@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEYSTONE ARCHITECTS | Architecture Shaped by Light, Form & Purpose</title>
+  <meta name="description" content="Keystone Architects — Architectural Design Studio, Luxury Modern Residences, and Commercial High-Rise Architecture in Kigali, Rwanda.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js 3D Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090A0D] text-white antialiased font-sans selection:bg-white selection:text-black relative">
+
+  <!-- AMBIENT LIGHT REFRACTION ORBS -->
+  <div class="ambient-glow-container">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+  </div>
+
+
+
+  <!-- TOP HEADER / NAVBAR (EXACT FORMA ARCHITECTS REPLICA + KEYSTONE PURE INLINE ANIMATED SVG LOGO) -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 sm:px-12 flex items-center justify-between backdrop-blur-md bg-black/40 border-b border-white/10">
+    
+    <!-- KEYSTONE PURE INLINE ANIMATED SVG LOGO -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-32 sm:w-36 h-auto transition-transform group-hover:scale-105">
+        <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+            <g class="rise">
+              <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+              <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-2">
+              <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+              <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-3">
+              <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+              <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+            </g>
+            <g class="rise rise-4">
+              <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
+              <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+              <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+              <path d="M144 195h257" stroke="#FFFFFF" stroke-width="6"></path>
+            </g>
+          </g>
+          <g class="wordmark">
+            <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+          </g>
+        </svg>
+      </div>
+    </a>
+
+    <!-- NAV MENU LINKS -->
+    <nav class="hidden md:flex items-center gap-8 font-forma-mono text-xs tracking-widest text-slate-300">
+      <a href="#" class="text-white hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="home" class="w-3.5 h-3.5 text-gold-400"></i> HOME</a>
+      <a href="#selected-work" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="building" class="w-3.5 h-3.5"></i> PROJECTS</a>
+      <a href="#3d-studio" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="box" class="w-3.5 h-3.5"></i> 3D STUDIO</a>
+      <a href="#live-build" class="hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="activity" class="w-3.5 h-3.5 text-gold-400"></i> LIVE BUILD</a>
+      <a href="client-portal.html" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> PORTAL</a>
+      <a href="dashboard.html" class="hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-gold-400"></i> ADMIN</a>
+    </nav>
+
+    <!-- RIGHT CONTROLS: BLACK / WHITE GLASS THEME TOGGLE & ADMIN LINK -->
+    <div class="flex items-center gap-4">
+      <button onclick="window.toggleKeystoneTheme()" class="forma-btn-outline !py-2 !px-4" title="Toggle Black / White Glass Theme">
+        <i data-lucide="sun" class="w-4 h-4 text-gold-400 dark:block hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 text-gold-400 dark:hidden block"></i>
+        <span class="text-[11px]">THEME</span>
+      </button>
+
+      <a href="dashboard.html" class="forma-btn-outline !py-2 !px-4">
+        <span>ADMIN</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <!-- HERO SECTION (EXACT FORMA ARCHITECTS REPLICA) -->
+  <section id="hero" class="hero-forma-bg min-h-screen flex flex-col justify-between pt-36 pb-16 px-6 sm:px-12 relative">
+    
+    <div></div> <!-- TOP SPACER -->
+
+    <!-- HERO OVERLAY CONTENT -->
+    <div class="max-w-4xl space-y-6">
+      
+      <!-- EYEBROW LABEL -->
+      <p class="font-forma-mono text-xs text-slate-400 tracking-[0.25em]">ARCHITECTURE STUDIO</p>
+
+      <!-- MAIN TALL CONDENSED HEADLINE -->
+      <h1 class="font-forma text-6xl sm:text-8xl md:text-9xl font-bold tracking-wide text-white leading-none">
+        SPACES<br>THAT SPEAK.
+      </h1>
+
+      <!-- SUBTITLE -->
+      <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed max-w-sm">
+        Architecture shaped by<br>light, form & purpose.
+      </p>
+
+      <!-- OUTLINE BUTTON -->
+      <div class="pt-4">
+        <a href="#selected-work" class="forma-btn-outline">
+          <span>EXPLORE PROJECTS</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT BOTTOM FLOATING COUNTER WIDGET -->
+    <div class="self-end font-forma-mono text-xs text-slate-400 tracking-widest space-y-1 text-right">
+      <p class="text-white font-bold">01</p>
+      <div class="w-6 h-[1px] bg-white/40 my-1 ml-auto"></div>
+      <p>03</p>
+    </div>
+
+  </section>
+
+  <!-- SECTION 2: SELECTED WORK -->
+  <section id="selected-work" class="py-24 px-6 sm:px-12 bg-[#090A0D] border-t border-white/10 relative z-10">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <!-- SECTION HEADER WITH LINE DIVIDER -->
+      <div class="flex items-center justify-between gap-6 mb-16">
+        <div class="flex items-center gap-6 grow">
+          <span class="font-forma-mono text-xs text-slate-400 tracking-[0.2em] shrink-0">SELECTED WORK</span>
+          <div class="forma-divider-line"></div>
+        </div>
+        <a href="#selected-work" class="font-forma-mono text-xs text-slate-300 hover:text-white transition-colors shrink-0 tracking-widest">
+          VIEW ALL PROJECTS →
+        </a>
+      </div>
+
+      <!-- 3-COLUMN PROJECT CARDS GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- CARD 01 (BEIGE PERGOLA VILLA - MATCHES USER PHOTO 1) -->
+        <div class="forma-card group cursor-pointer h-full flex flex-col justify-between" onclick="openProjectModal('Gacuriro Pergola Villa')">
+          <div class="forma-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop" alt="Gacuriro Pergola Villa" loading="lazy">
+          </div>
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <p class="font-forma-mono text-xs text-slate-400">01</p>
+              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
+                GACURIRO PERGOLA VILLA
+              </h3>
+              <p class="font-forma-mono text-xs text-slate-400">2024 &nbsp;/&nbsp; KIGALI, RWANDA</p>
+            </div>
+            <div class="pt-4 border-t border-white/10 mt-4">
+              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
+                VIEW PROJECT &nbsp;→
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 02 (STEEL BLUE GLASS VILLA - MATCHES USER PHOTO 2) -->
+        <div class="forma-card group cursor-pointer h-full flex flex-col justify-between" onclick="openProjectModal('Nyarutarama Glass Atrium')">
+          <div class="forma-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Nyarutarama Glass Atrium" loading="lazy">
+          </div>
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <p class="font-forma-mono text-xs text-slate-400">02</p>
+              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
+                NYARUTARAMA GLASS ATRIUM
+              </h3>
+              <p class="font-forma-mono text-xs text-slate-400">2023 &nbsp;/&nbsp; KIGALI, RWANDA</p>
+            </div>
+            <div class="pt-4 border-t border-white/10 mt-4">
+              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
+                VIEW PROJECT &nbsp;→
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 03 (INFINITY POOL VILLA - MATCHES USER PHOTO 3 & 4) -->
+        <div class="forma-card group cursor-pointer h-full flex flex-col justify-between" onclick="openProjectModal('Kicukiro Infinity Pool Villa')">
+          <div class="forma-card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Kicukiro Infinity Pool Villa" loading="lazy">
+          </div>
+          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
+            <div class="space-y-2">
+              <p class="font-forma-mono text-xs text-slate-400">03</p>
+              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
+                KICUKIRO INFINITY POOL VILLA
+              </h3>
+              <p class="font-forma-mono text-xs text-slate-400">2023 &nbsp;/&nbsp; KIGALI, RWANDA</p>
+            </div>
+            <div class="pt-4 border-t border-white/10 mt-4">
+              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
+                VIEW PROJECT &nbsp;→
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: INTERACTIVE 3D ARCHITECTURAL STUDIO -->
+  <section id="3d-studio" class="py-24 px-6 sm:px-12 bg-[#090A0D] border-t border-white/10 relative z-10">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <p class="font-forma-mono text-xs text-slate-400 tracking-[0.25em]">3D ARCHITECTURAL STUDIO</p>
+          <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white leading-tight">
+            INTERACTIVE<br>3D HOUSE ENGINE.
+          </h2>
+          <p class="text-slate-300 text-sm font-light leading-relaxed">
+            Architectural 3D model engine constructed directly from our master engineering blueprints. Rotate 360°, inspect cantilever balconies, swatch facade finishes, and toggle night illumination.
+          </p>
+
+          <!-- SWATCH BUTTONS -->
+          <div class="pt-2 space-y-3">
+            <p class="font-forma-mono text-xs text-slate-400">SWATCH FACADE MATERIAL:</p>
+            <div class="flex items-center gap-3">
+              <button data-swatch-color="#F8FAFC" class="w-8 h-8 rounded-full bg-slate-100 border border-white/40 hover:scale-110 transition-transform active-swatch" title="Pure White"></button>
+              <button data-swatch-color="#1E3A8A" class="w-8 h-8 rounded-full bg-blue-900 border border-white/40 hover:scale-110 transition-transform" title="Steel Blue"></button>
+              <button data-swatch-color="#D4AF37" class="w-8 h-8 rounded-full bg-amber-500 border border-white/40 hover:scale-110 transition-transform" title="Keystone Gold"></button>
+              <button data-swatch-color="#1E293B" class="w-8 h-8 rounded-full bg-slate-800 border border-white/40 hover:scale-110 transition-transform" title="Obsidian Charcoal"></button>
+              <button data-swatch-color="#854D0E" class="w-8 h-8 rounded-full bg-amber-800 border border-white/40 hover:scale-110 transition-transform" title="Teak Wood"></button>
+              <button data-swatch-color="#065F46" class="w-8 h-8 rounded-full bg-emerald-800 border border-white/40 hover:scale-110 transition-transform" title="Emerald"></button>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE TOGGLES (DAY/NIGHT, WIREFRAME, EXPLODED) -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+            <button id="toggle3DNight" class="forma-btn-outline !py-2 !px-3 text-xs">
+              <span>DAY / NIGHT</span>
+            </button>
+            <button id="toggle3DWireframe" class="forma-btn-outline !py-2 !px-3 text-xs">
+              <span>WIREFRAME</span>
+            </button>
+            <button id="toggle3DExplode" class="forma-btn-outline !py-2 !px-3 text-xs">
+              <span>EXPLODE BIM</span>
+            </button>
+          </div>
+
+          <!-- CAROUSEL MODEL CONTROLS -->
+          <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+            <button id="prev3dModelBtn" class="forma-btn-outline !py-2 !px-4">PREV</button>
+            <span id="modelIndexIndicator" class="font-forma-mono text-xs text-gold-400 font-bold">MODEL 1 OF 4</span>
+            <button id="next3dModelBtn" class="forma-btn-outline !py-2 !px-4">NEXT</button>
+          </div>
+        </div>
+
+        <!-- 3D THREE.JS CANVAS STAGE -->
+        <div class="lg:col-span-7">
+          <div class="forma-3d-frame h-[520px] relative shadow-2xl">
+            <canvas id="popOut3dCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+            <!-- FLOATING TITLE BADGE -->
+            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs text-slate-300 bg-black/85 backdrop-blur-md px-5 py-3 border border-white/15 flex justify-between items-center gap-4">
+              <div>
+                <span id="active3dModelTitle" class="text-white font-bold text-sm block">01 / BEIGE MARBLE PERGOLA VILLA</span>
+                <p id="active3dModelDesc" class="text-[11px] text-slate-400 mt-0.5">Matching Photo 1 · Dark Marble Columns & Roof Pergola</p>
+              </div>
+              <span class="text-gold-400 font-bold hidden sm:inline">360° ORBIT ACTIVE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: LIVE BUILD 3D TOWER CONSTRUCTION SIMULATOR -->
+  <section id="live-build" class="py-32 px-6 sm:px-12 bg-[#090A0D] border-t border-white/10 relative z-10">
+    <div class="max-w-[1400px] mx-auto space-y-12">
+      
+      <!-- HEADER -->
+      <div class="flex flex-wrap justify-between items-end gap-6">
+        <div>
+          <p class="font-forma-mono text-xs text-gold-400 tracking-[0.25em]">LIVE SITE SIMULATOR</p>
+          <h2 class="font-forma text-5xl sm:text-7xl font-bold text-white mt-2">
+            HIGH-RISE TOWER CONSTRUCTION.
+          </h2>
+        </div>
+        <p class="font-forma-mono text-xs text-slate-400 max-w-lg leading-relaxed">
+          Drag to orbit the building site in 3D. Move the progress slider to watch concrete cores, glass panels, and the tower crane build the high-rise floor by floor in real-time.
+        </p>
+      </div>
+
+      <!-- SPACIOUS 680px LIVE TOWER STAGE -->
+      <div class="live-tower-stage shadow-2xl !h-[680px]">
+        <canvas id="c2" class="live-tower-canvas" aria-label="3D tower under construction"></canvas>
+
+        <div class="live-tower-panel">
+          <div>
+            <span class="text-white font-bold text-xs block">FLOORS COMPLETE</span>
+            <b id="fl" class="text-gold-400 font-bold">0 / 24</b>
+          </div>
+          <div>
+            <span class="text-white font-bold text-xs block">PROGRESS</span>
+            <b id="pc" class="text-emerald-400 font-bold">0%</b>
+          </div>
+          <button id="toggleAutoBuildBtn" class="forma-btn-outline !py-2 !px-3 text-xs shrink-0" title="Toggle Endless Auto-Build Loop">
+            <i data-lucide="repeat" class="w-3.5 h-3.5 text-gold-400"></i>
+            <span id="autoBuildStatusText">LOOP ACTIVE</span>
+          </button>
+          <label for="sl" class="grow">
+            <span class="text-white font-bold text-xs block mb-1">SLIDE TO CONSTRUCT TOWER FLOOR-BY-FLOOR:</span>
+            <input id="sl" type="range" min="0" max="100" value="0">
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: WHAT WE BUILD (3D TILT CARDS WITH GORGEOUS LUCIDE ICONS & GENEROUS SPACING) -->
+  <section id="capabilities" class="py-24 px-6 sm:px-12 bg-[#090A0D] border-t border-white/10 relative z-10">
+    <div class="max-w-[1400px] mx-auto">
+      
+      <div class="flex items-center justify-between gap-6 mb-16">
+        <div class="flex items-center gap-6 grow">
+          <span class="font-forma-mono text-xs text-slate-400 tracking-[0.2em] shrink-0">ENGINEERING SERVICES</span>
+          <div class="forma-divider-line"></div>
+        </div>
+      </div>
+
+      <div class="tilt-cards-grid">
+        
+        <div class="tilt-card">
+          <div class="glass-icon-box">
+            <i data-lucide="shovel" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3>EXCAVATION & DIGS</h3>
+            <p>Bulk earthworks, trenching, and basement digs guided by real-time GPS telemetry.</p>
+          </div>
+        </div>
+
+        <div class="tilt-card">
+          <div class="glass-icon-box">
+            <i data-lucide="layers" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3>FOUNDATIONS & PILING</h3>
+            <p>Raft foundations, piling, and retaining walls poured and cured to exact engineering specs.</p>
+          </div>
+        </div>
+
+        <div class="tilt-card">
+          <div class="glass-icon-box">
+            <i data-lucide="building-2" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3>HIGH-RISE TOWERS</h3>
+            <p>Reinforced concrete cores and curtain wall glass slabs built on rapid 7-day cycles.</p>
+          </div>
+        </div>
+
+        <div class="tilt-card">
+          <div class="glass-icon-box">
+            <i data-lucide="truck" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h3>ROADS & CIVIL WORKS</h3>
+            <p>Grading, drainage, and asphalt paving for access roads, estate plots, and civic parks.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: READY TO CREATE? / LET'S BUILD... -->
+  <section class="cta-forma-bg min-h-[75vh] flex flex-col justify-center px-6 sm:px-12 relative border-t border-white/10">
+    <div class="max-w-4xl space-y-6">
+      
+      <!-- EYEBROW LABEL -->
+      <p class="font-forma-mono text-xs text-slate-400 tracking-[0.25em]">READY TO CREATE?</p>
+
+      <!-- MAIN TALL CONDENSED HEADLINE -->
+      <h2 class="font-forma text-6xl sm:text-8xl md:text-9xl font-bold tracking-wide text-white leading-none">
+        LET'S BUILD<br>SOMETHING<br>TIMELESS.
+      </h2>
+
+      <!-- OUTLINE BUTTON -->
+      <div class="pt-6">
+        <a href="mailto:info@keystone.rw" class="forma-btn-outline">
+          <span>START A PROJECT</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER (EXACT FORMA ARCHITECTS REPLICA) -->
+  <footer class="py-12 px-6 sm:px-12 bg-[#050608] border-t border-white/10 font-forma-mono text-xs text-slate-400 relative z-10">
+    <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div>
+        <p>© 2026 KEYSTONE ARCHITECTS. ALL RIGHTS RESERVED.</p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://instagram.com" target="_blank" class="hover:text-white transition-colors">INSTAGRAM</a>
+        <span>|</span>
+        <a href="https://linkedin.com" target="_blank" class="hover:text-white transition-colors">LINKEDIN</a>
+        <span>|</span>
+        <a href="client-portal.html" class="hover:text-white transition-colors">CLIENT PORTAL</a>
+        <span>|</span>
+        <a href="dashboard.html" class="hover:text-white transition-colors">ADMIN DASHBOARD</a>
+      </div>
+
+      <div>
+        <a href="mailto:info@keystone.rw" class="hover:text-white transition-colors">INFO@KEYSTONE.RW</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="js/app.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+
+    function openProjectModal(name) {
+      alert('Project Specs for ' + name + ' loading. Full BOQ available in Client Portal.');
+    }
+  </script>
+</body>
+</html>
