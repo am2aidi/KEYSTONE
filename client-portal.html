@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEYSTONE PORTAL | Client Project & BOQ Tracking</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090A0D] text-white antialiased font-sans selection:bg-white selection:text-black min-h-screen relative">
+
+
+
+  <!-- TOP HEADER / NAVBAR (MATCHES HOME & ADMIN PAGE) -->
+  <header class="sticky top-0 z-40 py-4 px-6 sm:px-12 flex items-center justify-between backdrop-blur-md bg-black/50 border-b border-white/10">
+    
+    <!-- KEYSTONE PURE INLINE ANIMATED SVG LOGO -->
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-32 sm:w-36 h-auto transition-transform group-hover:scale-105">
+        <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+            <g class="rise">
+              <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+              <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-2">
+              <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+              <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-3">
+              <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+              <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+            </g>
+            <g class="rise rise-4">
+              <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
+              <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+              <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+              <path d="M144 195h257" stroke="#FFFFFF" stroke-width="6"></path>
+            </g>
+          </g>
+          <g class="wordmark">
+            <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+          </g>
+        </svg>
+      </div>
+      <span class="font-forma-mono text-xs text-gold-400 border border-gold-500/30 px-2.5 py-1 uppercase tracking-widest hidden sm:inline">CLIENT PORTAL</span>
+    </a>
+
+    <!-- TOP HEADER RIGHT CONTROLS: BLACK / WHITE GLASS THEME TOGGLE -->
+    <div class="flex items-center gap-4 font-forma-mono text-xs">
+      <button onclick="window.toggleKeystoneTheme()" class="forma-btn-outline !py-2 !px-4" title="Toggle Black / White Glass Theme">
+        <i data-lucide="sun" class="w-4 h-4 text-gold-400 dark:block hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 text-gold-400 dark:hidden block"></i>
+        <span class="text-[11px]">THEME</span>
+      </button>
+
+      <a href="index.html" class="forma-btn-outline !py-2 !px-4">
+        <span>MAIN WEBSITE</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN CLIENT PORTAL CONTAINER -->
+  <main class="max-w-[1440px] mx-auto px-6 sm:px-12 md:px-16 py-16 sm:py-24">
+    
+    <!-- PAGE TITLE SECTION -->
+    <div class="flex flex-wrap items-center justify-between gap-8 mb-16">
+      <div>
+        <p class="font-forma-mono text-xs text-slate-400 tracking-[0.25em] flex items-center gap-2">
+          <i data-lucide="activity" class="w-4 h-4 text-gold-400"></i> LIVE SITE PROGRESS & DOCUMENTATION
+        </p>
+        <h1 class="font-forma text-5xl sm:text-7xl font-bold text-white mt-2">CLIENT TRACKING PORTAL.</h1>
+      </div>
+
+      <!-- LOOKUP SEARCH INPUT -->
+      <div class="flex items-center gap-3 font-forma-mono text-xs">
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+          <input type="text" id="trackInput" placeholder="Enter Quote ID (e.g. #KEY-9821)..." class="pl-10 pr-4 py-3 bg-[#0E1017] border border-white/20 text-white focus:border-gold-400 focus:outline-none w-72 rounded-xl">
+        </div>
+        <button id="trackBtn" class="forma-btn-outline !py-3 !px-5">
+          <span>TRACK</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- RECENT SUBMITTED QUOTES TABLE (SYNCED FROM LOCALSTORAGE) -->
+    <div class="forma-card p-10 space-y-8 mb-16 font-forma-mono text-xs">
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div>
+          <span class="text-white font-bold text-base block flex items-center gap-2">
+            <i data-lucide="file-text" class="w-5 h-5 text-gold-400"></i> YOUR SUBMITTED QUOTES & BOQ REQUESTS
+          </span>
+          <span class="text-slate-400 text-xs mt-1 block">Live Synced from Website Calculator & Contact Submissions</span>
+        </div>
+        <span class="px-3.5 py-1.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold rounded-lg flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> STATUS: ACTIVE
+        </span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10 text-slate-400">
+              <th class="py-4 px-5">REF CODE</th>
+              <th class="py-4 px-5">CLIENT NAME</th>
+              <th class="py-4 px-5">PROJECT TYPE</th>
+              <th class="py-4 px-5">LOCATION</th>
+              <th class="py-4 px-5">ESTIMATED BUDGET</th>
+              <th class="py-4 px-5">STATUS</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-slate-200" id="userQuotesTableBody">
+            <tr>
+              <td class="py-5 px-5 font-bold text-gold-400">#KEY-9821</td>
+              <td class="py-5 px-5">Valued Client</td>
+              <td class="py-5 px-5">Gacuriro 3-Story Pergola Villa</td>
+              <td class="py-5 px-5">Gacuriro, Kigali</td>
+              <td class="py-5 px-5">$157,500 USD</td>
+              <td class="py-5 px-5"><span class="px-3 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded-md">Under Engineering Review</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SAMPLE ACTIVE SITE PROJECT TRACKER -->
+    <div class="grid lg:grid-cols-12 gap-10 font-forma-mono text-xs">
+      
+      <!-- LEFT: LIVE SITE METRICS & MILESTONE TIMELINE -->
+      <div class="lg:col-span-8 space-y-10">
+        
+        <!-- SITE SUMMARY CARD -->
+        <div class="forma-card p-10 space-y-8">
+          <div class="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+              <p class="text-xs text-gold-400 tracking-widest uppercase">ACTIVE CONTRACT #KEY-GAC-2024</p>
+              <h3 class="font-forma text-4xl font-bold text-white mt-1">GACURIRO 3-STORY PERGOLA VILLA</h3>
+              <p class="text-slate-400 text-xs mt-1">Plot #452, Gacuriro Estate, Kigali · Lead Engineer: Eng. Claude Nshimiyimana</p>
+            </div>
+            <span class="px-4 py-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold rounded-lg text-xs">75% COMPLETE</span>
+          </div>
+
+          <!-- MILESTONE PROGRESS STEPS -->
+          <div class="space-y-6 pt-2">
+            <div>
+              <div class="flex justify-between text-slate-300 mb-2 font-bold">
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> 01 / SURVEY & BASEMENT EXCAVATION</span>
+                <span class="text-emerald-400">100% DONE</span>
+              </div>
+              <div class="h-2.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-400" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-slate-300 mb-2 font-bold">
+                <span class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> 02 / CONCRETE FRAMING & MARBLE PIERS</span>
+                <span class="text-emerald-400">100% DONE</span>
+              </div>
+              <div class="h-2.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-400" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-slate-300 mb-2 font-bold">
+                <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-gold-400"></i> 03 / ROOF PERGOLA LATTICE & FINISHINGS</span>
+                <span class="text-gold-400">75% IN PROGRESS</span>
+              </div>
+              <div class="h-2.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gold-400" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-slate-300 mb-2 font-bold">
+                <span class="flex items-center gap-2"><i data-lucide="circle" class="w-4 h-4 text-slate-500"></i> 04 / HANDOVER & CITY PERMIT INSPECTION</span>
+                <span class="text-slate-500">PENDING</span>
+              </div>
+              <div class="h-2.5 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-slate-600" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESIDENT ENGINEER LOGS -->
+        <div class="forma-card p-10 space-y-8">
+          <span class="text-white font-bold text-base block border-b border-white/10 pb-4 flex items-center gap-2">
+            <i data-lucide="clipboard-list" class="w-5 h-5 text-gold-400"></i> RESIDENT ENGINEER DAILY FIELD LOGS
+          </span>
+          
+          <div class="space-y-5">
+            <div class="p-6 bg-white/5 border border-white/10 rounded-xl space-y-2">
+              <div class="flex justify-between text-gold-400 font-bold">
+                <span>OCTOBER 6, 2026</span>
+                <span>ENG. CLAUDE NSHIMIYIMANA</span>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed">Completed roof pergola lattice installation. Dark marble piers polished and ground floor glazing fitted cleanly.</p>
+            </div>
+
+            <div class="p-6 bg-white/5 border border-white/10 rounded-xl space-y-2">
+              <div class="flex justify-between text-emerald-400 font-bold">
+                <span>OCTOBER 2, 2026</span>
+                <span>ENG. JEAN DE DIEU</span>
+              </div>
+              <p class="text-slate-200 text-sm leading-relaxed">Concrete slump test passed (30 N/mm²). Ground floor patio terrace tiles laid per architectural spec.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: DOWNLOADABLE BOQ DOCUMENTS & DIRECT CONTACT -->
+      <div class="lg:col-span-4 space-y-10">
+        
+        <!-- DOWNLOADABLE BOQ DOCUMENTS -->
+        <div class="forma-card p-10 space-y-8">
+          <span class="text-white font-bold text-base block border-b border-white/10 pb-4 flex items-center gap-2">
+            <i data-lucide="folder-down" class="w-5 h-5 text-gold-400"></i> PROJECT BOQ DOCUMENTS
+          </span>
+          
+          <div class="space-y-4">
+            <button onclick="alert('Downloading Bill of Quantities (BOQ) PDF...')" class="w-full text-left p-5 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 transition-colors flex justify-between items-center group">
+              <div>
+                <p class="text-white font-bold group-hover:text-gold-400 transition-colors">APPROVED BOQ COST SHEET</p>
+                <p class="text-slate-400 text-xs mt-1">PDF · 4.2 MB · Verified RDB</p>
+              </div>
+              <i data-lucide="download" class="w-5 h-5 text-gold-400 group-hover:scale-110 transition-transform"></i>
+            </button>
+
+            <button onclick="alert('Downloading Architectural BIM Blueprints...')" class="w-full text-left p-5 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 transition-colors flex justify-between items-center group">
+              <div>
+                <p class="text-white font-bold group-hover:text-gold-400 transition-colors">ARCHITECTURAL BLUEPRINTS</p>
+                <p class="text-slate-400 text-xs mt-1">DWG / PDF · 12.8 MB</p>
+              </div>
+              <i data-lucide="download" class="w-5 h-5 text-gold-400 group-hover:scale-110 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- DIRECT WHATSAPP / SITE ENGINEER HOTLINE -->
+        <div class="forma-card p-10 space-y-6">
+          <span class="text-white font-bold text-base block flex items-center gap-2">
+            <i data-lucide="phone-call" class="w-5 h-5 text-gold-400"></i> RESIDENT ENGINEER HOTLINE
+          </span>
+          <p class="text-slate-300 leading-relaxed text-sm">Need site assistance or BOQ adjustments? Contact your assigned site manager directly.</p>
+          <a href="https://whatsapp.com" target="_blank" class="forma-btn-outline w-full justify-center">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>WHATSAPP SITE ENGINEER</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 sm:px-12 bg-[#050608] border-t border-white/10 font-forma-mono text-xs text-slate-400">
+    <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <p>© 2026 KEYSTONE ARCHITECTS. ALL RIGHTS RESERVED.</p>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white">MAIN WEBSITE</a>
+        <span>|</span>
+        <a href="dashboard.html" class="hover:text-white">ADMIN DASHBOARD</a>
+      </div>
+      <p>INFO@KEYSTONE.RW</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="js/app.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+
+    // Render quotes stored in localStorage
+    const quotes = JSON.parse(localStorage.getItem('keystone-user-quotes') || '[]');
+    const body = document.getElementById('userQuotesTableBody');
+    if (body && quotes.length > 0) {
+      body.innerHTML = quotes.map(q => `
+        <tr>
+          <td class="py-4 px-4 font-bold text-gold-400">${q.id || '#KEY-9821'}</td>
+          <td class="py-4 px-4">${q.clientName || 'Valued Client'}</td>
+          <td class="py-4 px-4">${q.projectType || 'Villa Construction'}</td>
+          <td class="py-4 px-4">${q.location || 'Kigali'}</td>
+          <td class="py-4 px-4">${q.estimatedBudget || '$157,500 USD'}</td>
+          <td class="py-4 px-4"><span class="px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30">${q.status || 'Under Review'}</span></td>
+        </tr>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
