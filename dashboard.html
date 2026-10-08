@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEYSTONE ADMIN | Architecture & Fleet Management Portal</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons & Chart.js -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090A0D] text-white antialiased font-sans selection:bg-white selection:text-black min-h-screen relative">
+
+
+
+  <!-- TOP HEADER / NAVBAR (MATCHES HOME PAGE) -->
+  <header class="sticky top-0 z-40 py-4 px-6 sm:px-12 flex items-center justify-between backdrop-blur-md bg-black/50 border-b border-white/10">
+    
+    <!-- KEYSTONE PURE INLINE ANIMATED SVG LOGO -->
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-32 sm:w-36 h-auto transition-transform group-hover:scale-105">
+        <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+            <g class="rise">
+              <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+              <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-2">
+              <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+              <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-3">
+              <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+              <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+            </g>
+            <g class="rise rise-4">
+              <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
+              <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+              <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+              <path d="M144 195h257" stroke="#FFFFFF" stroke-width="6"></path>
+            </g>
+          </g>
+          <g class="wordmark">
+            <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+          </g>
+        </svg>
+      </div>
+      <span class="font-forma-mono text-xs text-gold-400 border border-gold-500/30 px-2.5 py-1 uppercase tracking-widest hidden sm:inline">ADMIN PORTAL</span>
+    </a>
+
+    <!-- TOP HEADER RIGHT CONTROLS: BLACK / WHITE GLASS THEME TOGGLE -->
+    <div class="flex items-center gap-4 font-forma-mono text-xs">
+      <button onclick="window.toggleKeystoneTheme()" class="forma-btn-outline !py-2 !px-4" title="Toggle Black / White Glass Theme">
+        <i data-lucide="sun" class="w-4 h-4 text-gold-400 dark:block hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 text-gold-400 dark:hidden block"></i>
+        <span class="text-[11px]">THEME</span>
+      </button>
+
+      <a href="index.html" class="forma-btn-outline !py-2 !px-4">
+        <span>RETURN TO WEBSITE</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN ADMIN LAYOUT CONTAINER -->
+  <div class="max-w-[1440px] mx-auto px-6 sm:px-12 md:px-16 py-16 sm:py-24">
+    
+    <!-- ADMIN PAGE TITLE SECTION -->
+    <div class="flex flex-wrap items-center justify-between gap-8 mb-16">
+      <div>
+        <p class="font-forma-mono text-xs text-slate-400 tracking-[0.25em] flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i> SYSTEM MANAGEMENT PLATFORM
+        </p>
+        <h1 class="font-forma text-5xl sm:text-7xl font-bold text-white mt-2">ADMINISTRATIVE DASHBOARD.</h1>
+      </div>
+      <div class="flex items-center gap-3 font-forma-mono text-xs bg-white/5 border border-white/10 px-4 py-2.5 rounded-full">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-slate-300">SYSTEM OPERATIONAL · ALL SERVICES ONLINE</span>
+      </div>
+    </div>
+
+    <!-- ADMIN NAVIGATION TABS BAR -->
+    <div class="flex flex-wrap items-center gap-4 mb-12 pb-6 border-b border-white/10 font-forma-mono text-xs">
+      <button data-tab="analyticsTab" class="dash-tab-btn forma-btn-outline active !py-3 !px-5 flex items-center gap-2">
+        <i data-lucide="bar-chart-3" class="w-4 h-4 text-gold-400"></i>
+        <span>ANALYTICAL METRICS</span>
+      </button>
+      <button data-tab="quotesTab" class="dash-tab-btn forma-btn-outline !py-3 !px-5 flex items-center gap-2">
+        <i data-lucide="file-text" class="w-4 h-4 text-gold-400"></i>
+        <span>QUOTE PIPELINE</span>
+      </button>
+      <button data-tab="bannersTab" class="dash-tab-btn forma-btn-outline !py-3 !px-5 flex items-center gap-2">
+        <i data-lucide="sliders" class="w-4 h-4 text-gold-400"></i>
+        <span>BANNER CMS</span>
+      </button>
+      <button data-tab="equipmentTab" class="dash-tab-btn forma-btn-outline !py-3 !px-5 flex items-center gap-2">
+        <i data-lucide="truck" class="w-4 h-4 text-gold-400"></i>
+        <span>FLEET EQUIPMENT</span>
+      </button>
+      <button data-tab="socialTab" class="dash-tab-btn forma-btn-outline !py-3 !px-5 flex items-center gap-2">
+        <i data-lucide="share-2" class="w-4 h-4 text-gold-400"></i>
+        <span>SOCIAL CHANNELS</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: ANALYTICS METRICS -->
+    <div id="analyticsTab" class="dash-tab-content space-y-10">
+      
+      <!-- TOP METRIC CARDS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 font-forma-mono">
+        <div class="forma-card p-8 space-y-3">
+          <div class="flex justify-between items-center text-slate-400">
+            <span class="text-xs">TOTAL BOQ PIPELINE</span>
+            <i data-lucide="trending-up" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="font-forma text-4xl font-bold text-gold-400">$2,840,000</p>
+          <p class="text-xs text-emerald-400 font-bold">↑ +18.4% this month</p>
+        </div>
+
+        <div class="forma-card p-8 space-y-3">
+          <div class="flex justify-between items-center text-slate-400">
+            <span class="text-xs">ACTIVE BUILD SITES</span>
+            <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+          </div>
+          <p class="font-forma text-4xl font-bold text-white">14 SITES</p>
+          <p class="text-xs text-slate-400">Kigali, Nyarutarama, Gacuriro</p>
+        </div>
+
+        <div class="forma-card p-8 space-y-3">
+          <div class="flex justify-between items-center text-slate-400">
+            <span class="text-xs">FLEET MACHINERY</span>
+            <i data-lucide="truck" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <p class="font-forma text-4xl font-bold text-emerald-400">28 UNITS</p>
+          <p class="text-xs text-emerald-400 font-bold">100% Telemetry Health</p>
+        </div>
+
+        <div class="forma-card p-8 space-y-3">
+          <div class="flex justify-between items-center text-slate-400">
+            <span class="text-xs">CLIENT QUOTES</span>
+            <i data-lucide="file-check-2" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <p class="font-forma text-4xl font-bold text-cyan-400">42 RECS</p>
+          <p class="text-xs text-slate-400">Pending Architectural Approval</p>
+        </div>
+      </div>
+
+      <!-- ANALYTICS CHART STAGE -->
+      <div class="forma-card p-10 space-y-6">
+        <div class="flex justify-between items-center pb-6 border-b border-white/10 font-forma-mono text-xs">
+          <span class="text-white font-bold text-base flex items-center gap-2">
+            <i data-lucide="line-chart" class="w-5 h-5 text-gold-400"></i> 2026 FINANCIAL & BUILD PROGRESS MONITORING
+          </span>
+          <span class="text-slate-400">Updated Real-Time</span>
+        </div>
+        <div class="h-96">
+          <canvas id="revenueChart"></canvas>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: QUOTE PIPELINE -->
+    <div id="quotesTab" class="dash-tab-content hidden space-y-8">
+      <div class="p-8 bg-[#0E1017] border border-white/10 space-y-6 font-forma-mono text-xs">
+        <div class="flex justify-between items-center pb-4 border-b border-white/10">
+          <span class="text-white font-bold">SUBMITTED CLIENT QUOTES & BOQS</span>
+          <span class="text-gold-400 font-bold">4 SUBMISSIONS PENDING</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-white/10 text-slate-400">
+                <th class="py-3 px-4">QUOTE ID</th>
+                <th class="py-3 px-4">CLIENT NAME</th>
+                <th class="py-3 px-4">PROJECT TYPE</th>
+                <th class="py-3 px-4">ESTIMATED BUDGET</th>
+                <th class="py-3 px-4">STATUS</th>
+                <th class="py-3 px-4">ACTION</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/10 text-slate-200">
+              <tr>
+                <td class="py-4 px-4 font-bold text-gold-400">#KEY-9821</td>
+                <td class="py-4 px-4">Jean-Paul Habimana</td>
+                <td class="py-4 px-4">Gacuriro 3-Story Luxury Villa</td>
+                <td class="py-4 px-4">$157,500 USD</td>
+                <td class="py-4 px-4"><span class="px-2 py-1 bg-amber-500/20 text-amber-400 border border-amber-500/30">Under BOQ Review</span></td>
+                <td class="py-4 px-4"><button onclick="alert('Quote #KEY-9821 Approved!')" class="forma-btn-outline !py-1 !px-2 text-[10px]">APPROVE</button></td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-bold text-gold-400">#KEY-9822</td>
+                <td class="py-4 px-4">Grace Mukamana</td>
+                <td class="py-4 px-4">Nyarutarama Infinity Resort</td>
+                <td class="py-4 px-4">$220,000 USD</td>
+                <td class="py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Permit Approved</span></td>
+                <td class="py-4 px-4"><button onclick="alert('BOQ Sheet Sent to Client!')" class="forma-btn-outline !py-1 !px-2 text-[10px]">SEND BOQ</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: BANNER CMS -->
+    <div id="bannersTab" class="dash-tab-content hidden space-y-8 font-forma-mono text-xs">
+      <div class="p-8 bg-[#0E1017] border border-white/10 space-y-6">
+        <span class="text-white font-bold">MANAGE ACTIVE ANNOUNCEMENT BANNERS</span>
+        
+        <form onsubmit="handleSaveBanner(event)" class="space-y-4 max-w-xl">
+          <div>
+            <label class="block text-slate-400 mb-2">Banner Alert Text</label>
+            <input type="text" id="adminBannerTextInput" value="New Nyarutarama Luxury Resort Project Groundbreaking · Phase 1 Booking Open" class="w-full px-4 py-3 bg-[#090A0D] border border-white/20 text-white focus:border-gold-400 focus:outline-none">
+          </div>
+          <button type="submit" class="forma-btn-outline">
+            <span>PUBLISH BANNER LIVE</span>
+            <span>→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- TAB 4: FLEET EQUIPMENT -->
+    <div id="equipmentTab" class="dash-tab-content hidden space-y-8 font-forma-mono text-xs">
+      <div class="p-8 bg-[#0E1017] border border-white/10 space-y-6">
+        <span class="text-white font-bold">HEAVY MACHINERY FLEET STATUS</span>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="p-6 bg-[#090A0D] border border-white/10 space-y-3">
+            <p class="font-bold text-white">CAT 336 EXCAVATOR #01</p>
+            <p class="text-emerald-400">Status: Active at Gacuriro Site</p>
+            <p class="text-slate-400">Pressure: 245 bar · Fuel 92%</p>
+          </div>
+
+          <div class="p-6 bg-[#090A0D] border border-white/10 space-y-3">
+            <p class="font-bold text-white">LIEBHERR TOWER CRANE #02</p>
+            <p class="text-emerald-400">Status: Active at Kimihurura Plaza</p>
+            <p class="text-slate-400">Height: 48m · Safety 100%</p>
+          </div>
+
+          <div class="p-6 bg-[#090A0D] border border-white/10 space-y-3">
+            <p class="font-bold text-white">VOLVO SD110 COMPACTOR #03</p>
+            <p class="text-cyan-400">Status: In Transit to Nyarutarama</p>
+            <p class="text-slate-400">GPS Signal Lock Verified</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: SOCIAL CHANNELS -->
+    <div id="socialTab" class="dash-tab-content hidden space-y-8 font-forma-mono text-xs">
+      <div class="p-8 bg-[#0E1017] border border-white/10 space-y-6">
+        <span class="text-white font-bold">DIRECT CONTACT CHANNELS & SOCIAL LINKS</span>
+        
+        <div class="space-y-4 max-w-xl">
+          <div>
+            <label class="block text-slate-400 mb-1">WhatsApp Direct Support</label>
+            <input type="text" value="+250 783 833 840" class="w-full px-4 py-2.5 bg-[#090A0D] border border-white/20 text-white">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Official Engineering Email</label>
+            <input type="text" value="info@keystone.rw" class="w-full px-4 py-2.5 bg-[#090A0D] border border-white/20 text-white">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">LinkedIn Business Profile</label>
+            <input type="text" value="https://linkedin.com/company/keystone-rw" class="w-full px-4 py-2.5 bg-[#090A0D] border border-white/20 text-white">
+          </div>
+          <button onclick="alert('Social Channels Saved!')" class="forma-btn-outline">
+            <span>UPDATE CONTACT CHANNELS</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- APPLICATION SCRIPT & CHART JS -->
+  <script src="js/dashboard-app.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+
+    // Tab Switching Logic
+    const tabBtns = document.querySelectorAll('.dash-tab-btn');
+    const tabContents = document.querySelectorAll('.dash-tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-tab');
+        
+        tabBtns.forEach(b => b.classList.remove('active', 'border-white', 'bg-white', 'text-black'));
+        this.classList.add('active');
+
+        tabContents.forEach(content => {
+          if (content.id === targetId) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Chart.js Setup
+    const ctx = document.getElementById('revenueChart');
+    if (ctx && typeof Chart !== 'undefined') {
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+          datasets: [{
+            label: 'Projected BOQ Revenue ($)',
+            data: [180000, 220000, 310000, 420000, 580000, 720000, 950000, 1200000, 1550000, 1980000],
+            borderColor: '#D4AF37',
+            backgroundColor: 'rgba(212, 175, 55, 0.1)',
+            fill: true,
+            tension: 0.4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#94A3B8' } },
+            y: { grid: { color: 'rgba(255, 255, 255, 0.05)' }, ticks: { color: '#94A3B8' } }
+          }
+        }
+      });
+    }
+
+    function handleSaveBanner(e) {
+      e.preventDefault();
+      const val = document.getElementById('adminBannerTextInput').value;
+      localStorage.setItem('keystone-banner-text', val);
+      alert('Banner announcement published live!');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | KEYSTONE Construction & Engineering Ltd</title>
+  
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              400: '#F59E0B',
+              500: '#D4AF37',
+              600: '#B89628'
+            },
+            navy: {
+              900: '#080D1A',
+              800: '#0B132B',
+              700: '#1C2541',
+              600: '#2A365C'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-navy-900 text-slate-100 font-sans">
+
+  <div class="min-h-screen flex flex-col md:flex-row">
+    
+    <!-- SIDEBAR NAVIGATION WITH PURE INLINE SVG LOGO -->
+    <aside class="w-full md:w-64 bg-navy-800 border-r border-navy-700 p-6 flex flex-col justify-between shrink-0">
+      <div>
+        <!-- Brand Header with Pure Inline SVG -->
+        <a href="index.html" class="block mb-8 group">
+          <div class="w-48">
+            <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+              <g fill="none">
+                <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
+                <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+              </g>
+              <text x="360" y="250" text-anchor="middle" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-size="64" font-weight="900">KEYSTONE</text>
+              <text x="360" y="278" text-anchor="middle" fill="#d2a03c" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="800">ADMIN PORTAL</text>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Navigation Items -->
+        <nav class="space-y-2 text-sm font-medium">
+          <a href="#overview" class="admin-nav-item flex items-center gap-3 px-4 py-3 rounded-xl bg-gold-500 text-navy-900 font-bold transition-all" data-tab="overviewTab">
+            <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+            <span>Overview</span>
+          </a>
+          <a href="#quotes" class="admin-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-navy-700 hover:text-white transition-all" data-tab="quotesTab">
+            <i data-lucide="file-text" class="w-5 h-5 text-gold-400"></i>
+            <span>Quote Requests</span>
+            <span id="quoteBadgeCount" class="ml-auto px-2 py-0.5 text-xs rounded-full bg-gold-500/20 text-gold-400 font-bold">4</span>
+          </a>
+          <a href="#projects" class="admin-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-navy-700 hover:text-white transition-all" data-tab="projectsTab">
+            <i data-lucide="building" class="w-5 h-5 text-blue-400"></i>
+            <span>Kigali Sites & Projects</span>
+          </a>
+          <a href="#surveys" class="admin-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-navy-700 hover:text-white transition-all" data-tab="surveysTab">
+            <i data-lucide="calendar" class="w-5 h-5 text-emerald-400"></i>
+            <span>Site Surveys Schedule</span>
+          </a>
+          <a href="#messages" class="admin-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-navy-700 hover:text-white transition-all" data-tab="messagesTab">
+            <i data-lucide="mail" class="w-5 h-5 text-purple-400"></i>
+            <span>Client Messages</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Bottom Links & Return to Website -->
+      <div class="pt-6 border-t border-navy-700 space-y-3">
+        <a href="index.html" class="flex items-center gap-2 text-xs font-semibold text-gold-400 hover:text-gold-300 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <span>Return to Public Website</span>
+        </a>
+        <div class="text-[11px] text-slate-400">
+          Logged in as <span class="text-white font-bold">Admin Engineer</span> <br>
+          Kigali HQ Office
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-1 p-6 lg:p-10 overflow-y-auto">
+      
+      <!-- TOP HEADER BAR -->
+      <header class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-navy-700">
+        <div>
+          <h1 id="tabTitle" class="text-2xl lg:text-3xl font-heading font-bold text-white">Engineering Overview</h1>
+          <p class="text-slate-400 text-xs mt-1">Keystone Construction & Engineering Ltd — Rwanda Project Pipeline</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="addProjectBtn" class="px-4 py-2.5 rounded-xl bg-gold-500 text-navy-900 font-bold text-xs flex items-center gap-2 hover:bg-gold-400 transition-colors">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>New Kigali Project</span>
+          </button>
+          <div class="w-10 h-10 rounded-xl bg-navy-700 border border-navy-600 flex items-center justify-center text-gold-400">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- TAB 1: OVERVIEW PANEL -->
+      <div id="overviewTab" class="tab-content space-y-8">
+        
+        <!-- Metrics Cards Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glass-card p-6 rounded-2xl border border-navy-700">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs text-slate-400 font-semibold">Total Quotes Received</span>
+              <div class="p-2 rounded-xl bg-gold-500/20 text-gold-400">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="text-3xl font-heading font-bold text-white">18</div>
+            <div class="text-xs text-emerald-400 font-medium mt-2 flex items-center gap-1">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+              <span>+24% this month</span>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-navy-700">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs text-slate-400 font-semibold">Active Construction Sites</span>
+              <div class="p-2 rounded-xl bg-blue-500/20 text-blue-400">
+                <i data-lucide="hard-hat" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="text-3xl font-heading font-bold text-white">9</div>
+            <div class="text-xs text-slate-400 font-medium mt-2">Kigali & Musanze Sites</div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-navy-700">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs text-slate-400 font-semibold">Scheduled Land Surveys</span>
+              <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="text-3xl font-heading font-bold text-white">5</div>
+            <div class="text-xs text-gold-400 font-medium mt-2">Upcoming this week</div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-navy-700">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs text-slate-400 font-semibold">Estimated Pipeline Value</span>
+              <div class="p-2 rounded-xl bg-purple-500/20 text-purple-400">
+                <i data-lucide="dollar-sign" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <div class="text-3xl font-heading font-bold text-gold-400">$1.45M</div>
+            <div class="text-xs text-slate-400 font-medium mt-2">USD Approved BOQs</div>
+          </div>
+
+        </div>
+
+        <!-- Recent Inquiries Table & Live Feed -->
+        <div class="grid lg:grid-cols-12 gap-8">
+          
+          <div class="lg:col-span-8 glass-card p-6 rounded-2xl border border-navy-700">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="font-heading font-bold text-lg text-white">Recent Quote Requests</h3>
+              <a href="#quotes" class="text-xs font-semibold text-gold-400 hover:text-gold-300">View All</a>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-slate-300">
+                <thead class="bg-navy-800 text-slate-400 uppercase tracking-wider border-b border-navy-700">
+                  <tr>
+                    <th class="p-3">Client</th>
+                    <th class="p-3">Service</th>
+                    <th class="p-3">Location</th>
+                    <th class="p-3">Est. Budget</th>
+                    <th class="p-3">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-navy-700">
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Jean-Paul H.</td>
+                    <td class="p-3">Architectural & Turnkey Villa</td>
+                    <td class="p-3 text-slate-400">Gacuriro, Kigali</td>
+                    <td class="p-3 text-gold-400 font-bold">$180,000</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-amber-500/20 text-amber-400 text-[10px] font-bold">In Review</span></td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Horizon Commercial Ltd</td>
+                    <td class="p-3">Structural & MEP Engineering</td>
+                    <td class="p-3 text-slate-400">Kimihurura, Kigali</td>
+                    <td class="p-3 text-gold-400 font-bold">$420,000</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">Approved</span></td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Claire U.</td>
+                    <td class="p-3">Land Survey & Topo Mapping</td>
+                    <td class="p-3 text-slate-400">Bugesera</td>
+                    <td class="p-3 text-gold-400 font-bold">$12,000</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold">Scheduled</span></td>
+                  </tr>
+                  <tr>
+                    <td class="p-3 font-semibold text-white">Musanze Eco-Resort</td>
+                    <td class="p-3">Structural Retrofitting</td>
+                    <td class="p-3 text-slate-400">Musanze</td>
+                    <td class="p-3 text-gold-400 font-bold">$85,000</td>
+                    <td class="p-3"><span class="px-2 py-1 rounded-full bg-purple-500/20 text-purple-400 text-[10px] font-bold">BOQ Sent</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Activity Feed -->
+          <div class="lg:col-span-4 glass-card p-6 rounded-2xl border border-navy-700">
+            <h3 class="font-heading font-bold text-lg text-white mb-6">Recent Engineering Logs</h3>
+            <div class="space-y-4 text-xs">
+              
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Concrete Pouring Approved</div>
+                  <div class="text-slate-400 text-[11px]">Nyarutarama Villa Site — Slab Inspection Passed</div>
+                  <div class="text-slate-500 text-[10px] mt-0.5">2 hours ago</div>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="map" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Topo GPS Survey Uploaded</div>
+                  <div class="text-slate-400 text-[11px]">Bugesera Parcel 104 — CAD data generated</div>
+                  <div class="text-slate-500 text-[10px] mt-0.5">5 hours ago</div>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                  <i data-lucide="file-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">BOQ Delivered to Client</div>
+                  <div class="text-slate-400 text-[11px]">Kimihurura Office Complex — Phase 1 Estimating</div>
+                  <div class="text-slate-500 text-[10px] mt-0.5">1 day ago</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: QUOTE REQUESTS PANEL -->
+      <div id="quotesTab" class="tab-content hidden space-y-6">
+        <div class="glass-card p-6 rounded-2xl border border-navy-700">
+          <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+            <h3 class="font-heading font-bold text-lg text-white">Client Quote Pipeline</h3>
+            <div class="flex gap-2">
+              <input type="text" placeholder="Search client or district..." class="bg-navy-900 border border-navy-600 rounded-xl px-3 py-2 text-xs text-white focus:outline-none">
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-slate-300">
+              <thead class="bg-navy-800 text-slate-400 uppercase border-b border-navy-700">
+                <tr>
+                  <th class="p-3">Ref ID</th>
+                  <th class="p-3">Client Name</th>
+                  <th class="p-3">Phone</th>
+                  <th class="p-3">Service</th>
+                  <th class="p-3">Scale (m²)</th>
+                  <th class="p-3">Est. Range</th>
+                  <th class="p-3">Status</th>
+                  <th class="p-3">Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-navy-700">
+                <tr>
+                  <td class="p-3 font-mono text-gold-400">#KEY-801</td>
+                  <td class="p-3 font-bold text-white">Jean-Paul Habimana</td>
+                  <td class="p-3 text-slate-300">+250 788 123 456</td>
+                  <td class="p-3">Architectural & Turnkey Villa</td>
+                  <td class="p-3">350 m²</td>
+                  <td class="p-3 text-gold-400 font-bold">$160K - $190K</td>
+                  <td class="p-3"><span class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 font-bold text-[10px]">In Review</span></td>
+                  <td class="p-3">
+                    <button class="px-3 py-1 bg-gold-500 text-navy-900 font-bold rounded-lg text-[10px] hover:bg-gold-400">Contact</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-mono text-gold-400">#KEY-802</td>
+                  <td class="p-3 font-bold text-white">Kigali Heights Corp</td>
+                  <td class="p-3 text-slate-300">+250 783 999 111</td>
+                  <td class="p-3">Structural & MEP Engineering</td>
+                  <td class="p-3">1,200 m²</td>
+                  <td class="p-3 text-gold-400 font-bold">$400K - $480K</td>
+                  <td class="p-3"><span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-[10px]">Approved</span></td>
+                  <td class="p-3">
+                    <button class="px-3 py-1 bg-navy-700 text-slate-200 font-bold rounded-lg text-[10px] hover:bg-navy-600">View BOQ</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: PROJECTS PANEL -->
+      <div id="projectsTab" class="tab-content hidden space-y-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl overflow-hidden border border-navy-700">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Villa" class="w-full h-44 object-cover">
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="font-heading font-bold text-white">Nyarutarama Eco Villa</h4>
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">Active Build</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-4">Location: Nyarutarama, Kigali</p>
+              <div class="w-full bg-navy-900 h-2 rounded-full overflow-hidden mb-2">
+                <div class="bg-gold-500 h-full w-3/4"></div>
+              </div>
+              <div class="flex justify-between text-[11px] text-slate-400">
+                <span>Completion Progress</span>
+                <span class="text-gold-400 font-bold">75%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl overflow-hidden border border-navy-700">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Office Plaza" class="w-full h-44 object-cover">
+            <div class="p-5">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="font-heading font-bold text-white">Kimihurura Heights Plaza</h4>
+                <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 text-[10px] font-bold">MEP Installation</span>
+              </div>
+              <p class="text-xs text-slate-400 mb-4">Location: Kimihurura, Kigali</p>
+              <div class="w-full bg-navy-900 h-2 rounded-full overflow-hidden mb-2">
+                <div class="bg-blue-500 h-full w-1/2"></div>
+              </div>
+              <div class="flex justify-between text-[11px] text-slate-400">
+                <span>Completion Progress</span>
+                <span class="text-blue-400 font-bold">50%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+
+      const navItems = document.querySelectorAll('.admin-nav-item');
+      const tabContents = document.querySelectorAll('.tab-content');
+      const tabTitle = document.getElementById('tabTitle');
+
+      const titleMap = {
+        overviewTab: 'Engineering Overview',
+        quotesTab: 'Client Quote Pipeline',
+        projectsTab: 'Kigali Sites & Construction Projects',
+        surveysTab: 'Site Surveys & Topo Schedule',
+        messagesTab: 'Client Messages Inbox'
+      };
+
+      navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetTab = item.dataset.tab;
+
+          navItems.forEach(n => {
+            n.classList.remove('bg-gold-500', 'text-navy-900', 'font-bold');
+            n.classList.add('text-slate-300', 'hover:bg-navy-700');
+          });
+
+          item.classList.add('bg-gold-500', 'text-navy-900', 'font-bold');
+          item.classList.remove('text-slate-300');
+
+          tabContents.forEach(content => {
+            if (content.id === targetTab) {
+              content.classList.remove('hidden');
+            } else {
+              content.classList.add('hidden');
+            }
+          });
+
+          if (tabTitle && titleMap[targetTab]) {
+            tabTitle.textContent = titleMap[targetTab];
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
