@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" width="100%" height="100%" class="keystone-animated-logo" role="img" aria-label="KEYSTONE Construction and Engineering Ltd Logo">
+  <defs>
+    <style>
+      .logo-art { width: 100%; height: auto; overflow: visible; }
+      .logo-art .rise { transform-box: fill-box; transform-origin: center bottom; animation: keystone-rise 5s ease-out infinite both; }
+      .logo-art .rise-2 { animation-delay: .15s; }
+      .logo-art .rise-3 { animation-delay: .30s; }
+      .logo-art .rise-4 { animation-delay: .45s; }
+      .logo-art .crane-arm { transform-box: fill-box; transform-origin: 8% 55%; animation: keystone-crane 5s ease-in-out infinite both; }
+      .logo-art .wordmark { animation: keystone-word 5s ease-out infinite both; }
+      .logo-art .descriptor { animation: keystone-caption 5s ease-out infinite both; }
+
+      @keyframes keystone-rise {
+        0%, 3% { opacity: 0; transform: translateY(24px); }
+        18%, 85% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(24px); }
+      }
+      @keyframes keystone-crane {
+        0%, 8% { opacity: 0; transform: rotate(-7deg); }
+        26%, 39% { opacity: 1; transform: rotate(3deg); }
+        49%, 85% { opacity: 1; transform: rotate(0); }
+        100% { opacity: 0; transform: rotate(-7deg); }
+      }
+      @keyframes keystone-word {
+        0%, 19% { opacity: 0; transform: translateY(10px); }
+        39%, 85% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(10px); }
+      }
+      @keyframes keystone-caption {
+        0%, 29% { opacity: 0; transform: translateY(8px); }
+        48%, 85% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(8px); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .logo-art * { animation: none !important; opacity: 1 !important; transform: none !important; }
+      }
+    </style>
+
+    <linearGradient id="goldGradSvg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#B89628" />
+    </linearGradient>
+  </defs>
+
+  <g class="logo-art">
+    <!-- Geometric skyline & emblem rise -->
+    <g class="rise">
+      <path d="M202 188V101l37-30v117" fill="url(#goldGradSvg)" stroke="#B89628" stroke-width="2"></path>
+      <path d="M213 110v61M226 99v72" stroke="#FFF0C6" stroke-width="4"></path>
+    </g>
+    <g class="rise rise-2">
+      <path d="M245 188V73l39-29v144" fill="#0B132B" stroke="#1C2541" stroke-width="2"></path>
+      <path d="M258 79v82M270 70v91" stroke="#64748B" stroke-width="4"></path>
+    </g>
+    <g class="rise rise-3">
+      <path d="M292 188v-84l34-31v115" fill="#E0B454" stroke="#A97728" stroke-width="2"></path>
+      <path d="M304 111v56M315 101v66" stroke="#FFF1CE" stroke-width="3"></path>
+    </g>
+    <g class="rise rise-4">
+      <path d="M159 188l110-96 117 96" stroke="#0B132B" stroke-width="15" fill="none"></path>
+      <path d="M196 188l73-64 75 64" stroke="#D4AF37" stroke-width="9" fill="none"></path>
+      <path d="M238 188l31-27 32 27" stroke="#1C2541" stroke-width="7" fill="none"></path>
+      <path d="M144 195h257" stroke="#0B132B" stroke-width="5"></path>
+    </g>
+
+    <!-- Crane Arm Animation -->
+    <g class="crane-arm" stroke="#0B132B">
+      <path d="M398 179V66M386 179h24M393 69h10" stroke-width="5"></path>
+      <path d="M398 68l-35 18" stroke-width="4"></path>
+      <path d="M398 68h117l-27 14h-90" stroke-width="5"></path>
+      <path d="M408 69l34 13 32-13" stroke-width="2"></path>
+      <path d="M498 81v63" stroke-width="2.5" stroke="#D4AF37"></path>
+      <path d="M490 144h16l-8 10z" fill="#D4AF37" stroke="#B89628" stroke-width="2"></path>
+      <path d="M383 182h30" stroke="#D4AF37" stroke-width="5"></path>
+    </g>
+
+    <!-- Wordmark & Descriptor -->
+    <g class="wordmark">
+      <text x="360" y="269" text-anchor="middle" fill="#F8FAFC" font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-size="64" font-weight="900" letter-spacing="4">
+        KEYSTONE
+      </text>
+    </g>
+    <g class="descriptor">
+      <path d="M112 292h125M483 292h125" stroke="#D4AF37" stroke-width="2.5"></path>
+      <text x="360" y="298" text-anchor="middle" fill="#D4AF37" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" letter-spacing="1.5">
+        CONSTRUCTION AND ENGINEERING LTD
+      </text>
+      <text x="360" y="322" text-anchor="middle" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" font-style="italic" letter-spacing="0.5">
+        Smart Engineering. Better Construction.
+      </text>
+    </g>
+  </g>
+</svg>
