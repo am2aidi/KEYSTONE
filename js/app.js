@@ -712,6 +712,202 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 5. ARCHITECTURAL PORTFOLIO DATASET & MODAL
+  const portfolioProjects = {
+    'gacuriro-villa': {
+      title: 'GACURIRO PERGOLA VILLA',
+      category: 'Architecture',
+      badge: '🏛️ Residential Architecture',
+      location: 'Plot 452, Gacuriro Estate, Kigali, Rwanda',
+      year: '2024',
+      area: '520 m² Built Area · 850 m² Lot',
+      status: 'Completed & Certified',
+      budget: '$220,000 USD (Verified BOQ)',
+      materials: 'Black Belgian Marble, Powder-Coated Steel, Teak Pergola, High-Solar UV Glazing',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop',
+      description: 'Luxury 3-story residential villa designed for Kigali’s temperate climate. Features an expansive cantilevered pergola roof terrace, dark marble colonnades, and cross-ventilation corridors that eliminate mechanical AC requirements.'
+    },
+    'nyarutarama-atrium': {
+      title: 'NYARUTARAMA GLASS ATRIUM',
+      category: 'Architecture',
+      badge: '🏛️ Modern Villa',
+      location: 'KG 9 Ave, Nyarutarama, Kigali, Rwanda',
+      year: '2023',
+      area: '780 m² Built Area · 1,200 m² Lot',
+      status: 'Handed Over',
+      budget: '$380,000 USD (Turnkey)',
+      materials: 'Curtain-Wall Structural Glass, Steel-Blue Aluminium, Reinforced Concrete Core',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
+      description: 'A striking statement in contemporary residential architecture. Double-height central atrium connecting three stepped living zones with floor-to-ceiling glass, opening directly to a private zen garden courtyard.'
+    },
+    'kicukiro-infinity': {
+      title: 'KICUKIRO INFINITY POOL VILLA',
+      category: 'Architecture',
+      badge: '🏛️ Hillside Residence',
+      location: 'Kicukiro Hill Ridge, Kigali, Rwanda',
+      year: '2024',
+      area: '640 m² Built Area · 950 m² Lot',
+      status: 'Completed & Occupied',
+      budget: '$295,000 USD',
+      materials: 'Cast Concrete, Teak Wood Decking, Vitrified Porcelain, Solar Micro-Inverters',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop',
+      description: 'Perched on the southern ridgeline of Kigali with breathtaking horizon views. Features a 16-meter cantilevered infinity swimming pool, sheltered sun loungers, and deep solar shading eaves.'
+    },
+    'kiyovu-interior': {
+      title: 'KIYOVU MINIMALIST LIVING SALON',
+      category: 'Interior',
+      badge: '🎨 Interior Architecture',
+      location: 'Kiyovu diplomatic enclave, Kigali, Rwanda',
+      year: '2024',
+      area: '320 m² Interior Footprint',
+      status: 'Completed',
+      budget: '$115,000 USD (Fit-Out)',
+      materials: 'Italian Travertine Stone, Fluted Oak Acoustic Slats, Recessed Brass Lumina',
+      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop',
+      description: 'Comprehensive interior architecture and space planning. Designed with hidden ambient LED coves, bespoke millwork cabinetry, acoustic ceiling baffle integration, and a low-profile travertine fireplace mantle.'
+    },
+    'norrsken-hub': {
+      title: 'KIGALI INNOVATION TOWER & PLAZA',
+      category: 'Commercial',
+      badge: '🏢 High-Rise Commercial',
+      location: 'Kigali CBD / Norrsken Innovation Zone',
+      year: '2025',
+      area: '12,500 m² Gross Leasable Area',
+      status: 'Under Site Construction',
+      budget: '$4,200,000 USD (Master Contract)',
+      materials: 'Post-Tensioned Slabs, Low-E Double Glazing, Kinetic Shading, Greywater System',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
+      description: 'A 14-story corporate and technological innovation hub shaping Kigali’s central skyline. Built on rigorous 7-day floor casting cycles with verified BIM coordination and zero-waste rainwater recycling.'
+    },
+    'twin-terraces': {
+      title: 'KAGUGU TWIN TERRACES ESTATE',
+      category: 'Interior',
+      badge: '🎨 Bespoke Interior & Fitout',
+      location: 'Kagugu Green Belt, Kigali, Rwanda',
+      year: '2024',
+      area: '450 m² Interior Living',
+      status: 'Completed',
+      budget: '$165,000 USD',
+      materials: 'Raw Volcanic Rwandan Basalt, Natural Linen, Matte Black Aluminum, Smoked Oak',
+      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop',
+      description: 'Organic minimalist interior design blending indigenous Rwandan volcanic stone accents with Scandinavian furniture ergonomics, open-concept island kitchens, and bespoke panoramic reading nooks.'
+    }
+  };
+
+  window.openProjectModal = function(id) {
+    const data = portfolioProjects[id];
+    if (!data) return;
+
+    const modal = document.getElementById('projectModal');
+    if (!modal) return;
+
+    document.getElementById('modalImg').src = data.image;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalCategory').textContent = data.badge;
+    document.getElementById('modalDesc').textContent = data.description;
+    document.getElementById('modalLocation').textContent = data.location;
+    document.getElementById('modalYear').textContent = data.year;
+    document.getElementById('modalArea').textContent = data.area;
+    document.getElementById('modalBudget').textContent = data.budget;
+    document.getElementById('modalMaterials').textContent = data.materials;
+    document.getElementById('modalStatus').textContent = data.status;
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeProjectModal = function() {
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Close on backdrop click or ESC
+  const modalElem = document.getElementById('projectModal');
+  if (modalElem) {
+    modalElem.addEventListener('click', (e) => {
+      if (e.target === modalElem) window.closeProjectModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') window.closeProjectModal();
+  });
+
+  // Portfolio Filtering
+  window.filterProjects = function(category, btnElem) {
+    document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+    if (btnElem) btnElem.classList.add('active');
+
+    const cards = document.querySelectorAll('.project-card-item');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (category === 'all' || cardCat === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
+
+  // FAQ Accordion Handler
+  window.toggleFaq = function(button) {
+    const item = button.closest('.faq-item');
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) {
+      item.classList.add('active');
+    }
+  };
+
+  // Consultation Form Handler
+  window.handleConsultationSubmit = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.clientName.value.trim();
+    const email = form.clientEmail.value.trim();
+    const phone = form.clientPhone.value.trim();
+    const service = form.projectType.value;
+    const location = form.projectLocation.value.trim() || 'Kigali, Rwanda';
+    const budget = form.estimatedBudget.value;
+    const notes = form.projectNotes.value.trim();
+
+    if (!name || !email) {
+      alert('Please provide your name and email address to calculate your BOQ quote.');
+      return;
+    }
+
+    const quoteId = '#KEY-' + Math.floor(1000 + Math.random() * 9000);
+    const newQuote = {
+      id: quoteId,
+      clientName: name,
+      email: email,
+      phone: phone,
+      projectType: service,
+      location: location,
+      estimatedBudget: budget,
+      status: 'Engineering Review Active',
+      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      notes: notes
+    };
+
+    const existingQuotes = JSON.parse(localStorage.getItem('keystone-user-quotes') || '[]');
+    existingQuotes.unshift(newQuote);
+    localStorage.setItem('keystone-user-quotes', JSON.stringify(existingQuotes));
+
+    const submitBtn = document.getElementById('consultationSubmitBtn');
+    if (submitBtn) {
+      submitBtn.innerHTML = `<span>✓ QUOTE ${quoteId} REGISTERED</span>`;
+      submitBtn.classList.add('!bg-emerald-500', '!text-black', '!border-emerald-400');
+    }
+
+    setTimeout(() => {
+      window.location.href = 'client-portal.html';
+    }, 1200);
+  };
+
   init3DHouseViewer();
   initLiveTowerBuilder();
+
 });
