@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Blueprint Not Found | KEYSTONE ARCHITECTS</title>
+  <link rel="icon" type="image/svg+xml" href="assets/keystone-logo.svg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#090A0D] text-white antialiased font-sans min-h-screen flex flex-col justify-between relative selection:bg-white selection:text-black">
+
+  <!-- AMBIENT LIGHT REFRACTION ORBS -->
+  <div class="ambient-glow-container">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+  </div>
+
+  <!-- TOP HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 sm:px-12 flex items-center justify-between backdrop-blur-md bg-black/40 border-b border-white/10">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <div class="w-32 sm:w-36 h-auto transition-transform group-hover:scale-105">
+        <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+            <g class="rise">
+              <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+              <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-2">
+              <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+              <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+            </g>
+            <g class="rise rise-3">
+              <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+              <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+            </g>
+            <g class="rise rise-4">
+              <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
+              <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+              <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+              <path d="M144 195h257" stroke="#FFFFFF" stroke-width="6"></path>
+            </g>
+          </g>
+          <g class="wordmark">
+            <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+          </g>
+        </svg>
+      </div>
+    </a>
+
+    <div class="flex items-center gap-4">
+      <button onclick="window.toggleKeystoneTheme()" class="forma-btn-outline !py-2 !px-4" title="Toggle Black / White Glass Theme">
+        <i data-lucide="sun" class="w-4 h-4 text-gold-400 dark:block hidden"></i>
+        <i data-lucide="moon" class="w-4 h-4 text-gold-400 dark:hidden block"></i>
+        <span class="text-[11px]">THEME</span>
+      </button>
+
+      <a href="index.html" class="forma-btn-outline !py-2 !px-4">
+        <span>RETURN TO HOME</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- 404 MAIN CONTENT -->
+  <main class="flex-1 flex items-center justify-center px-6 sm:px-12 py-32 relative z-10">
+    <div class="forma-card max-w-2xl w-full p-10 sm:p-14 text-center space-y-6">
+      <p class="font-forma-mono text-xs text-gold-400 tracking-[0.25em]">404 ERROR · BLUEPRINT UNRESOLVED</p>
+      
+      <h1 class="font-forma text-7xl sm:text-9xl font-bold text-white tracking-tight leading-none">
+        404
+      </h1>
+
+      <h2 class="font-forma text-3xl sm:text-4xl font-bold text-white uppercase tracking-wide">
+        SPATIAL COORDINATE NOT FOUND
+      </h2>
+
+      <p class="text-slate-300 text-sm font-light leading-relaxed max-w-md mx-auto">
+        The architectural blueprint or page you are attempting to inspect has been archived, relocated, or does not exist.
+      </p>
+
+      <div class="pt-4 flex flex-wrap justify-center gap-4">
+        <a href="index.html" class="forma-btn-outline">
+          <i data-lucide="home" class="w-4 h-4"></i>
+          <span>RETURN TO HOME</span>
+        </a>
+        <a href="client-portal.html" class="forma-btn-outline">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>CLIENT PORTAL</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 sm:px-12 bg-[#050608] border-t border-white/10 font-forma-mono text-xs text-slate-400 text-center relative z-10">
+    <p>© 2026 KEYSTONE ARCHITECTS. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>
