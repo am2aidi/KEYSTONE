@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="light scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
   <meta property="og:description" content="We redefine spaces with sustainable and innovative architectural designs, luxury residences, bespoke interior architecture, and commercial towers in Kigali, Rwanda.">
   <meta property="og:image" content="assets/keystone-logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#090A0D">
+  <meta name="theme-color" content="#FAF8F5">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,321 +28,513 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-[#090A0D] text-white antialiased font-sans selection:bg-white selection:text-black relative">
+<body class="bg-[#FAF8F5] text-slate-900 dark:bg-[#090A0D] dark:text-white antialiased font-sans selection:bg-[#FF5C1B] selection:text-white relative">
 
-  <!-- AMBIENT LIGHT REFRACTION ORBS -->
-  <div class="ambient-glow-container">
-    <div class="ambient-orb ambient-orb-1"></div>
-    <div class="ambient-orb ambient-orb-2"></div>
-  </div>
+  <!-- TOP HEADER / NAVBAR (EXACT AIMANI ARCHITECTURE STUDIO REPLICA) -->
+  <header class="w-full bg-white/95 dark:bg-[#0E1017]/95 border-b border-gray-100 dark:border-white/10 sticky top-0 z-50 backdrop-blur-md transition-colors">
+    <div class="w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center w-full" style="height: 105px;">
+        
+        <!-- LEFT: FLOATING CAPSULE NAVIGATION (MATCHING SCREENSHOT EXACTLY) -->
+        <nav class="hidden lg:flex items-center aimani-nav-bar" aria-label="Main Navigation">
+          
+          <!-- Home -->
+          <a href="#hero" class="aimani-nav-link active">Home</a>
 
-  <!-- TOP HEADER / NAVBAR (FORMA + AIMANI HYBRID WITH DUAL PILLARS) -->
-  <header class="fixed top-0 left-0 right-0 z-50 py-4 px-6 sm:px-12 flex items-center justify-between backdrop-blur-md bg-black/40 border-b border-white/10">
-    
-    <!-- KEYSTONE PURE INLINE ANIMATED SVG LOGO -->
-    <a href="#" class="flex items-center gap-3 group">
-      <div class="w-32 sm:w-36 h-auto transition-transform group-hover:scale-105">
-        <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
-          <g fill="none" stroke-linejoin="round" stroke-linecap="round">
-            <g class="rise">
-              <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
-              <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
-            </g>
-            <g class="rise rise-2">
-              <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
-              <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
-            </g>
-            <g class="rise rise-3">
-              <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
-              <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
-            </g>
-            <g class="rise rise-4">
-              <path d="M159 188l110-96 117 96" stroke="#FFFFFF" stroke-width="17"></path>
-              <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
-              <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
-              <path d="M144 195h257" stroke="#FFFFFF" stroke-width="6"></path>
-            </g>
-          </g>
-          <g class="wordmark">
-            <text x="360" y="260" text-anchor="middle" fill="#FFFFFF" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
-          </g>
-        </svg>
+          <!-- Our Services Dropdown -->
+          <div class="aimani-dropdown-group relative">
+            <button class="aimani-nav-link group-hover:text-[#FF5C1B]" type="button">
+              <span>Our Services</span>
+              <svg class="w-3.5 h-3.5 text-[#FF5C1B] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card (Exact replica from user screenshot) -->
+            <div class="aimani-dropdown-menu">
+              <a href="#services" class="aimani-dropdown-item">
+                <span class="text-base">🏗️</span>
+                <span>Construction</span>
+              </a>
+              <a href="#services" class="aimani-dropdown-item">
+                <span class="text-base">🎨</span>
+                <span>Interior Design</span>
+              </a>
+              <a href="#services" class="aimani-dropdown-item">
+                <span class="text-base">🏛️</span>
+                <span>Architecture</span>
+              </a>
+              <a href="#process" class="aimani-dropdown-item">
+                <span class="text-base">🗂️</span>
+                <span>Trainings</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Media Dropdown -->
+          <div class="aimani-dropdown-group relative">
+            <button class="aimani-nav-link" type="button">
+              <span>Media</span>
+              <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <div class="aimani-dropdown-menu">
+              <a href="#3d-studio" class="aimani-dropdown-item">
+                <span class="text-base">🖼️</span>
+                <span>3D Studio</span>
+              </a>
+              <a href="#live-build" class="aimani-dropdown-item">
+                <span class="text-base">🏗️</span>
+                <span>Live Site Simulator</span>
+              </a>
+              <a href="client-portal.html" class="aimani-dropdown-item">
+                <span class="text-base">📋</span>
+                <span>Client Portal</span>
+              </a>
+              <a href="dashboard.html" class="aimani-dropdown-item">
+                <span class="text-base">🛡️</span>
+                <span>Admin Dashboard</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- About Us -->
+          <a href="#about" class="aimani-nav-link">About Us</a>
+
+          <!-- Career -->
+          <a href="#career" class="aimani-nav-link">Career</a>
+
+        </nav>
+
+        <!-- CENTER: KEYSTONE BRAND LOGO -->
+        <div class="flex-1 flex justify-center">
+          <a href="#" class="flex items-center gap-3 group">
+            <div class="w-36 sm:w-44 h-auto transition-transform group-hover:scale-105">
+              <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+                <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+                  <g class="rise">
+                    <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+                    <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+                  </g>
+                  <g class="rise rise-2">
+                    <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+                    <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+                  </g>
+                  <g class="rise rise-3">
+                    <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+                    <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+                  </g>
+                  <g class="rise rise-4">
+                    <path d="M159 188l110-96 117 96" stroke="#000000" class="dark:stroke-white" stroke-width="17"></path>
+                    <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+                    <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+                    <path d="M144 195h257" stroke="#000000" class="dark:stroke-white" stroke-width="6"></path>
+                  </g>
+                </g>
+                <g class="wordmark">
+                  <text x="360" y="260" text-anchor="middle" fill="#000000" class="dark:fill-white" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <!-- RIGHT: THEME TOGGLE & START YOUR PROJECT BUTTON (EXACT AIMANI SPEC) -->
+        <div class="flex items-center gap-3">
+          <!-- Black / White Theme Toggle -->
+          <button onclick="window.toggleKeystoneTheme()" class="w-10 h-10 rounded-full border border-gray-200 dark:border-white/20 flex items-center justify-center text-gray-700 dark:text-gold-400 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Light / Dark Mode">
+            <i data-lucide="sun" class="w-4 h-4 dark:block hidden"></i>
+            <i data-lucide="moon" class="w-4 h-4 dark:hidden block text-[#FF5C1B]"></i>
+          </button>
+
+          <!-- Start your Project Button (Aimani exact rounded-[10px] height 50px) -->
+          <a href="#consultation" class="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-colors font-semibold text-sm whitespace-nowrap shadow-sm" style="border-radius: 10px; height: 50px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center;">
+            Start your Project
+          </a>
+        </div>
+
       </div>
-      <span class="font-forma-mono text-[10px] text-gold-400 border border-gold-500/30 px-2 py-0.5 uppercase tracking-widest hidden lg:inline">KIGALI · RWANDA</span>
-    </a>
-
-    <!-- NAV MENU LINKS -->
-    <nav class="hidden xl:flex items-center gap-7 font-forma-mono text-xs tracking-widest text-slate-300">
-      <a href="#" class="text-white hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="home" class="w-3.5 h-3.5 text-gold-400"></i> HOME</a>
-      <a href="#selected-work" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="building" class="w-3.5 h-3.5"></i> PROJECTS</a>
-      <a href="#3d-studio" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="box" class="w-3.5 h-3.5"></i> 3D STUDIO</a>
-      <a href="#live-build" class="hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="activity" class="w-3.5 h-3.5 text-gold-400"></i> LIVE TOWER</a>
-      <a href="#services" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="layers" class="w-3.5 h-3.5"></i> SERVICES</a>
-      <a href="#process" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="compass" class="w-3.5 h-3.5"></i> PROCESS</a>
-      <a href="client-portal.html" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> PORTAL</a>
-      <a href="dashboard.html" class="hover:text-gold-400 transition-colors flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5 text-gold-400"></i> ADMIN</a>
-    </nav>
-
-    <!-- RIGHT CONTROLS: THEME TOGGLE & START PROJECT CTA -->
-    <div class="flex items-center gap-3">
-      <button onclick="window.toggleKeystoneTheme()" class="forma-btn-outline !py-2 !px-3" title="Toggle Glass Theme">
-        <i data-lucide="sun" class="w-4 h-4 text-gold-400 dark:block hidden"></i>
-        <i data-lucide="moon" class="w-4 h-4 text-gold-400 dark:hidden block"></i>
-        <span class="text-[11px] hidden sm:inline">THEME</span>
-      </button>
-
-      <a href="#consultation" class="forma-btn-outline !py-2 !px-4 !bg-gold-500 !text-black !border-gold-400 font-bold hover:!bg-white">
-        <span>START A PROJECT</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-      </a>
     </div>
-
   </header>
 
-  <!-- HERO SECTION (AIMANI ARCHITECTURAL VISION + FORMA CONDENSED IMPACT) -->
-  <section id="hero" class="hero-forma-bg min-h-screen flex flex-col justify-between pt-36 pb-16 px-6 sm:px-12 md:px-16 relative">
-    
-    <div></div> <!-- TOP SPACER -->
-
-    <!-- HERO OVERLAY CONTENT -->
-    <div class="max-w-5xl space-y-7">
+  <!-- HERO SECTION (EXACT AIMANI ARCHITECTURE STUDIO REPLICA) -->
+  <section id="hero" class="w-full pt-16 pb-12 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       
       <!-- EYEBROW LABEL -->
-      <div class="flex flex-wrap items-center gap-3 font-forma-mono text-xs text-slate-300 tracking-[0.25em]">
-        <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
-        <span>ARCHITECTURE & INTERIOR DESIGN STUDIO · KIGALI, RWANDA</span>
+      <div class="uppercase text-xs sm:text-sm text-gray-500 dark:text-slate-400 font-semibold tracking-[0.25em]">
+        Creative Brilliance, Visionaries, Designers.
       </div>
 
-      <!-- MAIN TALL CONDENSED HEADLINE (REFERENCING AIMANI CORE PHILOSOPHY) -->
-      <h1 class="font-forma text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight text-white leading-[0.92]">
-        WE REDEFINE SPACES<br>
-        <span class="text-gold-400">WITH SUSTAINABLE &</span><br>
-        INNOVATIVE DESIGNS.
+      <!-- MAIN HEADLINE (EXACT TEXT FROM SCREENSHOT & AIMANI SOURCE) -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
+        <span class="text-[#FF5C1B]">A Team of over</span> 
+        <span class="text-black dark:text-white">50 Architects & Engineers.</span>
       </h1>
 
-      <!-- SUBTITLE -->
-      <p class="text-slate-300 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
-        Architecture shaped by light, form & purpose. From luxury modern villas in Gacuriro and Nyarutarama to commercial high-rise towers in Kigali’s central business district, we craft timeless built environments for Africa and beyond.
+      <!-- SUBTITLES -->
+      <p class="text-gray-600 dark:text-slate-300 text-base sm:text-xl mt-4 max-w-3xl mx-auto font-light leading-relaxed">
+        Meet the talented architects, designers, and engineers who bring creativity and expertise to every project across Rwanda and East Africa.
       </p>
 
-      <!-- DUAL ACTION BUTTONS -->
-      <div class="pt-4 flex flex-wrap items-center gap-4">
-        <a href="#consultation" class="forma-btn-outline !bg-gold-500 !text-black !border-gold-400 font-bold hover:!bg-white">
-          <span>START YOUR PROJECT</span>
-          <span>→</span>
-        </a>
-        <a href="#selected-work" class="forma-btn-outline">
-          <span>EXPLORE PORTFOLIO</span>
-          <i data-lucide="compass" class="w-4 h-4"></i>
-        </a>
-        <a href="#3d-studio" class="forma-btn-outline">
-          <i data-lucide="box" class="w-4 h-4 text-gold-400"></i>
-          <span>LAUNCH 3D ENGINE</span>
-        </a>
+      <p class="text-gray-500 dark:text-slate-400 text-sm font-medium">
+        From the best architects shaping Rwanda's sustainable skyline.
+      </p>
+
+      <!-- STATS STRIP -->
+      <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto font-forma-mono text-center">
+        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+          <p class="text-4xl font-extrabold text-[#FF5C1B]">28+</p>
+          <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">Projects / Year</p>
+        </div>
+        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+          <p class="text-4xl font-extrabold text-black dark:text-white">99.4%</p>
+          <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">On-Time Delivery</p>
+        </div>
+        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+          <p class="text-4xl font-extrabold text-[#FF5C1B]">15+</p>
+          <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">Design Awards</p>
+        </div>
+        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+          <p class="text-4xl font-extrabold text-black dark:text-white">100%</p>
+          <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">RDB Certified</p>
+        </div>
       </div>
 
     </div>
-
-    <!-- STATS COUNTER RIBBON (AIMANI STATS BAR) -->
-    <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 font-forma-mono border-t border-white/10 mt-12">
-      <div class="space-y-1">
-        <p class="font-forma text-4xl sm:text-5xl font-bold text-gold-400 leading-none">28+</p>
-        <p class="text-xs text-slate-300 uppercase tracking-widest">Projects / Year Delivered</p>
-      </div>
-      <div class="space-y-1">
-        <p class="font-forma text-4xl sm:text-5xl font-bold text-white leading-none">99.4%</p>
-        <p class="text-xs text-slate-300 uppercase tracking-widest">On-Time BOQ Accuracy</p>
-      </div>
-      <div class="space-y-1">
-        <p class="font-forma text-4xl sm:text-5xl font-bold text-gold-400 leading-none">15+</p>
-        <p class="text-xs text-slate-300 uppercase tracking-widest">Architectural Awards</p>
-      </div>
-      <div class="space-y-1">
-        <p class="font-forma text-4xl sm:text-5xl font-bold text-white leading-none">100%</p>
-        <p class="text-xs text-slate-300 uppercase tracking-widest">RDB & Kigali Certified</p>
-      </div>
-    </div>
-
   </section>
 
-  <!-- SECTION 2: FILTERABLE PROJECT PORTFOLIO SHOWCASE (ARCHITECTURE & INTERIOR DESIGN) -->
-  <section id="selected-work" class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-12">
+  <!-- DUAL PHILOSOPHY CARDS (AIMANI EXACT "WHO ARE WE?" & "WHY CHOOSE US?") -->
+  <section class="w-full py-10 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-8">
+        
+        <!-- CARD 1: WHO ARE WE? (DARK OBSIDIAN) -->
+        <div class="flex-1 bg-[#232323] text-white rounded-3xl p-8 sm:p-10 flex flex-col items-start shadow-xl hover:-translate-y-1 transition-transform">
+          <button class="bg-[#232323] text-white px-6 py-2.5 rounded-full text-sm font-semibold mb-6 border border-white hover:bg-white hover:text-[#232323] transition-colors">
+            Who Are We?
+          </button>
+          <p class="text-gray-200 text-base sm:text-lg leading-relaxed font-light">
+            We are visionaries, creators, and builders. With a passion for innovative architecture, functional interiors, and sustainable construction, we bring dreams to life. From concept to execution, our team blends creativity with precision to design spaces that inspire.
+          </p>
+        </div>
+
+        <!-- CARD 2: WHY CHOOSE US? (CLEAN WHITE) -->
+        <div class="flex-1 bg-white dark:bg-[#12141A] text-black dark:text-white rounded-3xl p-8 sm:p-10 flex flex-col items-start border border-gray-200 dark:border-white/10 shadow-xl hover:-translate-y-1 transition-transform">
+          <button class="bg-white text-[#232323] px-6 py-2.5 rounded-full text-sm font-semibold mb-6 border border-[#232323] hover:bg-[#232323] hover:text-white transition-colors">
+            Why Choose Us?
+          </button>
+          <p class="text-gray-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+            Our Creative Brilliance explains how our designers push boundaries and redefine modern aesthetics. Breaking the rules in new spaces while integrating sustainable technology for energy efficiency, natural cross-ventilation, and structural longevity.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: AT KEYSTONE ARCHITECTURE DESIGN & 3 CORE PILLARS -->
+  <section id="about" class="w-full py-16 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- SECTION HEADER WITH FILTER TABS (AIMANI ARCHITECTURE & INTERIORS FILTER) -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-6 border-b border-white/10">
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <h2 class="text-3xl lg:text-4xl font-bold">
+          At <span class="text-[#FF5C1B]">KEYSTONE Architecture</span> Design
+        </h2>
+        <p class="text-gray-600 dark:text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+          Discover our vision, values, and commitment to shaping Rwanda's architectural landscape with world-class engineering and sustainable materials.
+        </p>
+      </div>
+
+      <!-- 3 VISUAL PILLARS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1: Architecture -->
+        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+          <div class="h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-bold font-forma-mono uppercase tracking-wider text-[#FF5C1B]">🏛️ Architecture</span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Modern Architectural Design</h3>
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Creating personalized living spaces that blend comfort with contemporary design, tailored to modern family lifestyles and sustainable Rwandan topography.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Interior Design -->
+        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+          <div class="h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-bold font-forma-mono uppercase tracking-wider text-[#FF5C1B]">🎨 Interior Design</span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Bespoke Interior & Lighting</h3>
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Crafting bespoke luxury interiors with premium materials, acoustic fluted oak, Italian travertine stone, and ambient cove lighting for discerning clients.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Construction & High-Rise -->
+        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+          <div class="h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 space-y-3">
+            <span class="text-xs font-bold font-forma-mono uppercase tracking-wider text-[#FF5C1B]">🏗️ Construction</span>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Construction Supervision & BIM</h3>
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Rigorous on-site engineering, concrete slump testing, and verified BOQ cost tracking to guarantee rapid 7-day floor casting cycles with zero budget overruns.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: MORE OF OUR SERVICES WE PROVIDE (AIMANI EXACT SERVICES GRID) -->
+  <section id="services" class="w-full py-16 bg-white dark:bg-[#0E1017] border-y border-gray-200/70 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+      
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold mb-3">
+          More of Our Services <span class="text-[#FF5C1B]">We Provide:</span>
+        </h2>
+        <p class="text-gray-600 dark:text-slate-300 text-base max-w-2xl mx-auto font-light">
+          Explore our wide range of architectural and design services tailored to meet your residential, commercial, and institutional needs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        
+        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
+            🏗️
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors">Construction</h3>
+          <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+            Turnkey project construction, reinforced concrete foundations, structural steel framing, and daily on-site licensed supervisor management.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
+            🎨
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors">Interior Design</h3>
+          <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+            Spatial harmony, luxury furniture curation, architectural cove lighting, acoustic insulation, and bespoke residential cabinetry fit-outs.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
+            🏛️
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors">Architecture</h3>
+          <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+            Bioclimatic residential villas, commercial high-rises, CAD masterplanning, and 3D digital twins optimized for energy efficiency.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
+            📚
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors">Trainings & BIM</h3>
+          <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+            Architecture Design Training Cohort, advanced BIM modeling workshops, and hands-on structural sustainability training in Kigali.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: FEATURED ARCHITECTURE SHOWCASE BANNER -->
+  <section class="w-full py-12 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative w-full rounded-3xl overflow-hidden group shadow-2xl h-96 lg:h-[460px]">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1920&auto=format&fit=crop" alt="Architecture Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 space-y-6">
+          <p class="font-forma-mono text-xs text-gold-400 tracking-[0.3em] uppercase">FEATURED RESIDENTIAL RETREAT</p>
+          <h3 class="text-4xl sm:text-6xl font-extrabold text-white max-w-3xl leading-tight">
+            CRAFTING TIMELESS ARCHITECTURE IN KIGALI
+          </h3>
+          <a href="#selected-work" class="bg-black text-white hover:bg-[#FF5C1B] px-8 py-4 rounded-full font-semibold shadow-xl transition-colors text-sm uppercase tracking-wider">
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: LATEST PROJECTS (AIMANI CURATED PORTFOLIO WITH FILTERING) -->
+  <section id="selected-work" class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200/80 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200 dark:border-white/10">
         <div>
-          <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">CURATED ARCHITECTURAL PORTFOLIO</span>
-          <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white mt-2">SELECTED WORKS & INTERIORS.</h2>
-          <p class="text-slate-400 text-sm max-w-xl font-light mt-2">
-            Discover our latest architectural innovations and bespoke interior environments crafted across Kigali and East Africa.
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">OUR PORTFOLIO</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Latest Projects.</h2>
+          <p class="text-gray-600 dark:text-slate-300 text-sm font-light mt-1">
+            Discover our newest architectural innovations, featuring sustainable design and cutting-edge solutions.
           </p>
         </div>
 
         <!-- FILTER PILLS -->
-        <div class="flex flex-wrap items-center gap-3">
-          <button onclick="window.filterProjects('all', this)" class="filter-pill active">ALL (6)</button>
-          <button onclick="window.filterProjects('Architecture', this)" class="filter-pill">🏛️ ARCHITECTURE (3)</button>
-          <button onclick="window.filterProjects('Interior', this)" class="filter-pill">🎨 INTERIOR DESIGN (2)</button>
-          <button onclick="window.filterProjects('Commercial', this)" class="filter-pill">🏢 COMMERCIAL & TOWERS (1)</button>
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="window.filterProjects('all', this)" class="filter-pill active">All Projects</button>
+          <button onclick="window.filterProjects('Architecture', this)" class="filter-pill">🏛️ Architecture</button>
+          <button onclick="window.filterProjects('Interior', this)" class="filter-pill">🎨 Interior Design</button>
+          <button onclick="window.filterProjects('Commercial', this)" class="filter-pill">🏢 Commercial</button>
         </div>
       </div>
 
-      <!-- 6-CARD PROJECT GRID -->
-      <div id="projectGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- PROJECT CARDS GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- CARD 01: GACURIRO PERGOLA VILLA -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Architecture" onclick="window.openProjectModal('gacuriro-villa')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop" alt="Gacuriro Pergola Villa" loading="lazy">
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('gacuriro-villa')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop" alt="Gacuriro Pergola Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-gold-500/20 text-gold-400 border border-gold-500/30 text-[10px] font-forma-mono font-bold rounded-md">🏛️ ARCHITECTURE</span>
-                <span class="font-forma-mono text-xs text-slate-400">2024</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                GACURIRO PERGOLA VILLA
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2024 · Gacuriro, Kigali</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Gacuriro Pergola Villa
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">GACURIRO ESTATE · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">Cantilevered roof pergola with dark marble colonnades and bioclimatic cross-ventilation.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                A luxurious waterfront retreat combining modern elegance with sustainable design principles.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">520 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">520 m²</span>
             </div>
           </div>
         </div>
 
         <!-- CARD 02: NYARUTARAMA GLASS ATRIUM -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Architecture" onclick="window.openProjectModal('nyarutarama-atrium')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Nyarutarama Glass Atrium" loading="lazy">
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('nyarutarama-atrium')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Nyarutarama Glass Atrium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-gold-500/20 text-gold-400 border border-gold-500/30 text-[10px] font-forma-mono font-bold rounded-md">🏛️ ARCHITECTURE</span>
-                <span class="font-forma-mono text-xs text-slate-400">2023</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                NYARUTARAMA GLASS ATRIUM
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2023 · Nyarutarama, Kigali</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Nyarutarama Glass Atrium
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">KG 9 AVE, NYARUTARAMA · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">Double-height structural glass atrium with steel-blue mullions and stepped garden courtyards.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                Contemporary urban living spaces designed for the modern professional lifestyle.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">780 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">780 m²</span>
             </div>
           </div>
         </div>
 
         <!-- CARD 03: KICUKIRO INFINITY POOL VILLA -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Architecture" onclick="window.openProjectModal('kicukiro-infinity')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Kicukiro Infinity Pool Villa" loading="lazy">
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('kicukiro-infinity')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Kicukiro Infinity Pool Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-gold-500/20 text-gold-400 border border-gold-500/30 text-[10px] font-forma-mono font-bold rounded-md">🏛️ ARCHITECTURE</span>
-                <span class="font-forma-mono text-xs text-slate-400">2024</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                KICUKIRO INFINITY POOL VILLA
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2024 · Kicukiro, Kigali</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Kicukiro Infinity Pool Villa
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">KICUKIRO RIDGE · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">Cantilevered 16m infinity pool, teak sun-deck louvers, and sustainable rainwater harvesting.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                Innovative hillside residence showcasing harmonious family living and panoramic horizon views.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">640 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">640 m²</span>
             </div>
           </div>
         </div>
 
         <!-- CARD 04: KIYOVU MINIMALIST LIVING SALON -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Interior" onclick="window.openProjectModal('kiyovu-interior')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Kiyovu Minimalist Interior" loading="lazy">
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('kiyovu-interior')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Kiyovu Minimalist Living Salon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#FF5C1B]">🎨 Interior Design</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-forma-mono font-bold rounded-md">🎨 INTERIOR DESIGN</span>
-                <span class="font-forma-mono text-xs text-slate-400">2024</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                KIYOVU MINIMALIST LIVING SALON
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2024 · Kiyovu, Kigali</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Kiyovu Minimalist Living Salon
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">KIYOVU ENCLAVE · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">Acoustic fluted oak panels, Italian travertine hearth, and recessed ambient architectural cove lighting.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                Acoustic fluted oak panels, Italian travertine hearth, and ambient architectural cove lighting.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">320 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">320 m²</span>
             </div>
           </div>
         </div>
 
-        <!-- CARD 05: KIGALI INNOVATION TOWER & PLAZA -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Commercial" onclick="window.openProjectModal('norrsken-hub')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Kigali Innovation Tower" loading="lazy">
+        <!-- CARD 05: KIGALI INNOVATION TOWER -->
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Commercial" onclick="window.openProjectModal('norrsken-hub')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Kigali Innovation Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏢 Commercial</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-forma-mono font-bold rounded-md">🏢 COMMERCIAL TOWER</span>
-                <span class="font-forma-mono text-xs text-slate-400">2025</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                KIGALI INNOVATION TOWER
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2025 · CBD / Norrsken Zone</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Kigali Innovation Tower
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">CBD / NORRSKEN ZONE · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">14-story corporate hub featuring low-E double glazing, kinetic solar louvers, and post-tensioned slabs.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                High-end commercial complex featuring low-E glass facade, kinetic solar shading, and sustainable MEP.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">12,500 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">12,500 m²</span>
             </div>
           </div>
         </div>
 
         <!-- CARD 06: KAGUGU TWIN TERRACES ESTATE -->
-        <div class="project-card-item forma-card group cursor-pointer h-full flex flex-col justify-between" data-category="Interior" onclick="window.openProjectModal('twin-terraces')">
-          <div class="forma-card-img-wrap">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" alt="Kagugu Twin Terraces Interior" loading="lazy">
+        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('twin-terraces')">
+          <div class="h-64 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" alt="Kagugu Twin Terraces Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#FF5C1B]">🎨 Interior Design</span>
           </div>
-          <div class="p-6 sm:p-8 space-y-4 flex-1 flex flex-col justify-between">
-            <div class="space-y-2">
-              <div class="flex items-center justify-between">
-                <span class="px-2.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-forma-mono font-bold rounded-md">🎨 INTERIOR DESIGN</span>
-                <span class="font-forma-mono text-xs text-slate-400">2024</span>
-              </div>
-              <h3 class="font-forma text-3xl font-bold text-white group-hover:text-gold-400 transition-colors leading-tight">
-                KAGUGU TWIN TERRACES
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-400 font-forma-mono">2024 · Kagugu, Kigali</p>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#FF5C1B] transition-colors mt-1">
+                Kagugu Twin Terraces Estate
               </h3>
-              <p class="font-forma-mono text-xs text-slate-400">KAGUGU GREEN BELT · KIGALI</p>
-              <p class="text-slate-300 text-xs font-light line-clamp-2">Organic minimalism blending Rwandan volcanic basalt with natural linen and bespoke panoramic reading nooks.</p>
+              <p class="text-gray-600 dark:text-slate-300 text-xs mt-2 font-light line-clamp-2">
+                Harmonious interior living featuring Rwandan volcanic basalt accents and bespoke reading nooks.
+              </p>
             </div>
-            <div class="pt-4 border-t border-white/10 mt-4 flex items-center justify-between">
-              <span class="font-forma-mono text-xs text-slate-300 group-hover:text-white transition-colors">
-                VIEW SPECS & BOQ &nbsp;→
-              </span>
-              <span class="text-xs text-gold-400 font-bold font-forma-mono">450 m²</span>
+            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+              <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
+              <span class="text-xs font-forma-mono text-gray-400">450 m²</span>
             </div>
           </div>
         </div>
@@ -352,69 +544,68 @@
     </div>
   </section>
 
-  <!-- SECTION 3: INTERACTIVE 3D ARCHITECTURAL STUDIO -->
-  <section id="3d-studio" class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto">
+  <!-- SECTION: INTERACTIVE 3D VR & ARCHITECTURAL STUDIO -->
+  <section id="3d-studio" class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <div class="lg:col-span-5 space-y-6">
-          <p class="font-forma-mono text-xs text-gold-400 tracking-[0.25em]">INTERACTIVE VR & 3D STUDIO</p>
-          <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white leading-tight">
-            EXPLORE DESIGNS<br>BEFORE THEY ARE BUILT.
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">INTERACTIVE VR & 3D STUDIO</span>
+          <h2 class="text-3xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+            Immerse yourself in our interactive 3D experience.
           </h2>
-          <p class="text-slate-300 text-sm font-light leading-relaxed">
-            Constructed directly from our verified master CAD blueprints. Rotate 360°, inspect cantilever balconies, test facade finishes in real-time, inspect exploded BIM models, and simulate day/night illumination.
+          <p class="text-gray-600 dark:text-slate-300 text-sm font-light leading-relaxed">
+            Explore designs before they come to life. Constructed directly from our master engineering CAD blueprints. Rotate 360°, inspect cantilever balconies, test facade materials in real-time, inspect exploded BIM models, and simulate day/night lighting.
           </p>
 
           <!-- SWATCH BUTTONS -->
           <div class="pt-2 space-y-3">
-            <p class="font-forma-mono text-xs text-slate-400">SWATCH FACADE FINISH:</p>
+            <p class="font-forma-mono text-xs text-gray-500 dark:text-slate-400">SWATCH FACADE MATERIAL:</p>
             <div class="flex items-center gap-3">
-              <button data-swatch-color="#F8FAFC" class="w-8 h-8 rounded-full bg-slate-100 border border-white/40 hover:scale-110 transition-transform active-swatch" title="Pure White"></button>
-              <button data-swatch-color="#1E3A8A" class="w-8 h-8 rounded-full bg-blue-900 border border-white/40 hover:scale-110 transition-transform" title="Steel Blue"></button>
-              <button data-swatch-color="#D4AF37" class="w-8 h-8 rounded-full bg-amber-500 border border-white/40 hover:scale-110 transition-transform" title="Keystone Gold"></button>
-              <button data-swatch-color="#1E293B" class="w-8 h-8 rounded-full bg-slate-800 border border-white/40 hover:scale-110 transition-transform" title="Obsidian Charcoal"></button>
-              <button data-swatch-color="#854D0E" class="w-8 h-8 rounded-full bg-amber-800 border border-white/40 hover:scale-110 transition-transform" title="Teak Wood"></button>
-              <button data-swatch-color="#065F46" class="w-8 h-8 rounded-full bg-emerald-800 border border-white/40 hover:scale-110 transition-transform" title="Emerald"></button>
+              <button data-swatch-color="#F8FAFC" class="w-8 h-8 rounded-full bg-slate-100 border border-gray-300 hover:scale-110 transition-transform active-swatch" title="Pure White"></button>
+              <button data-swatch-color="#1E3A8A" class="w-8 h-8 rounded-full bg-blue-900 border border-gray-300 hover:scale-110 transition-transform" title="Steel Blue"></button>
+              <button data-swatch-color="#FF5C1B" class="w-8 h-8 rounded-full bg-[#FF5C1B] border border-gray-300 hover:scale-110 transition-transform" title="Aimani Terracotta"></button>
+              <button data-swatch-color="#1E293B" class="w-8 h-8 rounded-full bg-slate-800 border border-gray-300 hover:scale-110 transition-transform" title="Obsidian Charcoal"></button>
+              <button data-swatch-color="#854D0E" class="w-8 h-8 rounded-full bg-amber-800 border border-gray-300 hover:scale-110 transition-transform" title="Teak Wood"></button>
             </div>
           </div>
 
-          <!-- INTERACTIVE TOGGLES (DAY/NIGHT, WIREFRAME, EXPLODED) -->
-          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
-            <button id="toggle3DNight" class="forma-btn-outline !py-2 !px-3 text-xs">
-              <i data-lucide="moon" class="w-3.5 h-3.5 text-gold-400"></i>
+          <!-- INTERACTIVE CONTROLS -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-200 dark:border-white/10">
+            <button id="toggle3DNight" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
+              <i data-lucide="moon" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
               <span>DAY / NIGHT</span>
             </button>
-            <button id="toggle3DWireframe" class="forma-btn-outline !py-2 !px-3 text-xs">
+            <button id="toggle3DWireframe" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
               <i data-lucide="grid" class="w-3.5 h-3.5"></i>
               <span>WIREFRAME</span>
             </button>
-            <button id="toggle3DExplode" class="forma-btn-outline !py-2 !px-3 text-xs">
-              <i data-lucide="layers" class="w-3.5 h-3.5 text-gold-400"></i>
+            <button id="toggle3DExplode" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
               <span>EXPLODE BIM</span>
             </button>
           </div>
 
-          <!-- CAROUSEL MODEL CONTROLS -->
-          <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-            <button id="prev3dModelBtn" class="forma-btn-outline !py-2 !px-4">PREV</button>
-            <span id="modelIndexIndicator" class="font-forma-mono text-xs text-gold-400 font-bold">MODEL 1 OF 4</span>
-            <button id="next3dModelBtn" class="forma-btn-outline !py-2 !px-4">NEXT</button>
+          <!-- MODEL SELECTOR BUTTONS -->
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-white/10">
+            <button id="prev3dModelBtn" class="px-5 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold hover:bg-[#FF5C1B] transition-colors">PREV</button>
+            <span id="modelIndexIndicator" class="font-forma-mono text-xs text-[#FF5C1B] font-bold">MODEL 1 OF 4</span>
+            <button id="next3dModelBtn" class="px-5 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold hover:bg-[#FF5C1B] transition-colors">NEXT</button>
           </div>
         </div>
 
         <!-- 3D THREE.JS CANVAS STAGE -->
         <div class="lg:col-span-7">
-          <div class="forma-3d-frame h-[520px] relative shadow-2xl">
+          <div class="bg-white dark:bg-[#12141A] border border-gray-200 dark:border-white/10 rounded-3xl h-[520px] relative shadow-2xl overflow-hidden">
             <canvas id="popOut3dCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
 
             <!-- FLOATING TITLE BADGE -->
-            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs text-slate-300 bg-black/85 backdrop-blur-md px-5 py-3 border border-white/15 flex justify-between items-center gap-4 rounded-xl">
+            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs bg-white/90 dark:bg-black/85 backdrop-blur-md px-5 py-3 border border-gray-200 dark:border-white/15 flex justify-between items-center gap-4 rounded-xl shadow-lg">
               <div>
-                <span id="active3dModelTitle" class="text-white font-bold text-sm block">01 / BEIGE MARBLE PERGOLA VILLA</span>
-                <p id="active3dModelDesc" class="text-[11px] text-slate-400 mt-0.5">Matching Photo 1 · Dark Marble Columns & Roof Pergola</p>
+                <span id="active3dModelTitle" class="text-gray-900 dark:text-white font-bold text-sm block">01 / BEIGE MARBLE PERGOLA VILLA</span>
+                <p id="active3dModelDesc" class="text-[11px] text-gray-500 dark:text-slate-400 mt-0.5">Dark Marble Columns & Roof Pergola Lattice</p>
               </div>
-              <span class="text-gold-400 font-bold hidden sm:inline">360° ORBIT ACTIVE</span>
+              <span class="text-[#FF5C1B] font-bold hidden sm:inline">360° ORBIT ACTIVE</span>
             </div>
           </div>
         </div>
@@ -423,38 +614,34 @@
     </div>
   </section>
 
-  <!-- SECTION 4: LIVE BUILD 3D TOWER CONSTRUCTION SIMULATOR -->
-  <section id="live-build" class="py-28 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-12">
+  <!-- SECTION: LIVE 24-FLOOR HIGH-RISE TOWER CONSTRUCTION SIMULATOR -->
+  <section id="live-build" class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       
-      <!-- HEADER -->
-      <div class="flex flex-wrap justify-between items-end gap-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <p class="font-forma-mono text-xs text-gold-400 tracking-[0.25em]">REAL-TIME CONSTRUCTION SIMULATION</p>
-          <h2 class="font-forma text-5xl sm:text-7xl font-bold text-white mt-2">
-            HIGH-RISE TOWER CONSTRUCTION.
-          </h2>
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">ON-SITE CONSTRUCTION SIMULATOR</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">High-Rise Tower Construction.</h2>
         </div>
-        <p class="font-forma-mono text-xs text-slate-400 max-w-lg leading-relaxed">
+        <p class="text-gray-600 dark:text-slate-300 text-sm max-w-lg font-light leading-relaxed">
           Drag to orbit the building site in 3D. Move the progress slider to watch concrete cores, glass panels, and the tower crane build the 24-floor high-rise in real-time.
         </p>
       </div>
 
-      <!-- SPACIOUS 680px LIVE TOWER STAGE -->
       <div class="live-tower-stage shadow-2xl !h-[680px]">
         <canvas id="c2" class="live-tower-canvas" aria-label="3D tower under construction"></canvas>
 
         <div class="live-tower-panel">
           <div>
             <span class="text-white font-bold text-xs block">FLOORS COMPLETE</span>
-            <b id="fl" class="text-gold-400 font-bold">0 / 24</b>
+            <b id="fl" class="text-[#FF5C1B] font-bold">0 / 24</b>
           </div>
           <div>
             <span class="text-white font-bold text-xs block">PROGRESS</span>
             <b id="pc" class="text-emerald-400 font-bold">0%</b>
           </div>
-          <button id="toggleAutoBuildBtn" class="forma-btn-outline !py-2 !px-3 text-xs shrink-0" title="Toggle Endless Auto-Build Loop">
-            <i data-lucide="repeat" class="w-3.5 h-3.5 text-gold-400"></i>
+          <button id="toggleAutoBuildBtn" class="forma-btn-outline !py-2 !px-3 text-xs shrink-0 !border-white/30" title="Toggle Endless Auto-Build Loop">
+            <i data-lucide="repeat" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
             <span id="autoBuildStatusText">LOOP ACTIVE</span>
           </button>
           <label for="sl" class="grow">
@@ -467,206 +654,49 @@
     </div>
   </section>
 
-  <!-- SECTION 5: ARCHITECTURAL & INTERIOR DESIGN SERVICES (AIMANI DEPTH) -->
-  <section id="services" class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-16">
+  <!-- SECTION: TESTIMONIALS (HEAR FROM OUR CLIENTS) -->
+  <section class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
-        <div>
-          <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">FULL-SPECTRUM DISCIPLINES</span>
-          <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white mt-2">OUR CORE SERVICES.</h2>
-        </div>
-        <p class="font-forma-mono text-xs text-slate-400 max-w-md leading-relaxed">
-          From concept sketches and structural engineering to turnkey construction supervision and luxury interior fit-outs.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- SERVICE 01: ARCHITECTURAL DESIGN -->
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-gold-500/20 border border-gold-500/30 flex items-center justify-center text-gold-400">
-              <i data-lucide="building-2" class="w-7 h-7"></i>
-            </div>
-            <p class="font-forma-mono text-xs text-slate-400">01 / ARCHITECTURE</p>
-            <h3 class="font-forma text-3xl font-bold text-white">MODERN ARCHITECTURE & VILLAS</h3>
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Bespoke luxury residences and villas engineered for Rwandan topography. Bioclimatic passive cooling, panoramic glazing, and natural stone textures.
-            </p>
-          </div>
-          <ul class="font-forma-mono text-xs text-slate-400 space-y-2 pt-4 border-t border-white/10">
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Masterplan & CAD Blueprints</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> 3D Virtual Reality Twins</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> RDB Building Permits</li>
-          </ul>
-        </div>
-
-        <!-- SERVICE 02: COMMERCIAL & HIGH-RISE -->
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
-              <i data-lucide="layers" class="w-7 h-7"></i>
-            </div>
-            <p class="font-forma-mono text-xs text-slate-400">02 / HIGH-RISE</p>
-            <h3 class="font-forma text-3xl font-bold text-white">COMMERCIAL TOWERS & HUBS</h3>
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Post-tensioned concrete cores, curtain-wall facades, and high-efficiency MEP engineering for corporate offices, mixed-use plazas, and institutions.
-            </p>
-          </div>
-          <ul class="font-forma-mono text-xs text-slate-400 space-y-2 pt-4 border-t border-white/10">
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> 7-Day Rapid Casting Cycles</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Structural Load Engineering</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Kinetic Solar Facades</li>
-          </ul>
-        </div>
-
-        <!-- SERVICE 03: INTERIOR ARCHITECTURE & LIGHTING -->
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400">
-              <i data-lucide="palette" class="w-7 h-7"></i>
-            </div>
-            <p class="font-forma-mono text-xs text-slate-400">03 / INTERIORS</p>
-            <h3 class="font-forma text-3xl font-bold text-white">INTERIOR & AMBIENCE DESIGN</h3>
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Transforming raw spaces into refined sensorial environments. Architectural cove lighting, custom Italian millwork, and acoustic optimization.
-            </p>
-          </div>
-          <ul class="font-forma-mono text-xs text-slate-400 space-y-2 pt-4 border-t border-white/10">
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Bespoke Furniture Fitout</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Lux Lighting Calculations</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Material Swatch Boards</li>
-          </ul>
-        </div>
-
-        <!-- SERVICE 04: CONSTRUCTION SUPERVISION & BOQ -->
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-              <i data-lucide="clipboard-check" class="w-7 h-7"></i>
-            </div>
-            <p class="font-forma-mono text-xs text-slate-400">04 / MANAGEMENT</p>
-            <h3 class="font-forma text-3xl font-bold text-white">CONSTRUCTION & BOQ TRACKING</h3>
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Resident engineers on site daily. Complete Bill of Quantities (BOQ) cost controls, concrete slump testing, and live client portal telemetry.
-            </p>
-          </div>
-          <ul class="font-forma-mono text-xs text-slate-400 space-y-2 pt-4 border-t border-white/10">
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> 0% Budget Overrun Guarantee</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Daily Field Engineer Logs</li>
-            <li class="flex items-center gap-2"><span class="text-gold-400">✓</span> Turnkey Handover</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECTION 6: THE 4-STEP ARCHITECTURAL JOURNEY (AIMANI PROCESS REFERENCE) -->
-  <section id="process" class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-16">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-4">
-        <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">PRECISION METHODOLOGY</span>
-        <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white">HOW WE BRING VISIONS TO LIFE.</h2>
-        <p class="text-slate-300 text-sm font-light leading-relaxed">
-          A seamless, transparent 4-stage engineering pathway designed to safeguard your investment from initial plot survey through to turnkey key handover.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <div class="forma-card p-8 space-y-4 relative">
-          <div class="text-5xl font-forma font-bold text-gold-400/40">01</div>
-          <h4 class="font-forma text-2xl font-bold text-white">TOPOGRAPHICAL FEASIBILITY</h4>
-          <p class="text-slate-300 text-xs font-light leading-relaxed">
-            Drone contour scanning, soil core sampling, and City of Kigali zoning review to uncover exact slope opportunities.
-          </p>
-        </div>
-
-        <div class="forma-card p-8 space-y-4 relative">
-          <div class="text-5xl font-forma font-bold text-gold-400/40">02</div>
-          <h4 class="font-forma text-2xl font-bold text-white">3D TWIN & SCHEMATICS</h4>
-          <p class="text-slate-300 text-xs font-light leading-relaxed">
-            Translating your lifestyle vision into interactive Three.js 3D models, interior lighting studies, and architectural blueprints.
-          </p>
-        </div>
-
-        <div class="forma-card p-8 space-y-4 relative">
-          <div class="text-5xl font-forma font-bold text-gold-400/40">03</div>
-          <h4 class="font-forma text-2xl font-bold text-white">VERIFIED BOQ & PERMITS</h4>
-          <p class="text-slate-300 text-xs font-light leading-relaxed">
-            Exhaustive quantity calculations itemizing every metric ton of cement, steel, and glazing with RDB stamped approvals.
-          </p>
-        </div>
-
-        <div class="forma-card p-8 space-y-4 relative">
-          <div class="text-5xl font-forma font-bold text-gold-400/40">04</div>
-          <h4 class="font-forma text-2xl font-bold text-white">ON-SITE EXECUTION & HANDOVER</h4>
-          <p class="text-slate-300 text-xs font-light leading-relaxed">
-            Construction managed by licensed resident site engineers with daily milestone logs available in your Client Portal.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECTION 7: CLIENT TESTIMONIALS (AIMANI TRUST INDICATOR) -->
-  <section class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-16">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
-        <div>
-          <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">VERIFIED CLIENT IMPACT</span>
-          <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white mt-2">TESTIMONIALS & TRUST.</h2>
-        </div>
-        <p class="font-forma-mono text-xs text-slate-400 max-w-md">
-          Hear from our residential villa owners, commercial real estate developers, and international partners.
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">CLIENT EXPERIENCES</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white">
+          Hear from our satisfied clients and partners.
+        </h2>
+        <p class="text-gray-600 dark:text-slate-300 text-sm font-light">
+          About their experiences working with KEYSTONE Architecture Design.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex text-gold-400 gap-1 text-sm">★★★★★</div>
-            <p class="text-slate-200 text-sm font-light leading-relaxed italic">
-              "Working with Keystone redefined our family home. The 3D model engine allowed us to inspect every angle of our Gacuriro villa before groundbreaking, and the BOQ cost sheet was 100% accurate down to the last dollar."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 font-forma-mono text-xs">
-            <p class="text-white font-bold">Dr. Emmanuel Habimana</p>
-            <p class="text-slate-400">Homeowner · Gacuriro Pergola Villa</p>
+        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+          <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
+            "Working with this team was exceptional. Their attention to detail and innovative approach created something truly remarkable for our villa in Gacuriro."
+          </p>
+          <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+            <p class="font-bold text-gray-900 dark:text-white text-sm">UI / UX Designer & Villa Owner</p>
+            <p class="text-xs text-gray-500 font-forma-mono">Gacuriro Estate, Kigali</p>
           </div>
         </div>
 
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex text-gold-400 gap-1 text-sm">★★★★★</div>
-            <p class="text-slate-200 text-sm font-light leading-relaxed italic">
-              "As a diaspora investor in the UK building in Kigali, being able to track resident engineer daily field logs and concrete slump tests on the Client Portal gave me absolute confidence."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 font-forma-mono text-xs">
-            <p class="text-white font-bold">Clarisse Uwase</p>
-            <p class="text-slate-400">Diaspora Property Investor · Nyarutarama Glass Atrium</p>
+        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+          <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
+            "The sustainable and innovative designs completely redefined our space. Professional service, verified BOQ pricing, and clear timeline from start to finish."
+          </p>
+          <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+            <p class="font-bold text-gray-900 dark:text-white text-sm">Project Manager</p>
+            <p class="text-xs text-gray-500 font-forma-mono">Nyarutarama Atrium Residence</p>
           </div>
         </div>
 
-        <div class="forma-card p-8 sm:p-10 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex text-gold-400 gap-1 text-sm">★★★★★</div>
-            <p class="text-slate-200 text-sm font-light leading-relaxed italic">
-              "Their structural engineering and rapid 7-day slab casting schedule kept our commercial high-rise exactly on target. Exceptional attention to detail and African climate sustainability."
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 font-forma-mono text-xs">
-            <p class="text-white font-bold">Eng. Patrick Kayihura</p>
-            <p class="text-slate-400">Project Director · Commercial High-Rise Tower</p>
+        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+          <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
+            "As an international client in London, tracking daily site engineer field logs on the Client Portal gave me absolute confidence. Outstanding execution."
+          </p>
+          <div class="pt-4 border-t border-gray-100 dark:border-white/10">
+            <p class="font-bold text-gray-900 dark:text-white text-sm">Diaspora Real Estate Investor</p>
+            <p class="text-xs text-gray-500 font-forma-mono">Kicukiro Hillside Complex</p>
           </div>
         </div>
 
@@ -675,61 +705,63 @@
     </div>
   </section>
 
-  <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS (AIMANI FAQ REFERENCE) -->
-  <section class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-4xl mx-auto space-y-12">
+  <!-- SECTION: FREQUENTLY ASKED QUESTIONS (AIMANI FAQ ACCORDION) -->
+  <section class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="text-center space-y-4">
-        <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">FREQUENTLY ASKED QUESTIONS</span>
-        <h2 class="font-forma text-5xl sm:text-6xl font-bold text-white">COMMONLY ASKED QUESTIONS.</h2>
+      <div class="text-center space-y-3">
+        <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white">
+          Common Questions & Answers.
+        </h2>
       </div>
 
       <div class="space-y-4">
         
         <div class="faq-item">
           <button class="faq-trigger" onclick="window.toggleFaq(this)">
-            <span class="font-forma text-2xl font-bold text-white">01 / What architectural and interior design services do you offer?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon"></i>
+            <span class="text-lg font-bold text-gray-900 dark:text-white">What types of architectural and interior design services do you offer?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon text-[#FF5C1B]"></i>
           </button>
           <div class="faq-answer">
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              We provide end-to-end architectural design, BIM spatial modeling, structural engineering, interior architecture & ambience lighting design, City of Kigali building permit processing, and turnkey on-site construction supervision.
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              We offer comprehensive services including modern residential architecture, commercial high-rise engineering, complete space planning, color consultation, custom furniture fit-out, and turnkey construction management through completion.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-trigger" onclick="window.toggleFaq(this)">
-            <span class="font-forma text-2xl font-bold text-white">02 / How do I start a project with Keystone?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon"></i>
+            <span class="text-lg font-bold text-gray-900 dark:text-white">How do I start a project with you?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon text-[#FF5C1B]"></i>
           </button>
           <div class="faq-answer">
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Simply complete our Project Consultation form below or contact our office via WhatsApp. We will conduct an initial site assessment, review your topographical plot requirements, and prepare a preliminary 3D concept and estimated BOQ quotation within 48 hours.
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Simply complete our Project Consultation form below or contact our office via WhatsApp. We'll schedule a consultation to discuss your vision, plot coordinates, and requirements.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-trigger" onclick="window.toggleFaq(this)">
-            <span class="font-forma text-2xl font-bold text-white">03 / Are your services available for diaspora and international clients?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon"></i>
+            <span class="text-lg font-bold text-gray-900 dark:text-white">Are your architectural services available internationally?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon text-[#FF5C1B]"></i>
           </button>
           <div class="faq-answer">
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Yes. A substantial portion of our private villa clients reside in Europe, North America, and across the African continent. Our integrated Client Portal provides daily field logs, slump test certificates, milestone percentage updates, and downloadable PDF/DWG blueprints from anywhere in the world.
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Yes, we work with clients worldwide and coordinate projects remotely with daily site engineer logs, concrete test reports, and milestone tracking in our Client Portal.
             </p>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-trigger" onclick="window.toggleFaq(this)">
-            <span class="font-forma text-2xl font-bold text-white">04 / How do you ensure BOQ accuracy and eliminate budget overruns?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon"></i>
+            <span class="text-lg font-bold text-gray-900 dark:text-white">What is your design and construction process?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 faq-icon text-[#FF5C1B]"></i>
           </button>
           <div class="faq-answer">
-            <p class="text-slate-300 text-sm font-light leading-relaxed">
-              Every design is backed by detailed BIM quantity takeoffs itemizing reinforcement rebar, cement grade, glazing square meters, and finishings. We lock in fixed-rate contracts with verified supplier agreements to guarantee zero unforeseen cost inflation.
+            <p class="text-gray-600 dark:text-slate-300 text-sm leading-relaxed font-light">
+              Our process includes consultation, topographical analysis, concept development, 3D digital twin, verified BOQ calculation, revisions, RDB permit filing, and turnkey on-site supervision.
             </p>
           </div>
         </div>
@@ -739,202 +771,198 @@
     </div>
   </section>
 
-  <!-- SECTION 9: INTERACTIVE CONSULTATION & INSTANT BOQ ESTIMATOR FORM -->
-  <section id="consultation" class="py-24 px-6 sm:px-12 md:px-16 bg-[#090A0D] border-t border-white/10 relative z-10">
-    <div class="max-w-4xl mx-auto">
-      <div class="forma-card p-10 sm:p-14 space-y-10">
+  <!-- SECTION: START YOUR PROJECT / CONSULTATION FORM (AIMANI CALL TO ACTION) -->
+  <section id="consultation" class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white dark:bg-[#12141A] rounded-3xl p-8 sm:p-12 border border-gray-200 dark:border-white/10 shadow-xl space-y-8">
         
         <div class="space-y-3">
-          <span class="font-forma-mono text-xs text-gold-400 tracking-[0.25em] uppercase">START YOUR ARCHITECTURAL JOURNEY</span>
-          <h2 class="font-forma text-4xl sm:text-6xl font-bold text-white leading-tight">
-            REQUEST A PROJECT CONSULTATION.
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">START YOUR PROJECT</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white">
+            Let's bring your architectural vision to life.
           </h2>
-          <p class="text-slate-300 text-sm font-light leading-relaxed">
-            Fill in your project details below to calculate your estimated Bill of Quantities (BOQ). Your request will sync directly into the Client Portal with an active tracking reference code.
+          <p class="text-gray-600 dark:text-slate-300 text-sm font-light">
+            Schedule a consultation with our expert team. We'll get back to you within 24 hours with an estimated BOQ.
           </p>
         </div>
 
         <form onsubmit="window.handleConsultationSubmit(event)" class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
-              <label class="font-forma-mono text-xs text-slate-300 block">FULL NAME *</label>
+              <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Full Name *</label>
               <input type="text" name="clientName" required placeholder="e.g. Jean-Luc Nkurunziza" class="keystone-input">
             </div>
 
             <div class="space-y-2">
-              <label class="font-forma-mono text-xs text-slate-300 block">EMAIL ADDRESS *</label>
+              <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Email Address *</label>
               <input type="email" name="clientEmail" required placeholder="e.g. client@domain.rw" class="keystone-input">
             </div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="space-y-2">
-              <label class="font-forma-mono text-xs text-slate-300 block">PHONE / WHATSAPP</label>
+              <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Phone / WhatsApp</label>
               <input type="tel" name="clientPhone" placeholder="+250 788 000 000" class="keystone-input">
             </div>
 
             <div class="space-y-2">
-              <label class="font-forma-mono text-xs text-slate-300 block">SERVICE TYPE</label>
-              <select name="projectType" class="keystone-input bg-[#12141A]">
-                <option value="Residential Villa Architecture">🏛️ Luxury Residential Villa</option>
-                <option value="Commercial High-Rise Tower">🏢 Commercial High-Rise</option>
-                <option value="Interior Architecture & Ambience">🎨 Interior Architecture Fit-Out</option>
-                <option value="Construction Supervision & BOQ">📋 Construction Supervision & BOQ</option>
+              <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Service Type</label>
+              <select name="projectType" class="keystone-input">
+                <option value="Residential Villa Architecture">🏛️ Architecture</option>
+                <option value="Interior Design & Fitout">🎨 Interior Design</option>
+                <option value="Commercial High-Rise">🏢 Construction</option>
+                <option value="Trainings & BIM">📚 Trainings</option>
               </select>
             </div>
 
             <div class="space-y-2">
-              <label class="font-forma-mono text-xs text-slate-300 block">ESTIMATED BUDGET</label>
-              <select name="estimatedBudget" class="keystone-input bg-[#12141A]">
+              <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Budget Range</label>
+              <select name="estimatedBudget" class="keystone-input">
                 <option value="$100k - $250k USD">$100k - $250k USD</option>
                 <option value="$250k - $500k USD">$250k - $500k USD</option>
                 <option value="$500k - $1M+ USD">$500k - $1M+ USD</option>
-                <option value="$1M - $5M+ USD (Commercial)">$1M - $5M+ USD (Commercial)</option>
+                <option value="$1M - $5M+ USD (Commercial)">$1M - $5M+ USD</option>
               </select>
             </div>
           </div>
 
           <div class="space-y-2">
-            <label class="font-forma-mono text-xs text-slate-300 block">PLOT LOCATION / ESTATE</label>
+            <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Plot Location</label>
             <input type="text" name="projectLocation" placeholder="e.g. Gacuriro / Nyarutarama / Kicukiro / Kigali CBD" class="keystone-input">
           </div>
 
           <div class="space-y-2">
-            <label class="font-forma-mono text-xs text-slate-300 block">PROJECT VISION & REQUIREMENTS</label>
-            <textarea name="projectNotes" rows="4" placeholder="Describe your architectural vision, number of floors, preferred materials, or timeline..." class="keystone-input"></textarea>
+            <label class="text-xs font-bold text-gray-700 dark:text-slate-300 uppercase font-forma-mono">Project Vision</label>
+            <textarea name="projectNotes" rows="4" placeholder="Describe your architectural vision, number of floors, or timeline..." class="keystone-input"></textarea>
           </div>
 
-          <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="font-forma-mono text-xs text-slate-400">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 inline mr-1"></i> RDB & City of Kigali Registered Engineers
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <p class="text-xs text-gray-500 font-forma-mono">
+              ✓ Direct sync with Client Tracking Portal
             </p>
-            <button type="submit" id="consultationSubmitBtn" class="forma-btn-outline !bg-gold-500 !text-black !border-gold-400 font-bold hover:!bg-white w-full sm:w-auto">
-              <span>GENERATE ESTIMATED BOQ & TRACK</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <button type="submit" id="consultationSubmitBtn" class="bg-black hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 text-white font-bold py-4 px-8 rounded-full text-sm transition-colors w-full sm:w-auto uppercase tracking-wider">
+              Start your Project →
             </button>
           </div>
         </form>
 
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER (EXACT FORMA + AIMANI SPECIFICATION) -->
-  <footer class="py-16 px-6 sm:px-12 md:px-16 bg-[#050608] border-t border-white/10 font-forma-mono text-xs text-slate-400 relative z-10">
-    <div class="max-w-[1400px] mx-auto space-y-12">
+  <!-- FOOTER (AIMANI SPECIFICATION) -->
+  <footer class="w-full py-16 bg-[#181818] text-gray-300 font-sans border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         
         <div class="space-y-4">
-          <p class="text-white font-bold text-sm">KEYSTONE ARCHITECTS</p>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Architecture Shaped by Light, Form & Purpose. Registered architectural design, BIM technology, and structural engineering studio in Kigali, Rwanda.
+          <p class="text-white font-bold text-lg">KEYSTONE ARCHITECTS</p>
+          <p class="text-gray-400 text-sm leading-relaxed font-light">
+            Creating sustainable and innovative architectural designs that redefine spaces across Rwanda and beyond.
           </p>
-          <div class="pt-2 text-gold-400 font-bold">
+          <p class="text-[#FF5C1B] font-bold text-xs font-forma-mono">
             KN 78 St, Kigali, Rwanda
-          </div>
+          </p>
         </div>
 
         <div class="space-y-3">
-          <p class="text-white font-bold text-xs uppercase tracking-widest">DISCIPLINES</p>
-          <ul class="space-y-2">
-            <li><a href="#selected-work" class="hover:text-white transition-colors">Residential Architecture</a></li>
-            <li><a href="#selected-work" class="hover:text-white transition-colors">Commercial High-Rises</a></li>
-            <li><a href="#selected-work" class="hover:text-white transition-colors">Interior & Lighting Ambience</a></li>
-            <li><a href="#3d-studio" class="hover:text-white transition-colors">3D Interactive BIM Studio</a></li>
+          <p class="text-white font-bold text-sm uppercase tracking-wider">Services</p>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#services" class="hover:text-white transition-colors">🏗️ Construction</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">🎨 Interior Design</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">🏛️ Architecture</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">📚 Trainings & BIM</a></li>
           </ul>
         </div>
 
         <div class="space-y-3">
-          <p class="text-white font-bold text-xs uppercase tracking-widest">PORTALS & TOOLS</p>
-          <ul class="space-y-2">
+          <p class="text-white font-bold text-sm uppercase tracking-wider">Portals & Media</p>
+          <ul class="space-y-2 text-sm text-gray-400">
             <li><a href="client-portal.html" class="hover:text-white transition-colors">Client Tracking Portal</a></li>
             <li><a href="dashboard.html" class="hover:text-white transition-colors">Admin Dashboard</a></li>
-            <li><a href="#live-build" class="hover:text-white transition-colors">Live 24-Floor Tower Simulator</a></li>
-            <li><a href="#consultation" class="hover:text-white transition-colors">BOQ Quote Estimator</a></li>
+            <li><a href="#3d-studio" class="hover:text-white transition-colors">Interactive 3D Studio</a></li>
+            <li><a href="#live-build" class="hover:text-white transition-colors">Live 24-Floor Simulator</a></li>
           </ul>
         </div>
 
         <div class="space-y-3">
-          <p class="text-white font-bold text-xs uppercase tracking-widest">DIRECT HOTLINE</p>
-          <p class="text-slate-300">Mon - Sat: 8:00 AM - 6:00 PM</p>
-          <p><a href="mailto:info@keystone.rw" class="text-gold-400 hover:text-white">INFO@KEYSTONE.RW</a></p>
-          <p><a href="tel:+250788000000" class="hover:text-white">+250 788 000 000 (Site Desk)</a></p>
+          <p class="text-white font-bold text-sm uppercase tracking-wider">Direct Contact</p>
+          <p class="text-sm text-gray-400">Kigali Office: Mon - Sat 8AM - 6PM</p>
+          <p class="text-sm"><a href="mailto:info@keystone.rw" class="text-[#FF5C1B] hover:underline">info@keystone.rw</a></p>
+          <p class="text-sm text-gray-400">+250 788 000 000</p>
         </div>
 
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
-        <p>© 2026 KEYSTONE ARCHITECTS. ALL RIGHTS RESERVED.</p>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-500">
+        <p>© 2026 KEYSTONE ARCHITECTS STUDIO. ALL RIGHTS RESERVED.</p>
         <div class="flex items-center gap-6">
-          <a href="https://instagram.com" target="_blank" class="hover:text-white transition-colors">INSTAGRAM</a>
-          <span>|</span>
-          <a href="https://linkedin.com" target="_blank" class="hover:text-white transition-colors">LINKEDIN</a>
-          <span>|</span>
-          <a href="https://youtube.com" target="_blank" class="hover:text-white transition-colors">YOUTUBE</a>
-          <span>|</span>
-          <a href="client-portal.html" class="hover:text-white transition-colors">CLIENT PORTAL</a>
+          <a href="https://instagram.com" target="_blank" class="hover:text-white transition-colors">Instagram</a>
+          <span>·</span>
+          <a href="https://linkedin.com" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+          <span>·</span>
+          <a href="https://youtube.com" target="_blank" class="hover:text-white transition-colors">YouTube</a>
+          <span>·</span>
+          <a href="client-portal.html" class="hover:text-white transition-colors">Client Portal</a>
         </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- INTERACTIVE PROJECT DETAIL MODAL (AIMANI FULL SPECIFICATION VIEWER) -->
+  <!-- INTERACTIVE PROJECT DETAIL MODAL -->
   <div id="projectModal" aria-hidden="true">
-    <div class="modal-content-box p-8 sm:p-12 relative space-y-8">
+    <div class="modal-content-box p-8 sm:p-12 relative space-y-8 bg-white dark:bg-[#181A20] rounded-3xl">
       
-      <!-- CLOSE BUTTON -->
-      <button onclick="window.closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors" title="Close Specs">
+      <button onclick="window.closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 border border-gray-200 dark:border-white/20 flex items-center justify-center text-gray-700 dark:text-white transition-colors" title="Close Specs">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- PROJECT IMAGE -->
-        <div class="rounded-2xl overflow-hidden h-[340px] sm:h-[400px] border border-white/15 shadow-2xl">
+        <div class="rounded-2xl overflow-hidden h-[340px] sm:h-[400px] border border-gray-200 dark:border-white/15 shadow-xl">
           <img id="modalImg" src="" alt="Project detail view" class="w-full h-full object-cover">
         </div>
 
-        <!-- SPECS CONTENT -->
         <div class="space-y-6">
           <div>
-            <span id="modalCategory" class="px-3 py-1 bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-forma-mono font-bold rounded-md">CATEGORY</span>
-            <h3 id="modalTitle" class="font-forma text-4xl sm:text-5xl font-bold text-white mt-3 leading-tight">PROJECT TITLE</h3>
-            <p id="modalLocation" class="font-forma-mono text-xs text-slate-400 mt-1">LOCATION</p>
+            <span id="modalCategory" class="px-3 py-1 bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] text-xs font-bold rounded-full">CATEGORY</span>
+            <h3 id="modalTitle" class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3 leading-tight">PROJECT TITLE</h3>
+            <p id="modalLocation" class="font-forma-mono text-xs text-gray-500 dark:text-slate-400 mt-1">LOCATION</p>
           </div>
 
-          <p id="modalDesc" class="text-slate-300 text-sm font-light leading-relaxed">
+          <p id="modalDesc" class="text-gray-600 dark:text-slate-300 text-sm font-light leading-relaxed">
             Detailed architectural description.
           </p>
 
-          <!-- TECHNICAL PARAMETERS TABLE -->
-          <div class="font-forma-mono text-xs space-y-2.5 pt-4 border-t border-white/10">
-            <div class="flex justify-between py-1 border-b border-white/5">
-              <span class="text-slate-400">TOTAL AREA:</span>
-              <span id="modalArea" class="text-white font-bold">520 m²</span>
+          <div class="font-forma-mono text-xs space-y-2.5 pt-4 border-t border-gray-200 dark:border-white/10">
+            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-white/5">
+              <span class="text-gray-400">TOTAL AREA:</span>
+              <span id="modalArea" class="text-gray-900 dark:text-white font-bold">520 m²</span>
             </div>
-            <div class="flex justify-between py-1 border-b border-white/5">
-              <span class="text-slate-400">COMPLETION:</span>
-              <span id="modalYear" class="text-white font-bold">2024</span>
+            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-white/5">
+              <span class="text-gray-400">COMPLETION:</span>
+              <span id="modalYear" class="text-gray-900 dark:text-white font-bold">2024</span>
             </div>
-            <div class="flex justify-between py-1 border-b border-white/5">
-              <span class="text-slate-400">ESTIMATED BOQ:</span>
-              <span id="modalBudget" class="text-gold-400 font-bold">$220,000 USD</span>
+            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-white/5">
+              <span class="text-gray-400">ESTIMATED BOQ:</span>
+              <span id="modalBudget" class="text-[#FF5C1B] font-bold">$220,000 USD</span>
             </div>
-            <div class="flex justify-between py-1 border-b border-white/5">
-              <span class="text-slate-400">STATUS:</span>
-              <span id="modalStatus" class="text-emerald-400 font-bold">Completed & Certified</span>
+            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-white/5">
+              <span class="text-gray-400">STATUS:</span>
+              <span id="modalStatus" class="text-emerald-500 font-bold">Completed & Certified</span>
             </div>
             <div class="py-1">
-              <span class="text-slate-400 block mb-1">KEY MATERIALS:</span>
-              <span id="modalMaterials" class="text-slate-200">Marble, Steel, Glass</span>
+              <span class="text-gray-400 block mb-1">KEY MATERIALS:</span>
+              <span id="modalMaterials" class="text-gray-700 dark:text-slate-200">Marble, Steel, Glass</span>
             </div>
           </div>
 
           <div class="pt-2 flex gap-4">
-            <a href="#consultation" onclick="window.closeProjectModal()" class="forma-btn-outline !bg-gold-500 !text-black !border-gold-400 font-bold hover:!bg-white grow justify-center">
-              <span>COMMISSION SIMILAR PROJECT</span>
-              <span>→</span>
+            <a href="#consultation" onclick="window.closeProjectModal()" class="bg-black text-white hover:bg-[#FF5C1B] dark:bg-white dark:text-black font-bold py-3.5 px-6 rounded-full text-xs uppercase tracking-wider text-center grow transition-colors">
+              Start Similar Project →
             </a>
           </div>
         </div>
