@@ -28,138 +28,274 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-[#FAF8F5] text-slate-900 dark:bg-[#090A0D] dark:text-white antialiased font-sans selection:bg-[#FF5C1B] selection:text-white relative">
+<body class="bg-[#FAF8F5] text-slate-900 dark:bg-[#090A0D] dark:text-white antialiased font-sans selection:bg-[#FF5C1B] selection:text-white relative min-h-screen">
 
-  <!-- TOP HEADER / NAVBAR (EXACT AIMANI ARCHITECTURE STUDIO REPLICA) -->
-  <header class="w-full bg-white/95 dark:bg-[#0E1017]/95 border-b border-gray-100 dark:border-white/10 sticky top-0 z-50 backdrop-blur-md transition-colors">
-    <div class="w-full px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center w-full" style="height: 105px;">
-        
-        <!-- LEFT: FLOATING CAPSULE NAVIGATION (MATCHING SCREENSHOT EXACTLY) -->
-        <nav class="hidden lg:flex items-center aimani-nav-bar" aria-label="Main Navigation">
-          
-          <!-- Home -->
-          <a href="#hero" class="aimani-nav-link active">Home</a>
+  <!-- AMBIENT LIGHT REFRACTION ORBS FOR LIQUID GLASS EFFECT -->
+  <div class="ambient-glow-container" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+  </div>
 
-          <!-- Our Services Dropdown -->
-          <div class="aimani-dropdown-group relative">
-            <button class="aimani-nav-link group-hover:text-[#FF5C1B]" type="button">
-              <span>Our Services</span>
-              <svg class="w-3.5 h-3.5 text-[#FF5C1B] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            <!-- Dropdown Card (Exact replica from user screenshot) -->
-            <div class="aimani-dropdown-menu">
-              <a href="#services" class="aimani-dropdown-item">
-                <span class="text-base">🏗️</span>
-                <span>Construction</span>
-              </a>
-              <a href="#services" class="aimani-dropdown-item">
-                <span class="text-base">🎨</span>
-                <span>Interior Design</span>
-              </a>
-              <a href="#services" class="aimani-dropdown-item">
-                <span class="text-base">🏛️</span>
-                <span>Architecture</span>
-              </a>
-              <a href="#process" class="aimani-dropdown-item">
-                <span class="text-base">🗂️</span>
-                <span>Trainings</span>
-              </a>
-            </div>
+  <!-- TOP FLOATING FROSTED GLASS CAPSULE HEADER -->
+  <header class="floating-glass-header" aria-label="Main Navigation Bar">
+    <div class="flex justify-between items-center w-full">
+      
+      <!-- LEFT: CAPSULE NAVIGATION -->
+      <nav class="hidden lg:flex items-center aimani-nav-bar" aria-label="Main Navigation">
+        <a href="#hero" class="aimani-nav-link active">Home</a>
+
+        <!-- Our Services Dropdown -->
+        <div class="aimani-dropdown-group relative">
+          <button class="aimani-nav-link" type="button">
+            <span>Our Services</span>
+            <svg class="w-3.5 h-3.5 text-[#FF5C1B] transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="aimani-dropdown-menu">
+            <a href="#services" class="aimani-dropdown-item">
+              <span class="text-base">🏗️</span>
+              <span>Construction</span>
+            </a>
+            <a href="#services" class="aimani-dropdown-item">
+              <span class="text-base">🎨</span>
+              <span>Interior Design</span>
+            </a>
+            <a href="#services" class="aimani-dropdown-item">
+              <span class="text-base">🏛️</span>
+              <span>Architecture</span>
+            </a>
+            <a href="#services" class="aimani-dropdown-item">
+              <span class="text-base">🗂️</span>
+              <span>Trainings & BIM</span>
+            </a>
           </div>
-
-          <!-- Media Dropdown -->
-          <div class="aimani-dropdown-group relative">
-            <button class="aimani-nav-link" type="button">
-              <span>Media</span>
-              <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            <div class="aimani-dropdown-menu">
-              <a href="#3d-studio" class="aimani-dropdown-item">
-                <span class="text-base">🖼️</span>
-                <span>3D Studio</span>
-              </a>
-              <a href="#live-build" class="aimani-dropdown-item">
-                <span class="text-base">🏗️</span>
-                <span>Live Site Simulator</span>
-              </a>
-              <a href="client-portal.html" class="aimani-dropdown-item">
-                <span class="text-base">📋</span>
-                <span>Client Portal</span>
-              </a>
-              <a href="dashboard.html" class="aimani-dropdown-item">
-                <span class="text-base">🛡️</span>
-                <span>Admin Dashboard</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- About Us -->
-          <a href="#about" class="aimani-nav-link">About Us</a>
-
-          <!-- Career -->
-          <a href="#career" class="aimani-nav-link">Career</a>
-
-        </nav>
-
-        <!-- CENTER: KEYSTONE BRAND LOGO -->
-        <div class="flex-1 flex justify-center">
-          <a href="#" class="flex items-center gap-3 group">
-            <div class="w-36 sm:w-44 h-auto transition-transform group-hover:scale-105">
-              <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
-                <g fill="none" stroke-linejoin="round" stroke-linecap="round">
-                  <g class="rise">
-                    <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
-                    <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
-                  </g>
-                  <g class="rise rise-2">
-                    <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
-                    <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
-                  </g>
-                  <g class="rise rise-3">
-                    <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
-                    <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
-                  </g>
-                  <g class="rise rise-4">
-                    <path d="M159 188l110-96 117 96" stroke="#000000" class="dark:stroke-white" stroke-width="17"></path>
-                    <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
-                    <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
-                    <path d="M144 195h257" stroke="#000000" class="dark:stroke-white" stroke-width="6"></path>
-                  </g>
-                </g>
-                <g class="wordmark">
-                  <text x="360" y="260" text-anchor="middle" fill="#000000" class="dark:fill-white" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
-                </g>
-              </svg>
-            </div>
-          </a>
         </div>
 
-        <!-- RIGHT: THEME TOGGLE & START YOUR PROJECT BUTTON (EXACT AIMANI SPEC) -->
-        <div class="flex items-center gap-3">
-          <!-- Black / White Theme Toggle -->
-          <button onclick="window.toggleKeystoneTheme()" class="w-10 h-10 rounded-full border border-gray-200 dark:border-white/20 flex items-center justify-center text-gray-700 dark:text-gold-400 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Light / Dark Mode">
-            <i data-lucide="sun" class="w-4 h-4 dark:block hidden"></i>
-            <i data-lucide="moon" class="w-4 h-4 dark:hidden block text-[#FF5C1B]"></i>
+        <!-- Media Dropdown -->
+        <div class="aimani-dropdown-group relative">
+          <button class="aimani-nav-link" type="button">
+            <span>Media</span>
+            <svg class="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
           </button>
+          <div class="aimani-dropdown-menu">
+            <a href="#3d-studio" class="aimani-dropdown-item">
+              <span class="text-base">🖼️</span>
+              <span>Interactive 3D Studio</span>
+            </a>
+            <a href="#live-build" class="aimani-dropdown-item">
+              <span class="text-base">🏗️</span>
+              <span>Live Site Simulator</span>
+            </a>
+            <a href="client-portal.html" class="aimani-dropdown-item">
+              <span class="text-base">📋</span>
+              <span>Client Tracking Portal</span>
+            </a>
+            <a href="dashboard.html" class="aimani-dropdown-item">
+              <span class="text-base">🛡️</span>
+              <span>Admin Dashboard</span>
+            </a>
+          </div>
+        </div>
 
-          <!-- Start your Project Button (Aimani exact rounded-[10px] height 50px) -->
-          <a href="#consultation" class="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-colors font-semibold text-sm whitespace-nowrap shadow-sm" style="border-radius: 10px; height: 50px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center;">
-            Start your Project
+        <a href="#about" class="aimani-nav-link">About Us</a>
+        <a href="#consultation" class="aimani-nav-link">Career</a>
+      </nav>
+
+      <!-- CENTER: KEYSTONE ARCHITECTS LOGO -->
+      <div class="flex items-center justify-center">
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-32 sm:w-40 h-auto transition-transform group-hover:scale-105">
+            <svg class="logo-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280">
+              <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+                <g class="rise">
+                  <path d="M202 188V101l37-30v117" fill="#d3a240" stroke="#aa7b25" stroke-width="3"></path>
+                  <path d="M213 110v61M226 99v72" stroke="#fff0c6" stroke-width="5"></path>
+                </g>
+                <g class="rise rise-2">
+                  <path d="M245 188V73l39-29v144" fill="#173d6c" stroke="#102b4d" stroke-width="3"></path>
+                  <path d="M258 79v82M270 70v91" stroke="#7395b8" stroke-width="5"></path>
+                </g>
+                <g class="rise rise-3">
+                  <path d="M292 188v-84l34-31v115" fill="#e0b454" stroke="#a97728" stroke-width="3"></path>
+                  <path d="M304 111v56M315 101v66" stroke="#fff1ce" stroke-width="4"></path>
+                </g>
+                <g class="rise rise-4">
+                  <path d="M159 188l110-96 117 96" stroke="#000000" class="dark:stroke-white" stroke-width="17"></path>
+                  <path d="M196 188l73-64 75 64" stroke="#d2a03c" stroke-width="10"></path>
+                  <path d="M238 188l31-27 32 27" stroke="#173d6c" stroke-width="8"></path>
+                  <path d="M144 195h257" stroke="#000000" class="dark:stroke-white" stroke-width="6"></path>
+                </g>
+              </g>
+              <g class="wordmark">
+                <text x="360" y="260" text-anchor="middle" fill="#000000" class="dark:fill-white" font-family="'Barlow Condensed', sans-serif" font-size="64" font-weight="900" letter-spacing="4">KEYSTONE</text>
+              </g>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- RIGHT: THEME TOGGLE & START YOUR PROJECT -->
+      <div class="flex items-center gap-3">
+        <button onclick="window.toggleKeystoneTheme()" class="w-10 h-10 rounded-full border border-gray-300/80 dark:border-white/20 bg-white/40 dark:bg-white/10 backdrop-blur-md flex items-center justify-center text-gray-700 dark:text-gold-400 hover:scale-105 transition-all shadow-sm" title="Toggle Light / Dark Mode">
+          <i data-lucide="sun" class="w-4 h-4 dark:block hidden"></i>
+          <i data-lucide="moon" class="w-4 h-4 dark:hidden block text-[#FF5C1B]"></i>
+        </button>
+
+        <a href="#consultation" class="bg-black text-white hover:bg-[#FF5C1B] dark:bg-white dark:text-black dark:hover:bg-[#FF5C1B] dark:hover:text-white transition-colors font-semibold text-xs sm:text-sm whitespace-nowrap shadow-md rounded-full px-5 py-2.5 sm:px-6 sm:py-3 flex items-center gap-2">
+          <span>Start your Project</span>
+          <span class="text-[#FF5C1B] dark:text-[#FF5C1B]">→</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- TOP HERO VIDEO STAGE (AUTO ADVANCES TO RIGHT ON ENDED) -->
+  <section id="hero" class="hero-video-stage">
+    
+    <!-- TOP REAL-TIME TIMELINE RUNNER -->
+    <div class="video-timeline-runner">
+      <div id="videoTimelineFill" class="video-timeline-fill"></div>
+    </div>
+
+    <!-- VIDEO SLIDER TRACK -->
+    <div id="videoSliderTrack" class="video-slider-track">
+      
+      <!-- SLIDE 01: GACURIRO VILLA -->
+      <div class="video-slide-item active">
+        <video class="video-slide-media" playsinline muted autoplay preload="auto" poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop">
+          <source src="assets/videos/video1.mp4" type="video/mp4">
+          <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+        </video>
+        <div class="video-scrim-overlay"></div>
+      </div>
+
+      <!-- SLIDE 02: NYARUTARAMA GLASS ATRIUM -->
+      <div class="video-slide-item">
+        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop">
+          <source src="assets/videos/video2.mp4" type="video/mp4">
+          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        </video>
+        <div class="video-scrim-overlay"></div>
+      </div>
+
+      <!-- SLIDE 03: KIGALI INNOVATION TOWER -->
+      <div class="video-slide-item">
+        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop">
+          <source src="assets/videos/video3.mp4" type="video/mp4">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <div class="video-scrim-overlay"></div>
+      </div>
+
+      <!-- SLIDE 04: KIYOVU MINIMALIST RESIDENCE -->
+      <div class="video-slide-item">
+        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&auto=format&fit=crop">
+          <source src="assets/videos/video4.mp4" type="video/mp4">
+          <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        </video>
+        <div class="video-scrim-overlay"></div>
+      </div>
+
+    </div>
+
+    <!-- FROSTED LIQUID GLASS HUD CARD OVERLAY -->
+    <div class="absolute inset-0 z-20 flex flex-col justify-center items-start pointer-events-none px-4 sm:px-8 lg:px-16 pt-24 pb-28">
+      <div class="glass-hud-card p-6 sm:p-10 max-w-2xl pointer-events-auto shadow-2xl space-y-5 animate-fade-in">
+        
+        <div class="flex items-center gap-3">
+          <span id="hudProjectCategory" class="px-3.5 py-1 rounded-full text-[11px] font-bold font-forma-mono uppercase tracking-wider bg-[#FF5C1B]/20 text-[#FF5C1B] border border-[#FF5C1B]/40 backdrop-blur-md">
+            🏛️ LUXURY RESIDENTIAL ARCHITECTURE · KIGALI
+          </span>
+          <span class="inline-flex items-center gap-1.5 text-[11px] font-forma-mono text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            LIVE REEL
+          </span>
+        </div>
+
+        <div>
+          <p class="text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-gray-300 dark:text-gray-400">
+            Creative Brilliance, Visionaries, Designers
+          </p>
+          <h1 id="hudProjectTitle" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mt-1 font-forma">
+            GACURIRO PERGOLA VILLA
+          </h1>
+        </div>
+
+        <p id="hudProjectSubtitle" class="text-gray-200 dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+          Cantilevered roof pergolas and black marble colonnades engineered with bioclimatic cross-ventilation.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="#consultation" class="bg-[#FF5C1B] hover:bg-[#e04f14] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-105 flex items-center gap-2">
+            <span>Start your Project</span>
+            <span>→</span>
+          </a>
+          <a href="#selected-work" class="bg-white/20 hover:bg-white/30 text-white border border-white/30 px-6 py-3 rounded-full font-semibold text-xs uppercase tracking-wider backdrop-blur-md transition-all">
+            Explore Portfolio
+          </a>
+          <a href="#3d-studio" class="bg-black/40 hover:bg-black/60 text-white border border-white/20 px-5 py-3 rounded-full font-semibold text-xs uppercase tracking-wider backdrop-blur-md transition-all flex items-center gap-2">
+            <span>3D Studio</span>
+            <i data-lucide="box" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
           </a>
         </div>
 
       </div>
     </div>
-  </header>
 
-  <!-- HERO SECTION (EXACT AIMANI ARCHITECTURE STUDIO REPLICA) -->
-  <section id="hero" class="w-full pt-16 pb-12 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+    <!-- BOTTOM VIDEO PILL STRIP CONTROLS -->
+    <div class="absolute bottom-6 left-0 right-0 z-30 flex items-center justify-center gap-3 px-4 flex-wrap">
+      
+      <!-- Prev Arrow -->
+      <button id="heroVideoPrevBtn" class="w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF5C1B] text-white border border-white/20 backdrop-blur-md flex items-center justify-center transition-all" title="Previous Video">
+        <i data-lucide="chevron-left" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Video Switcher Pills (Auto Advances & Clickable) -->
+      <div class="flex items-center gap-2 flex-wrap justify-center">
+        
+        <button class="video-pill-btn active" data-slide="0">
+          <span>01 Gacuriro Villa</span>
+          <div class="video-pill-progress"></div>
+        </button>
+
+        <button class="video-pill-btn" data-slide="1">
+          <span>02 Glass Atrium</span>
+          <div class="video-pill-progress"></div>
+        </button>
+
+        <button class="video-pill-btn" data-slide="2">
+          <span>03 Innovation Tower</span>
+          <div class="video-pill-progress"></div>
+        </button>
+
+        <button class="video-pill-btn" data-slide="3">
+          <span>04 Minimalist Living</span>
+          <div class="video-pill-progress"></div>
+        </button>
+
+      </div>
+
+      <!-- Next Arrow -->
+      <button id="heroVideoNextBtn" class="w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF5C1B] text-white border border-white/20 backdrop-blur-md flex items-center justify-center transition-all" title="Next Video">
+        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Play / Pause Toggle -->
+      <button id="heroVideoPausePlayBtn" class="w-10 h-10 rounded-full bg-black/60 hover:bg-[#FF5C1B] text-white border border-white/20 backdrop-blur-md flex items-center justify-center transition-all" title="Pause / Play Video">
+        <i data-lucide="pause" class="w-4 h-4"></i>
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO SECTION (EXACT AIMANI ARCHITECTURE STUDIO REPLICA WITH FROSTED GLASS CARDS) -->
+  <section class="w-full pt-20 pb-12 bg-transparent relative z-10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
       
       <!-- EYEBROW LABEL -->
@@ -168,10 +304,10 @@
       </div>
 
       <!-- MAIN HEADLINE (EXACT TEXT FROM SCREENSHOT & AIMANI SOURCE) -->
-      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
+      <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
         <span class="text-[#FF5C1B]">A Team of over</span> 
         <span class="text-black dark:text-white">50 Architects & Engineers.</span>
-      </h1>
+      </h2>
 
       <!-- SUBTITLES -->
       <p class="text-gray-600 dark:text-slate-300 text-base sm:text-xl mt-4 max-w-3xl mx-auto font-light leading-relaxed">
@@ -182,21 +318,21 @@
         From the best architects shaping Rwanda's sustainable skyline.
       </p>
 
-      <!-- STATS STRIP -->
+      <!-- STATS STRIP IN FROSTED LIQUID GLASS CARDS -->
       <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto font-forma-mono text-center">
-        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+        <div class="glass-card p-6 shadow-sm">
           <p class="text-4xl font-extrabold text-[#FF5C1B]">28+</p>
           <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">Projects / Year</p>
         </div>
-        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+        <div class="glass-card p-6 shadow-sm">
           <p class="text-4xl font-extrabold text-black dark:text-white">99.4%</p>
           <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">On-Time Delivery</p>
         </div>
-        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+        <div class="glass-card p-6 shadow-sm">
           <p class="text-4xl font-extrabold text-[#FF5C1B]">15+</p>
           <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">Design Awards</p>
         </div>
-        <div class="bg-white dark:bg-[#12141A] p-6 rounded-2xl border border-gray-200/80 dark:border-white/10 shadow-sm">
+        <div class="glass-card p-6 shadow-sm">
           <p class="text-4xl font-extrabold text-black dark:text-white">100%</p>
           <p class="text-xs text-gray-500 dark:text-slate-400 mt-1 uppercase tracking-wider">RDB Certified</p>
         </div>
@@ -205,27 +341,27 @@
     </div>
   </section>
 
-  <!-- DUAL PHILOSOPHY CARDS (AIMANI EXACT "WHO ARE WE?" & "WHY CHOOSE US?") -->
-  <section class="w-full py-10 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+  <!-- DUAL PHILOSOPHY CARDS (AIMANI EXACT "WHO ARE WE?" & "WHY CHOOSE US?" IN FROSTED LIQUID GLASS) -->
+  <section class="w-full py-10 bg-transparent relative z-10 transition-colors">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-8">
         
-        <!-- CARD 1: WHO ARE WE? (DARK OBSIDIAN) -->
-        <div class="flex-1 bg-[#232323] text-white rounded-3xl p-8 sm:p-10 flex flex-col items-start shadow-xl hover:-translate-y-1 transition-transform">
-          <button class="bg-[#232323] text-white px-6 py-2.5 rounded-full text-sm font-semibold mb-6 border border-white hover:bg-white hover:text-[#232323] transition-colors">
+        <!-- CARD 1: WHO ARE WE? (FROSTED GLASS) -->
+        <div class="flex-1 glass-card p-8 sm:p-10 flex flex-col items-start shadow-xl hover:-translate-y-1 transition-all">
+          <button class="bg-[#FF5C1B] text-white px-6 py-2.5 rounded-full text-sm font-semibold mb-6 shadow-md hover:bg-[#e04f14] transition-colors">
             Who Are We?
           </button>
-          <p class="text-gray-200 text-base sm:text-lg leading-relaxed font-light">
+          <p class="text-gray-800 dark:text-gray-200 text-base sm:text-lg leading-relaxed font-light">
             We are visionaries, creators, and builders. With a passion for innovative architecture, functional interiors, and sustainable construction, we bring dreams to life. From concept to execution, our team blends creativity with precision to design spaces that inspire.
           </p>
         </div>
 
-        <!-- CARD 2: WHY CHOOSE US? (CLEAN WHITE) -->
-        <div class="flex-1 bg-white dark:bg-[#12141A] text-black dark:text-white rounded-3xl p-8 sm:p-10 flex flex-col items-start border border-gray-200 dark:border-white/10 shadow-xl hover:-translate-y-1 transition-transform">
-          <button class="bg-white text-[#232323] px-6 py-2.5 rounded-full text-sm font-semibold mb-6 border border-[#232323] hover:bg-[#232323] hover:text-white transition-colors">
+        <!-- CARD 2: WHY CHOOSE US? (FROSTED GLASS) -->
+        <div class="flex-1 glass-card p-8 sm:p-10 flex flex-col items-start shadow-xl hover:-translate-y-1 transition-all">
+          <button class="bg-black text-white dark:bg-white dark:text-black px-6 py-2.5 rounded-full text-sm font-semibold mb-6 shadow-md hover:bg-[#FF5C1B] dark:hover:bg-[#FF5C1B] dark:hover:text-white transition-colors">
             Why Choose Us?
           </button>
-          <p class="text-gray-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          <p class="text-gray-800 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-light">
             Our Creative Brilliance explains how our designers push boundaries and redefine modern aesthetics. Breaking the rules in new spaces while integrating sustainable technology for energy efficiency, natural cross-ventilation, and structural longevity.
           </p>
         </div>
@@ -234,8 +370,8 @@
     </div>
   </section>
 
-  <!-- SECTION: AT KEYSTONE ARCHITECTURE DESIGN & 3 CORE PILLARS -->
-  <section id="about" class="w-full py-16 bg-[#FAF8F5] dark:bg-[#090A0D] transition-colors">
+  <!-- SECTION: AT KEYSTONE ARCHITECTURE DESIGN & 3 CORE PILLARS (FROSTED GLASS) -->
+  <section id="about" class="w-full py-16 bg-transparent relative z-10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
@@ -247,11 +383,11 @@
         </p>
       </div>
 
-      <!-- 3 VISUAL PILLARS -->
+      <!-- 3 VISUAL PILLARS IN FROSTED GLASS CARDS -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Pillar 1: Architecture -->
-        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+        <div class="glass-card overflow-hidden shadow-md group hover:shadow-xl transition-all">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -265,7 +401,7 @@
         </div>
 
         <!-- Pillar 2: Interior Design -->
-        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+        <div class="glass-card overflow-hidden shadow-md group hover:shadow-xl transition-all">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Interior Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -279,7 +415,7 @@
         </div>
 
         <!-- Pillar 3: Construction & High-Rise -->
-        <div class="bg-white dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200/80 dark:border-white/10 shadow-md group hover:shadow-xl transition-all">
+        <div class="glass-card overflow-hidden shadow-md group hover:shadow-xl transition-all">
           <div class="h-64 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -297,8 +433,8 @@
     </div>
   </section>
 
-  <!-- SECTION: MORE OF OUR SERVICES WE PROVIDE (AIMANI EXACT SERVICES GRID) -->
-  <section id="services" class="w-full py-16 bg-white dark:bg-[#0E1017] border-y border-gray-200/70 dark:border-white/10 transition-colors">
+  <!-- SECTION: MORE OF OUR SERVICES WE PROVIDE (IN FROSTED GLASS CARDS) -->
+  <section id="services" class="w-full py-16 bg-transparent relative z-10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
       
       <div>
@@ -312,7 +448,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
         
-        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+        <div class="glass-card p-8 space-y-4 hover:border-[#FF5C1B] transition-all group">
           <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
             🏗️
           </div>
@@ -322,7 +458,7 @@
           </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+        <div class="glass-card p-8 space-y-4 hover:border-[#FF5C1B] transition-all group">
           <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
             🎨
           </div>
@@ -332,7 +468,7 @@
           </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+        <div class="glass-card p-8 space-y-4 hover:border-[#FF5C1B] transition-all group">
           <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
             🏛️
           </div>
@@ -342,7 +478,7 @@
           </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-[#FAF8F5] dark:bg-[#12141A] border border-gray-200/80 dark:border-white/10 space-y-4 hover:border-[#FF5C1B] transition-colors group">
+        <div class="glass-card p-8 space-y-4 hover:border-[#FF5C1B] transition-all group">
           <div class="w-12 h-12 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-[#FF5C1B] flex items-center justify-center text-2xl">
             📚
           </div>
@@ -376,11 +512,11 @@
     </div>
   </section>
 
-  <!-- SECTION: LATEST PROJECTS (AIMANI CURATED PORTFOLIO WITH FILTERING) -->
-  <section id="selected-work" class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200/80 dark:border-white/10 transition-colors">
+  <!-- SECTION: LATEST PROJECTS (AIMANI CURATED PORTFOLIO IN FROSTED LIQUID GLASS) -->
+  <section id="selected-work" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200 dark:border-white/10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200/50 dark:border-white/10">
         <div>
           <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">OUR PORTFOLIO</span>
           <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Latest Projects.</h2>
@@ -398,11 +534,11 @@
         </div>
       </div>
 
-      <!-- PROJECT CARDS GRID -->
+      <!-- PROJECT CARDS GRID IN FROSTED LIQUID GLASS -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- CARD 01: GACURIRO PERGOLA VILLA -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('gacuriro-villa')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('gacuriro-villa')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000&auto=format&fit=crop" alt="Gacuriro Pergola Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
@@ -417,7 +553,7 @@
                 A luxurious waterfront retreat combining modern elegance with sustainable design principles.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">520 m²</span>
             </div>
@@ -425,7 +561,7 @@
         </div>
 
         <!-- CARD 02: NYARUTARAMA GLASS ATRIUM -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('nyarutarama-atrium')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('nyarutarama-atrium')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="Nyarutarama Glass Atrium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
@@ -440,7 +576,7 @@
                 Contemporary urban living spaces designed for the modern professional lifestyle.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">780 m²</span>
             </div>
@@ -448,7 +584,7 @@
         </div>
 
         <!-- CARD 03: KICUKIRO INFINITY POOL VILLA -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('kicukiro-infinity')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Architecture" onclick="window.openProjectModal('kicukiro-infinity')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop" alt="Kicukiro Infinity Pool Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏛️ Architecture</span>
@@ -463,7 +599,7 @@
                 Innovative hillside residence showcasing harmonious family living and panoramic horizon views.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">640 m²</span>
             </div>
@@ -471,7 +607,7 @@
         </div>
 
         <!-- CARD 04: KIYOVU MINIMALIST LIVING SALON -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('kiyovu-interior')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('kiyovu-interior')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1000&auto=format&fit=crop" alt="Kiyovu Minimalist Living Salon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#FF5C1B]">🎨 Interior Design</span>
@@ -486,7 +622,7 @@
                 Acoustic fluted oak panels, Italian travertine hearth, and ambient architectural cove lighting.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">320 m²</span>
             </div>
@@ -494,7 +630,7 @@
         </div>
 
         <!-- CARD 05: KIGALI INNOVATION TOWER -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Commercial" onclick="window.openProjectModal('norrsken-hub')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Commercial" onclick="window.openProjectModal('norrsken-hub')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" alt="Kigali Innovation Tower" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-900">🏢 Commercial</span>
@@ -509,7 +645,7 @@
                 High-end commercial complex featuring low-E glass facade, kinetic solar shading, and sustainable MEP.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">12,500 m²</span>
             </div>
@@ -517,7 +653,7 @@
         </div>
 
         <!-- CARD 06: KAGUGU TWIN TERRACES ESTATE -->
-        <div class="project-card-item bg-[#FAF8F5] dark:bg-[#12141A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('twin-terraces')">
+        <div class="project-card-item glass-card overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer flex flex-col justify-between group" data-category="Interior" onclick="window.openProjectModal('twin-terraces')">
           <div class="h-64 overflow-hidden relative">
             <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" alt="Kagugu Twin Terraces Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-[#FF5C1B]">🎨 Interior Design</span>
@@ -532,7 +668,7 @@
                 Harmonious interior living featuring Rwandan volcanic basalt accents and bespoke reading nooks.
               </p>
             </div>
-            <div class="pt-4 border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
+            <div class="pt-4 border-t border-gray-200/50 dark:border-white/10 flex items-center justify-between">
               <span class="text-xs font-semibold text-[#FF5C1B] group-hover:underline">View Project Details →</span>
               <span class="text-xs font-forma-mono text-gray-400">450 m²</span>
             </div>
@@ -544,8 +680,8 @@
     </div>
   </section>
 
-  <!-- SECTION: INTERACTIVE 3D VR & ARCHITECTURAL STUDIO -->
-  <section id="3d-studio" class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+  <!-- SECTION: INTERACTIVE 3D VR & ARCHITECTURAL STUDIO IN LIQUID GLASS -->
+  <section id="3d-studio" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -571,36 +707,36 @@
           </div>
 
           <!-- INTERACTIVE CONTROLS -->
-          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-200 dark:border-white/10">
-            <button id="toggle3DNight" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-200/50 dark:border-white/10">
+            <button id="toggle3DNight" class="px-4 py-2 glass-card text-gray-800 dark:text-white rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
               <i data-lucide="moon" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
               <span>DAY / NIGHT</span>
             </button>
-            <button id="toggle3DWireframe" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
+            <button id="toggle3DWireframe" class="px-4 py-2 glass-card text-gray-800 dark:text-white rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
               <i data-lucide="grid" class="w-3.5 h-3.5"></i>
               <span>WIREFRAME</span>
             </button>
-            <button id="toggle3DExplode" class="px-4 py-2 bg-white dark:bg-[#181A20] text-gray-800 dark:text-white border border-gray-300 dark:border-white/20 rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
+            <button id="toggle3DExplode" class="px-4 py-2 glass-card text-gray-800 dark:text-white rounded-full text-xs font-semibold flex items-center gap-2 hover:border-[#FF5C1B] transition-colors">
               <i data-lucide="layers" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
               <span>EXPLODE BIM</span>
             </button>
           </div>
 
           <!-- MODEL SELECTOR BUTTONS -->
-          <div class="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-white/10">
+          <div class="flex items-center gap-4 pt-4 border-t border-gray-200/50 dark:border-white/10">
             <button id="prev3dModelBtn" class="px-5 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold hover:bg-[#FF5C1B] transition-colors">PREV</button>
             <span id="modelIndexIndicator" class="font-forma-mono text-xs text-[#FF5C1B] font-bold">MODEL 1 OF 4</span>
             <button id="next3dModelBtn" class="px-5 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-xs font-bold hover:bg-[#FF5C1B] transition-colors">NEXT</button>
           </div>
         </div>
 
-        <!-- 3D THREE.JS CANVAS STAGE -->
+        <!-- 3D THREE.JS CANVAS STAGE IN FROSTED GLASS -->
         <div class="lg:col-span-7">
-          <div class="bg-white dark:bg-[#12141A] border border-gray-200 dark:border-white/10 rounded-3xl h-[520px] relative shadow-2xl overflow-hidden">
+          <div class="glass-card rounded-3xl h-[520px] relative shadow-2xl overflow-hidden">
             <canvas id="popOut3dCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
 
             <!-- FLOATING TITLE BADGE -->
-            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs bg-white/90 dark:bg-black/85 backdrop-blur-md px-5 py-3 border border-gray-200 dark:border-white/15 flex justify-between items-center gap-4 rounded-xl shadow-lg">
+            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs glass-card px-5 py-3 flex justify-between items-center gap-4 rounded-xl shadow-lg">
               <div>
                 <span id="active3dModelTitle" class="text-gray-900 dark:text-white font-bold text-sm block">01 / BEIGE MARBLE PERGOLA VILLA</span>
                 <p id="active3dModelDesc" class="text-[11px] text-gray-500 dark:text-slate-400 mt-0.5">Dark Marble Columns & Roof Pergola Lattice</p>
@@ -615,7 +751,7 @@
   </section>
 
   <!-- SECTION: LIVE 24-FLOOR HIGH-RISE TOWER CONSTRUCTION SIMULATOR -->
-  <section id="live-build" class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200 dark:border-white/10 transition-colors">
+  <section id="live-build" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -654,8 +790,8 @@
     </div>
   </section>
 
-  <!-- SECTION: TESTIMONIALS (HEAR FROM OUR CLIENTS) -->
-  <section class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+  <!-- SECTION: TESTIMONIALS (HEAR FROM OUR CLIENTS IN FROSTED GLASS) -->
+  <section class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center max-w-3xl mx-auto space-y-3">
@@ -670,7 +806,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="glass-card p-8 shadow-sm space-y-4 flex flex-col justify-between">
           <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
             "Working with this team was exceptional. Their attention to detail and innovative approach created something truly remarkable for our villa in Gacuriro."
           </p>
@@ -680,7 +816,7 @@
           </div>
         </div>
 
-        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="glass-card p-8 shadow-sm space-y-4 flex flex-col justify-between">
           <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
             "The sustainable and innovative designs completely redefined our space. Professional service, verified BOQ pricing, and clear timeline from start to finish."
           </p>
@@ -690,7 +826,7 @@
           </div>
         </div>
 
-        <div class="bg-white dark:bg-[#12141A] p-8 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="glass-card p-8 shadow-sm space-y-4 flex flex-col justify-between">
           <p class="text-gray-700 dark:text-slate-300 text-sm leading-relaxed font-light italic">
             "As an international client in London, tracking daily site engineer field logs on the Client Portal gave me absolute confidence. Outstanding execution."
           </p>
@@ -705,8 +841,8 @@
     </div>
   </section>
 
-  <!-- SECTION: FREQUENTLY ASKED QUESTIONS (AIMANI FAQ ACCORDION) -->
-  <section class="w-full py-20 bg-white dark:bg-[#0E1017] border-t border-gray-200 dark:border-white/10 transition-colors">
+  <!-- SECTION: FREQUENTLY ASKED QUESTIONS (AIMANI FAQ ACCORDION IN LIQUID GLASS) -->
+  <section class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       
       <div class="text-center space-y-3">
@@ -771,11 +907,11 @@
     </div>
   </section>
 
-  <!-- SECTION: START YOUR PROJECT / CONSULTATION FORM (AIMANI CALL TO ACTION) -->
-  <section id="consultation" class="w-full py-20 bg-[#FAF8F5] dark:bg-[#090A0D] border-t border-gray-200 dark:border-white/10 transition-colors">
+  <!-- SECTION: START YOUR PROJECT / CONSULTATION FORM (IN LIQUID FROSTED GLASS) -->
+  <section id="consultation" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="bg-white dark:bg-[#12141A] rounded-3xl p-8 sm:p-12 border border-gray-200 dark:border-white/10 shadow-xl space-y-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8">
         
         <div class="space-y-3">
           <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">START YOUR PROJECT</span>
@@ -915,7 +1051,7 @@
 
   <!-- INTERACTIVE PROJECT DETAIL MODAL -->
   <div id="projectModal" aria-hidden="true">
-    <div class="modal-content-box p-8 sm:p-12 relative space-y-8 bg-white dark:bg-[#181A20] rounded-3xl">
+    <div class="modal-content-box p-8 sm:p-12 relative space-y-8 glass-card rounded-3xl">
       
       <button onclick="window.closeProjectModal()" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 border border-gray-200 dark:border-white/20 flex items-center justify-center text-gray-700 dark:text-white transition-colors" title="Close Specs">
         <i data-lucide="x" class="w-5 h-5"></i>
