@@ -907,7 +907,177 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1200);
   };
 
+  // 6. HEADER AUTO-ADVANCING VIDEO SLIDER ENGINE (SCROLL TO RIGHT ON ENDED)
+  function initHeaderVideoSlider() {
+    const track = document.getElementById('videoSliderTrack');
+    if (!track) return;
+
+    const slides = Array.from(track.querySelectorAll('.video-slide-item'));
+    const pills = Array.from(document.querySelectorAll('.video-pill-btn'));
+    const runner = document.getElementById('videoTimelineFill');
+    const hudTitle = document.getElementById('hudProjectTitle');
+    const hudCategory = document.getElementById('hudProjectCategory');
+    const hudSubtitle = document.getElementById('hudProjectSubtitle');
+    const prevBtn = document.getElementById('heroVideoPrevBtn');
+    const nextBtn = document.getElementById('heroVideoNextBtn');
+    const pausePlayBtn = document.getElementById('heroVideoPausePlayBtn');
+
+    let currentIndex = 0;
+    let fallbackTimer = null;
+
+    const slideMeta = [
+      {
+        title: 'GACURIRO PERGOLA VILLA',
+        category: '🏛️ LUXURY RESIDENTIAL ARCHITECTURE · KIGALI',
+        subtitle: 'Cantilevered roof pergolas and black marble colonnades engineered with bioclimatic cross-ventilation.'
+      },
+      {
+        title: 'NYARUTARAMA GLASS ATRIUM',
+        category: '🏛️ SPATIAL LIGHT & CONTEMPORARY LIVING · NYARUTARAMA',
+        subtitle: 'Double-height structural glass curtain walls merging landscaped exterior gardens with interior serenity.'
+      },
+      {
+        title: 'KIGALI INNOVATION TOWER',
+        category: '🏢 COMMERCIAL HIGH-RISE & URBAN HORIZONS · CBD',
+        subtitle: '14-story post-tensioned reinforced concrete core built on precision 7-day cyclical casting schedules.'
+      },
+      {
+        title: 'KIYOVU MINIMALIST RESIDENCE',
+        category: '🎨 BESPOKE INTERIOR ARCHITECTURE · KIYOVU',
+        subtitle: 'Travertine fireplace hearths, fluted acoustic oak paneling, and ambient cove illumination.'
+      }
+    ];
+
+    function updateHud(index) {
+      if (slideMeta[index]) {
+        if (hudTitle) hudTitle.textContent = slideMeta[index].title;
+        if (hudCategory) hudCategory.textContent = slideMeta[index].category;
+        if (hudSubtitle) hudSubtitle.textContent = slideMeta[index].subtitle;
+      }
+    }
+
+    function goToSlide(index, forward = true) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      // Reset all progress bars
+      pills.forEach((p, i) => {
+        p.classList.toggle('active', i === currentIndex);
+        const prog = p.querySelector('.video-pill-progress');
+        if (prog) prog.style.width = '0%';
+      });
+      if (runner) runner.style.width = '0%';
+
+      // Handle video playback
+      slides.forEach((slide, i) => {
+        const vid = slide.querySelector('video');
+        if (vid) {
+          if (i === currentIndex) {
+            slide.classList.add('active');
+            vid.currentTime = 0;
+            vid.play().then(() => {
+              if (pausePlayBtn) pausePlayBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4"></i>';
+              if (window.lucide) lucide.createIcons();
+            }).catch(err => {
+              console.log('Video autoplay fallback:', err);
+              clearTimeout(fallbackTimer);
+              fallbackTimer = setTimeout(() => {
+                goToSlide(currentIndex + 1);
+              }, 7000);
+            });
+          } else {
+            slide.classList.remove('active');
+            vid.pause();
+            vid.currentTime = 0;
+          }
+        }
+      });
+
+      updateHud(currentIndex);
+    }
+
+    // Attach ended event and timeupdate to each video
+    slides.forEach((slide, idx) => {
+      const vid = slide.querySelector('video');
+      if (vid) {
+        // Auto scroll to right to new one direct on ended!
+        vid.addEventListener('ended', () => {
+          goToSlide(currentIndex + 1, true);
+        });
+
+        // Track live progress
+        vid.addEventListener('timeupdate', () => {
+          if (idx === currentIndex && vid.duration) {
+            const pct = (vid.currentTime / vid.duration) * 100;
+            if (runner) runner.style.width = `${pct}%`;
+            const activePill = pills[currentIndex];
+            if (activePill) {
+              const prog = activePill.querySelector('.video-pill-progress');
+              if (prog) prog.style.width = `${pct}%`;
+            }
+          }
+        });
+
+        // Error handling fallback
+        vid.addEventListener('error', () => {
+          clearTimeout(fallbackTimer);
+          fallbackTimer = setTimeout(() => {
+            goToSlide(currentIndex + 1);
+          }, 7000);
+        });
+      }
+    });
+
+    // Pill click navigation
+    pills.forEach((pill, i) => {
+      pill.addEventListener('click', () => {
+        clearTimeout(fallbackTimer);
+        goToSlide(i);
+      });
+    });
+
+    // Prev / Next button listeners
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        clearTimeout(fallbackTimer);
+        goToSlide(currentIndex - 1, false);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        clearTimeout(fallbackTimer);
+        goToSlide(currentIndex + 1, true);
+      });
+    }
+
+    // Pause / Play toggle
+    if (pausePlayBtn) {
+      pausePlayBtn.addEventListener('click', () => {
+        const activeVid = slides[currentIndex]?.querySelector('video');
+        if (activeVid) {
+          if (activeVid.paused) {
+            activeVid.play();
+            pausePlayBtn.innerHTML = '<i data-lucide="pause" class="w-4 h-4"></i>';
+          } else {
+            activeVid.pause();
+            pausePlayBtn.innerHTML = '<i data-lucide="play" class="w-4 h-4"></i>';
+          }
+          if (window.lucide) lucide.createIcons();
+        }
+      });
+    }
+
+    // Initialize first slide
+    goToSlide(0);
+  }
+
   init3DHouseViewer();
   initLiveTowerBuilder();
+  initHeaderVideoSlider();
 
 });
+
