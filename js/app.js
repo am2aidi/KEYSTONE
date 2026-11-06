@@ -835,20 +835,54 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') window.closeProjectModal();
   });
 
-  // Portfolio Filtering
-  window.filterProjects = function(category, btnElem) {
-    document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
-    if (btnElem) btnElem.classList.add('active');
+  // Enhanced Portfolio Discovery & Filtering (Menu Feature)
+  let currentPortfolioCategory = 'all';
+  let currentPortfolioQuery = '';
 
+  function applyPortfolioFilters() {
     const cards = document.querySelectorAll('.project-card-item');
+    let visibleCount = 0;
+
     cards.forEach(card => {
-      const cardCat = card.getAttribute('data-category');
-      if (category === 'all' || cardCat === category) {
+      const cardCat = (card.getAttribute('data-category') || '').toLowerCase();
+      const cardText = (card.innerText || '').toLowerCase();
+
+      const matchesCat = (currentPortfolioCategory === 'all' || cardCat.includes(currentPortfolioCategory.toLowerCase()));
+      const matchesQuery = (!currentPortfolioQuery || cardText.includes(currentPortfolioQuery.toLowerCase()));
+
+      if (matchesCat && matchesQuery) {
         card.style.display = 'flex';
+        visibleCount++;
       } else {
         card.style.display = 'none';
       }
     });
+
+    const badge = document.getElementById('portfolioCountBadge');
+    if (badge) badge.textContent = visibleCount;
+  }
+
+  window.filterProjects = function(category, btnElem) {
+    document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+    if (btnElem) btnElem.classList.add('active');
+    currentPortfolioCategory = category;
+    const select = document.getElementById('portfolioTypologySelect');
+    if (select) select.value = category;
+    applyPortfolioFilters();
+  };
+
+  window.filterProjectsByTypology = function(category) {
+    currentPortfolioCategory = category;
+    document.querySelectorAll('.filter-pill').forEach(b => {
+      const isMatch = (category === 'all' && b.innerText.includes('All')) || b.innerText.toLowerCase().includes(category.toLowerCase());
+      b.classList.toggle('active', isMatch);
+    });
+    applyPortfolioFilters();
+  };
+
+  window.filterProjectsBySearch = function(query) {
+    currentPortfolioQuery = query.trim();
+    applyPortfolioFilters();
   };
 
   // FAQ Accordion Handler
@@ -927,24 +961,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const slideMeta = [
       {
-        title: 'GACURIRO PERGOLA VILLA',
+        title: 'GACURIRO 3D VILLA ASSEMBLY',
         category: '🏛️ LUXURY RESIDENTIAL ARCHITECTURE · KIGALI',
-        subtitle: 'Cantilevered roof pergolas and black marble colonnades engineered with bioclimatic cross-ventilation.'
+        subtitle: 'Autonomous layer-by-layer architectural assembly from reinforced foundation to illuminated luxury residence.'
       },
       {
-        title: 'NYARUTARAMA GLASS ATRIUM',
-        category: '🏛️ SPATIAL LIGHT & CONTEMPORARY LIVING · NYARUTARAMA',
-        subtitle: 'Double-height structural glass curtain walls merging landscaped exterior gardens with interior serenity.'
+        title: 'KIGALI INNOVATION TOWERS',
+        category: '🏢 COMMERCIAL HIGH-RISE & URBAN HORIZONS · WATERFRONT',
+        subtitle: 'Twin post-tensioned glass facade towers engineered on precision cyclical casting schedules.'
       },
       {
-        title: 'KIGALI INNOVATION TOWER',
-        category: '🏢 COMMERCIAL HIGH-RISE & URBAN HORIZONS · CBD',
-        subtitle: '14-story post-tensioned reinforced concrete core built on precision 7-day cyclical casting schedules.'
+        title: 'NYARUTARAMA CANTILEVER RESIDENCE',
+        category: '🏗️ PRECISION GROUNDWORK & STRUCTURAL ENGINEERING · NYARUTARAMA',
+        subtitle: 'Precision foundation excavation, reinforced concrete slab casting, and seismic-resistant steel structural frames.'
       },
       {
-        title: 'KIYOVU MINIMALIST RESIDENCE',
-        category: '🎨 BESPOKE INTERIOR ARCHITECTURE · KIYOVU',
-        subtitle: 'Travertine fireplace hearths, fluted acoustic oak paneling, and ambient cove illumination.'
+        title: 'KIYOVU BLUEPRINT RESIDENCE',
+        category: '📐 HOLOGRAPHIC BIM BLUEPRINT TO REALITY · KIYOVU',
+        subtitle: 'Parametric structural engineering transitioning seamlessly from CAD wireframes to hand-laid stone and finished luxury architecture.'
+      },
+      {
+        title: 'KAGUGU BESPOKE ESTATE',
+        category: '🌲 MASTERPLAN RESIDENTIAL COMMUNITY · KAGUGU',
+        subtitle: 'Turnkey architectural construction integrating timber framing, thermal insulation envelope, and manicured private grounds.'
       }
     ];
 
