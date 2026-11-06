@@ -164,38 +164,46 @@
     <!-- VIDEO SLIDER TRACK -->
     <div id="videoSliderTrack" class="video-slider-track">
       
-      <!-- SLIDE 01: GACURIRO VILLA -->
+      <!-- SLIDE 01: 3D VILLA ASSEMBLY (house-2.mp4) -->
       <div class="video-slide-item active">
-        <video class="video-slide-media" playsinline muted autoplay preload="auto" poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1920&auto=format&fit=crop">
+        <video class="video-slide-media" playsinline muted autoplay preload="auto">
+          <source src="assets/videos/house-2.mp4" type="video/mp4">
           <source src="assets/videos/video1.mp4" type="video/mp4">
-          <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
         </video>
         <div class="video-scrim-overlay"></div>
       </div>
 
-      <!-- SLIDE 02: NYARUTARAMA GLASS ATRIUM -->
+      <!-- SLIDE 02: WATERFRONT TOWERS (house-3.mp4) -->
       <div class="video-slide-item">
-        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop">
+        <video class="video-slide-media" playsinline muted preload="auto">
+          <source src="assets/videos/house-3.mp4" type="video/mp4">
           <source src="assets/videos/video2.mp4" type="video/mp4">
-          <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
         </video>
         <div class="video-scrim-overlay"></div>
       </div>
 
-      <!-- SLIDE 03: KIGALI INNOVATION TOWER -->
+      <!-- SLIDE 03: CONSTRUCTION TIMELAPSE (house-1.mp4) -->
       <div class="video-slide-item">
-        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920&auto=format&fit=crop">
+        <video class="video-slide-media" playsinline muted preload="auto">
+          <source src="assets/videos/house-1.mp4" type="video/mp4">
           <source src="assets/videos/video3.mp4" type="video/mp4">
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
         </video>
         <div class="video-scrim-overlay"></div>
       </div>
 
-      <!-- SLIDE 04: KIYOVU MINIMALIST RESIDENCE -->
+      <!-- SLIDE 04: BLUEPRINT TO REALITY (house-7.mp4) -->
       <div class="video-slide-item">
-        <video class="video-slide-media" playsinline muted preload="auto" poster="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&auto=format&fit=crop">
+        <video class="video-slide-media" playsinline muted preload="auto">
+          <source src="assets/videos/house-7.mp4" type="video/mp4">
           <source src="assets/videos/video4.mp4" type="video/mp4">
-          <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        </video>
+        <div class="video-scrim-overlay"></div>
+      </div>
+
+      <!-- SLIDE 05: CUSTOM RESIDENTIAL ESTATE (house-5.mp4) -->
+      <div class="video-slide-item">
+        <video class="video-slide-media" playsinline muted preload="auto">
+          <source src="assets/videos/house-5.mp4" type="video/mp4">
         </video>
         <div class="video-scrim-overlay"></div>
       </div>
@@ -210,23 +218,16 @@
           <span id="hudProjectCategory" class="px-3.5 py-1 rounded-full text-[11px] font-bold font-forma-mono uppercase tracking-wider bg-[#FF5C1B]/20 text-[#FF5C1B] border border-[#FF5C1B]/40 backdrop-blur-md">
             🏛️ LUXURY RESIDENTIAL ARCHITECTURE · KIGALI
           </span>
-          <span class="inline-flex items-center gap-1.5 text-[11px] font-forma-mono text-emerald-400">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            LIVE REEL
-          </span>
         </div>
 
         <div>
-          <p class="text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold text-gray-300 dark:text-gray-400">
-            Creative Brilliance, Visionaries, Designers
-          </p>
           <h1 id="hudProjectTitle" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mt-1 font-forma">
-            GACURIRO PERGOLA VILLA
+            GACURIRO 3D VILLA ASSEMBLY
           </h1>
         </div>
 
         <p id="hudProjectSubtitle" class="text-gray-200 dark:text-slate-300 text-sm sm:text-base font-light leading-relaxed">
-          Cantilevered roof pergolas and black marble colonnades engineered with bioclimatic cross-ventilation.
+          Autonomous layer-by-layer architectural assembly from reinforced foundation to illuminated luxury residence.
         </p>
 
         <!-- CTA BUTTONS -->
@@ -259,22 +260,27 @@
       <div class="flex items-center gap-2 flex-wrap justify-center">
         
         <button class="video-pill-btn active" data-slide="0">
-          <span>01 Gacuriro Villa</span>
+          <span>01 Villa Assembly</span>
           <div class="video-pill-progress"></div>
         </button>
 
         <button class="video-pill-btn" data-slide="1">
-          <span>02 Glass Atrium</span>
+          <span>02 High-Rise Towers</span>
           <div class="video-pill-progress"></div>
         </button>
 
         <button class="video-pill-btn" data-slide="2">
-          <span>03 Innovation Tower</span>
+          <span>03 Structural Build</span>
           <div class="video-pill-progress"></div>
         </button>
 
         <button class="video-pill-btn" data-slide="3">
-          <span>04 Minimalist Living</span>
+          <span>04 Blueprint BIM</span>
+          <div class="video-pill-progress"></div>
+        </button>
+
+        <button class="video-pill-btn" data-slide="4">
+          <span>05 Custom Estate</span>
           <div class="video-pill-progress"></div>
         </button>
 
@@ -338,6 +344,91 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- CONTINUOUS PARTNER & REGULATORY ACCREDITATION MARQUEE (MENU REAL ESTATE GROUP FEATURE) -->
+  <section class="w-full py-6 border-y border-gray-200/50 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-md overflow-hidden relative z-10">
+    <div class="max-w-7xl mx-auto px-4 mb-3 flex items-center justify-between">
+      <span class="text-[11px] font-forma-mono uppercase tracking-[0.25em] text-gray-500 dark:text-slate-400">
+        Accredited Partners & Regulatory Standards
+      </span>
+      <span class="text-[11px] font-forma-mono text-emerald-500 font-bold hidden sm:inline">
+        ● OFFICIAL PRACTICE LICENSES
+      </span>
+    </div>
+    
+    <div class="partner-marquee-wrapper overflow-hidden relative">
+      <div class="partner-marquee-track flex items-center gap-6 whitespace-nowrap">
+        <!-- ITEM 1: RDB -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FF5C1B]"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RDB RWANDA</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Development Board Certified</span>
+        </div>
+        <!-- ITEM 2: RIA -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RIA RWANDA</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Institute of Architects Registered</span>
+        </div>
+        <!-- ITEM 3: IER -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">IER ENGINEERS</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Institution of Engineers Rwanda</span>
+        </div>
+        <!-- ITEM 4: IFC EDGE -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">IFC EDGE</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">World Bank Green Architecture</span>
+        </div>
+        <!-- ITEM 5: BANK OF KIGALI -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">BANK OF KIGALI</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Project Finance Partner</span>
+        </div>
+        <!-- ITEM 6: RHA -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RHA CODES</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Rwanda Housing Authority Standards</span>
+        </div>
+
+        <!-- DUPLICATE SET FOR INFINITE SCROLL -->
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#FF5C1B]"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RDB RWANDA</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Development Board Certified</span>
+        </div>
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RIA RWANDA</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Institute of Architects Registered</span>
+        </div>
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">IER ENGINEERS</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Institution of Engineers Rwanda</span>
+        </div>
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">IFC EDGE</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">World Bank Green Architecture</span>
+        </div>
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">BANK OF KIGALI</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Project Finance Partner</span>
+        </div>
+        <div class="partner-marquee-item glass-card px-5 py-2.5 flex items-center gap-3 shrink-0">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+          <span class="font-bold text-xs text-gray-900 dark:text-white">RHA CODES</span>
+          <span class="text-[11px] text-gray-500 dark:text-slate-400">Rwanda Housing Authority Standards</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -513,8 +604,16 @@
   </section>
 
   <!-- SECTION: LATEST PROJECTS (AIMANI CURATED PORTFOLIO IN FROSTED LIQUID GLASS) -->
-  <section id="selected-work" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+  <section id="selected-work" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors overflow-hidden">
+    
+    <!-- SUBTLE AMBIENT VIDEO BACKGROUND (house-3.mp4 SKYSCRAPERS) -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.04] dark:opacity-[0.08] -z-10">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover filter blur-[4px]">
+        <source src="assets/videos/house-3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200/50 dark:border-white/10">
         <div>
@@ -531,6 +630,30 @@
           <button onclick="window.filterProjects('Architecture', this)" class="filter-pill">🏛️ Architecture</button>
           <button onclick="window.filterProjects('Interior', this)" class="filter-pill">🎨 Interior Design</button>
           <button onclick="window.filterProjects('Commercial', this)" class="filter-pill">🏢 Commercial</button>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DISCOVERY TOOLBAR (MENU REAL ESTATE GROUP FEATURE) -->
+      <div class="glass-card p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 border border-gray-200/40 dark:border-white/10">
+        <!-- Search Input -->
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input id="portfolioSearchInput" oninput="window.filterProjectsBySearch(this.value)" type="text" placeholder="Search project, location (Gacuriro, Nyarutarama)..." class="w-full pl-10 pr-4 py-2.5 rounded-full bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-[#FF5C1B] transition-colors">
+        </div>
+
+        <!-- Typology Dropdown -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <select id="portfolioTypologySelect" onchange="window.filterProjectsByTypology(this.value)" class="keystone-input !py-2.5 !px-4 !text-xs !rounded-full bg-black/5 dark:bg-white/5 border-gray-200 dark:border-white/10">
+            <option value="all">All Architectural Types</option>
+            <option value="Architecture">🏛️ Residential Architecture</option>
+            <option value="Interior">🎨 Interior Design</option>
+            <option value="Commercial">🏢 Commercial & Landmark</option>
+          </select>
+        </div>
+
+        <!-- Result Count Indicator -->
+        <div class="font-forma-mono text-xs text-gray-500 dark:text-slate-400">
+          Showing <span id="portfolioCountBadge" class="font-bold text-[#FF5C1B]">6</span> verified commissions
         </div>
       </div>
 
@@ -730,19 +853,49 @@
           </div>
         </div>
 
-        <!-- 3D THREE.JS CANVAS STAGE IN FROSTED GLASS -->
+        <!-- 3D ARCHITECTURAL STAGE IN FROSTED GLASS (FEATURING house-2.mp4 3D ASSEMBLY REEL) -->
         <div class="lg:col-span-7">
-          <div class="glass-card rounded-3xl h-[520px] relative shadow-2xl overflow-hidden">
-            <canvas id="popOut3dCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+          <div class="glass-card rounded-3xl h-[520px] relative shadow-2xl overflow-hidden group">
+            
+            <!-- 3D BIM Video Reel (house-2.mp4) -->
+            <video id="studio3dVideo" playsinline autoplay muted loop class="w-full h-full object-cover">
+              <source src="assets/videos/house-2.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Three.js Canvas (Available when toggled) -->
+            <canvas id="popOut3dCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing absolute inset-0 hidden"></canvas>
+
+            <!-- GRADIENT VIGNETTE -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none"></div>
+
+            <!-- TOP CONTROLS: SWITCH BETWEEN 3D VIDEO & THREE.JS -->
+            <div class="absolute top-4 right-4 z-20 flex items-center gap-2">
+              <button id="view3dVideoBtn" onclick="document.getElementById('studio3dVideo').classList.remove('hidden'); document.getElementById('popOut3dCanvas').classList.add('hidden'); this.classList.add('bg-[#FF5C1B]', 'text-white'); this.classList.remove('bg-black/50', 'text-gray-300'); document.getElementById('view3dCanvasBtn').classList.remove('bg-[#FF5C1B]', 'text-white'); document.getElementById('view3dCanvasBtn').classList.add('bg-black/50', 'text-gray-300');" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#FF5C1B] text-white backdrop-blur-md shadow-lg transition-all flex items-center gap-1.5">
+                <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                <span>3D REEL</span>
+              </button>
+              <button id="view3dCanvasBtn" onclick="document.getElementById('popOut3dCanvas').classList.remove('hidden'); document.getElementById('studio3dVideo').classList.add('hidden'); this.classList.add('bg-[#FF5C1B]', 'text-white'); this.classList.remove('bg-black/50', 'text-gray-300'); document.getElementById('view3dVideoBtn').classList.remove('bg-[#FF5C1B]', 'text-white'); document.getElementById('view3dVideoBtn').classList.add('bg-black/50', 'text-gray-300');" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-black/50 text-gray-300 hover:text-white backdrop-blur-md transition-all flex items-center gap-1.5">
+                <i data-lucide="box" class="w-3.5 h-3.5"></i>
+                <span>3D INTERACTIVE</span>
+              </button>
+            </div>
 
             <!-- FLOATING TITLE BADGE -->
-            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs glass-card px-5 py-3 flex justify-between items-center gap-4 rounded-xl shadow-lg">
+            <div class="absolute bottom-5 left-5 right-5 font-forma-mono text-xs glass-card px-5 py-3 flex justify-between items-center gap-4 rounded-xl shadow-lg border border-white/20">
               <div>
-                <span id="active3dModelTitle" class="text-gray-900 dark:text-white font-bold text-sm block">01 / BEIGE MARBLE PERGOLA VILLA</span>
-                <p id="active3dModelDesc" class="text-[11px] text-gray-500 dark:text-slate-400 mt-0.5">Dark Marble Columns & Roof Pergola Lattice</p>
+                <span id="active3dModelTitle" class="text-white font-bold text-sm block">01 / 3D BIM VILLA ASSEMBLY</span>
+                <p id="active3dModelDesc" class="text-[11px] text-gray-300 mt-0.5">Autonomous Cantilever Framing · Glass Envelope · Interior Finishes</p>
               </div>
-              <span class="text-[#FF5C1B] font-bold hidden sm:inline">360° ORBIT ACTIVE</span>
+              <div class="flex items-center gap-2">
+                <button onclick="const v = document.getElementById('studio3dVideo'); v.paused ? v.play() : v.pause(); this.querySelector('i').setAttribute('data-lucide', v.paused ? 'play' : 'pause'); lucide.createIcons();" class="p-2 rounded-full bg-white/20 hover:bg-[#FF5C1B] text-white transition-colors" title="Play/Pause">
+                  <i data-lucide="pause" class="w-3.5 h-3.5"></i>
+                </button>
+                <button onclick="const v = document.getElementById('studio3dVideo'); v.muted = !v.muted; this.querySelector('i').setAttribute('data-lucide', v.muted ? 'volume-x' : 'volume-2'); lucide.createIcons();" class="p-2 rounded-full bg-white/20 hover:bg-[#FF5C1B] text-white transition-colors" title="Mute/Unmute">
+                  <i data-lucide="volume-x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -756,34 +909,40 @@
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">ON-SITE CONSTRUCTION SIMULATOR</span>
-          <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">High-Rise Tower Construction.</h2>
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">ON-SITE CONSTRUCTION TIMELAPSE</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Full-Cycle Architectural Execution.</h2>
         </div>
         <p class="text-gray-600 dark:text-slate-300 text-sm max-w-lg font-light leading-relaxed">
-          Drag to orbit the building site in 3D. Move the progress slider to watch concrete cores, glass panels, and the tower crane build the 24-floor high-rise in real-time.
+          Witness architectural design transform into reality. From CAD blueprint wireframes to structural framing, weather-tight envelope, and completed luxury residence.
         </p>
       </div>
 
-      <div class="live-tower-stage shadow-2xl !h-[680px]">
-        <canvas id="c2" class="live-tower-canvas" aria-label="3D tower under construction"></canvas>
+      <div class="glass-card rounded-3xl h-[620px] relative shadow-2xl overflow-hidden group">
+        <video id="liveBuildVideo" playsinline autoplay muted loop class="w-full h-full object-cover">
+          <source src="assets/videos/house-7.mp4" type="video/mp4">
+          <source src="assets/videos/house-1.mp4" type="video/mp4">
+        </video>
 
-        <div class="live-tower-panel">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20 pointer-events-none"></div>
+
+        <!-- TIMELAPSE CONTROLS PANEL -->
+        <div class="absolute bottom-6 left-6 right-6 font-forma-mono glass-card p-5 rounded-2xl flex flex-wrap items-center justify-between gap-4 border border-white/20">
           <div>
-            <span class="text-white font-bold text-xs block">FLOORS COMPLETE</span>
-            <b id="fl" class="text-[#FF5C1B] font-bold">0 / 24</b>
+            <span class="text-xs uppercase tracking-widest text-[#FF5C1B] font-bold block">4-STAGE COMMISSION EXECUTION</span>
+            <h3 class="text-base sm:text-lg font-bold text-white">Blueprint → Framing → Dry-In → Finished Residence</h3>
+            <p class="text-[11px] text-gray-300 mt-0.5">High-Precision Structural Engineering & On-Site Supervisory Control</p>
           </div>
-          <div>
-            <span class="text-white font-bold text-xs block">PROGRESS</span>
-            <b id="pc" class="text-emerald-400 font-bold">0%</b>
+          <div class="flex items-center gap-3">
+            <button onclick="const v = document.getElementById('liveBuildVideo'); v.currentTime = 0; v.play();" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-md transition-all">
+              Restart
+            </button>
+            <button onclick="const v = document.getElementById('liveBuildVideo'); v.paused ? v.play() : v.pause(); this.textContent = v.paused ? 'Play' : 'Pause';" class="px-5 py-2 rounded-full bg-[#FF5C1B] hover:bg-[#e04f14] text-white text-xs font-bold transition-all shadow-lg">
+              Pause
+            </button>
+            <button onclick="const v = document.getElementById('liveBuildVideo'); v.muted = !v.muted; this.querySelector('i').setAttribute('data-lucide', v.muted ? 'volume-x' : 'volume-2'); lucide.createIcons();" class="p-2.5 rounded-full bg-white/20 hover:bg-[#FF5C1B] text-white transition-colors" title="Audio">
+              <i data-lucide="volume-x" class="w-4 h-4"></i>
+            </button>
           </div>
-          <button id="toggleAutoBuildBtn" class="forma-btn-outline !py-2 !px-3 text-xs shrink-0 !border-white/30" title="Toggle Endless Auto-Build Loop">
-            <i data-lucide="repeat" class="w-3.5 h-3.5 text-[#FF5C1B]"></i>
-            <span id="autoBuildStatusText">LOOP ACTIVE</span>
-          </button>
-          <label for="sl" class="grow">
-            <span class="text-white font-bold text-xs block mb-1">SLIDE TO CONSTRUCT TOWER FLOOR-BY-FLOOR:</span>
-            <input id="sl" type="range" min="0" max="100" value="0">
-          </label>
         </div>
       </div>
 
@@ -907,8 +1066,87 @@
     </div>
   </section>
 
+  <!-- SECTION: EXECUTIVE ARCHITECTURE & ENGINEERING LEADERSHIP (MENU REAL ESTATE GROUP FEATURE) -->
+  <section class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-gray-200/50 dark:border-white/10">
+        <div>
+          <span class="font-forma-mono text-xs text-[#FF5C1B] font-bold tracking-[0.25em] uppercase">OUR LEADERSHIP</span>
+          <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Key Architects & Engineers.</h2>
+          <p class="text-gray-600 dark:text-slate-300 text-sm font-light mt-1">
+            Registered practitioners with Rwanda Institute of Architects (RIA) and Institution of Engineers Rwanda (IER).
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- LEADER 1 -->
+        <div class="glass-card overflow-hidden group hover:shadow-2xl transition-all">
+          <div class="h-72 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Aimable Mugabo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-forma-mono uppercase tracking-wider bg-[#FF5C1B] text-white px-2.5 py-1 rounded-full font-bold">RIA LICENSED · REG #084</span>
+              <h3 class="text-lg font-bold text-white mt-2">Aimable Mugabo</h3>
+              <p class="text-xs text-gray-300">Principal Design Architect</p>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-xs text-gray-600 dark:text-slate-300 leading-relaxed font-light">
+              18+ years leading bioclimatic residential masterplanning and bespoke luxury villas across Kigali, Nairobi, and Geneva.
+            </p>
+          </div>
+        </div>
+
+        <!-- LEADER 2 -->
+        <div class="glass-card overflow-hidden group hover:shadow-2xl transition-all">
+          <div class="h-72 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Eng. Jean-Paul Gasana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-forma-mono uppercase tracking-wider bg-blue-600 text-white px-2.5 py-1 rounded-full font-bold">IER CERTIFIED · REG #192</span>
+              <h3 class="text-lg font-bold text-white mt-2">Eng. Jean-Paul Gasana</h3>
+              <p class="text-xs text-gray-300">Lead Structural & Post-Tension Specialist</p>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-xs text-gray-600 dark:text-slate-300 leading-relaxed font-light">
+              Specialized in high-rise concrete cores, seismic vibration dampening, and automated site engineering verification.
+            </p>
+          </div>
+        </div>
+
+        <!-- LEADER 3 -->
+        <div class="glass-card overflow-hidden group hover:shadow-2xl transition-all">
+          <div class="h-72 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Diane Uwase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-forma-mono uppercase tracking-wider bg-emerald-600 text-white px-2.5 py-1 rounded-full font-bold">IFC EDGE AUDITOR</span>
+              <h3 class="text-lg font-bold text-white mt-2">Diane Uwase</h3>
+              <p class="text-xs text-gray-300">Director of Sustainable Architecture</p>
+            </div>
+          </div>
+          <div class="p-6 space-y-3">
+            <p class="text-xs text-gray-600 dark:text-slate-300 leading-relaxed font-light">
+              World Bank IFC EDGE certified auditor directing passive solar shading, rainwater harvesting, and low-embodied carbon construction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECTION: START YOUR PROJECT / CONSULTATION FORM (IN LIQUID FROSTED GLASS) -->
-  <section id="consultation" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors">
+  <section id="consultation" class="w-full py-20 bg-transparent relative z-10 border-t border-gray-200/50 dark:border-white/10 transition-colors overflow-hidden">
+    
+    <!-- SUBTLE AMBIENT VIDEO BACKGROUND (house-1.mp4 TIMELAPSE) -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.05] dark:opacity-[0.09] -z-10">
+      <video autoplay loop muted playsinline class="w-full h-full object-cover filter blur-[4px]">
+        <source src="assets/videos/house-1.mp4" type="video/mp4">
+      </video>
+    </div>
+    
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8">
